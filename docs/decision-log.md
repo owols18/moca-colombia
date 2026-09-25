@@ -14,6 +14,10 @@
 | D-008 | GoDaddy is assumed to support the planned Next.js runtime until the exact hosting plan can be verified. | Provisional |
 | D-009 | The Home is the last page to be designed and developed, as a scrollytelling experience. | Confirmed |
 | D-010 | The primary Codex agent owns architecture, Design System, integration and the Home. Subagents require explicit authorization and only receive bounded work. | Confirmed |
+| D-011 | Stage 1 uses Next.js App Router, TypeScript, CSS Modules and self-hosted variable Comfortaa/Manrope fonts. | Confirmed |
+| D-012 | The layout is fluid from 320 px, uses full-bleed sections, and caps content at 1760 px for 2560 px screens. | Confirmed |
+| D-013 | Gold `#C59B50` is a supporting accent inferred from the approved Illustrator rules and borders; it is not a primary brand surface. | Provisional |
+| D-014 | The `/design-system` route is a no-index development reference and is not part of the public sitemap. | Confirmed |
 
 ## Pending before production
 
@@ -24,4 +28,3 @@
 - Privacy and cookie policy.
 - Final Spanish translation and bilingual editorial approval.
 - Written confirmation of image usage rights, especially for minors and medical contexts.
-

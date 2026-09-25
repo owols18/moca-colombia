@@ -1,0 +1,129 @@
+.header {
+  align-items: center;
+  background: var(--color-forest);
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  min-height: 112px;
+  padding: var(--space-5) var(--gutter);
+}
+
+.header img,
+.footer img {
+  height: auto;
+  width: clamp(8.25rem, 12vw, 11rem);
+}
+
+.menu {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  display: grid;
+  gap: 5px;
+  justify-self: start;
+  padding: var(--space-3);
+}
+
+.menu span {
+  background: var(--color-white);
+  display: block;
+  height: 2px;
+  width: 30px;
+}
+
+.language {
+  color: var(--color-ivory);
+  display: flex;
+  font-size: var(--text-caption);
+  gap: var(--space-3);
+  justify-self: end;
+  letter-spacing: 0.12em;
+}
+
+.language span[aria-current="page"] {
+  border-bottom: 1px solid var(--color-gold);
+}
+
+.footer {
+  align-items: center;
+  background: var(--color-muted);
+  color: var(--color-ivory);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  justify-content: center;
+  min-height: 240px;
+  padding: var(--space-7) var(--gutter);
+  text-align: center;
+}
+
+.footer p {
+  font-size: var(--text-caption);
+  margin: 0;
+}
+
+.cta {
+  align-items: center;
+  background:
+    linear-gradient(var(--color-overlay), var(--color-overlay)),
+    url("/media/design-system/donate-cta.png") center / cover;
+  border-radius: var(--radius-lg);
+  color: var(--color-ivory);
+  display: grid;
+  gap: var(--space-7);
+  grid-template-columns: minmax(0, 1fr) auto;
+  min-height: 390px;
+  overflow: hidden;
+  padding: clamp(2rem, 5vw, 5.5rem);
+}
+
+.cta h2 {
+  font-family: var(--font-heading);
+  font-size: var(--text-h2);
+  font-weight: 500;
+  margin: 0 0 var(--space-4);
+  text-transform: uppercase;
+}
+
+.cta h2::after {
+  background: var(--color-gold);
+  content: "";
+  display: block;
+  height: 2px;
+  margin-top: var(--space-3);
+  width: 10rem;
+}
+
+.cta p {
+  line-height: 1.65;
+  margin: 0;
+  max-width: 55ch;
+}
+
+.cta .kicker {
+  color: var(--color-sand);
+  font-size: var(--text-caption);
+  letter-spacing: 0.14em;
+  margin-bottom: var(--space-3);
+  text-transform: uppercase;
+}
+
+.actions {
+  display: grid;
+  gap: var(--space-3);
+  min-width: min(100%, 15rem);
+}
+
+@media (max-width: 780px) {
+  .header {
+    min-height: 88px;
+  }
+
+  .language {
+    gap: var(--space-2);
+  }
+
+  .cta {
+    align-items: start;
+    grid-template-columns: 1fr;
+  }
+}

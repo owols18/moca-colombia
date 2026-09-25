@@ -1,0 +1,47 @@
+.heading {
+  color: var(--color-forest);
+  max-width: var(--text-max);
+}
+
+.heading p {
+  color: var(--color-cacao);
+  font-size: var(--text-caption);
+  letter-spacing: 0.16em;
+  margin: 0 0 var(--space-3);
+  text-transform: uppercase;
+}
+
+.heading h2 {
+  font-family: var(--font-heading);
+  font-size: var(--text-h2);
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  line-height: 1.14;
+  margin: 0;
+}
+
+.heading h2::after {
+  background: var(--color-gold);
+  content: "";
+  display: block;
+  height: 2px;
+  margin-top: var(--space-3);
+  width: min(12rem, 62%);
+}
+
+.center {
+  margin-inline: auto;
+  text-align: center;
+}
+
+.center h2::after {
+  margin-inline: auto;
+}
+
+.inverted {
+  color: var(--color-ivory);
+}
+
+.inverted p {
+  color: var(--color-sand);
+}

@@ -1,0 +1,56 @@
+.field {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.field label {
+  color: var(--color-forest);
+  font-size: var(--text-caption);
+  letter-spacing: 0.055em;
+  text-transform: uppercase;
+}
+
+.field input,
+.field textarea {
+  background: var(--color-white);
+  border: 1.5px solid var(--color-line);
+  border-radius: var(--radius-sm);
+  color: var(--color-ink);
+  font-size: 1rem;
+  min-height: 50px;
+  padding: 0.85rem 1rem;
+  transition:
+    border-color var(--duration-fast) var(--ease-standard),
+    box-shadow var(--duration-fast) var(--ease-standard);
+  width: 100%;
+}
+
+.field textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+.field input:hover,
+.field textarea:hover {
+  border-color: var(--color-muted);
+}
+
+.field input:focus-visible,
+.field textarea:focus-visible {
+  border-color: var(--color-forest);
+  box-shadow: var(--shadow-focus);
+  outline: 0;
+}
+
+.field > span {
+  color: var(--color-muted);
+  font-size: var(--text-caption);
+}
+
+.field .invalid {
+  border-color: var(--color-error);
+}
+
+.field .error {
+  color: var(--color-error);
+}
