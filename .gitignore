@@ -1,0 +1,26 @@
+# Dependencies
+node_modules/
+
+# Next.js
+.next/
+out/
+
+# Local environment and secrets
+.env
+.env.local
+.env.*.local
+
+# Test and coverage output
+coverage/
+playwright-report/
+test-results/
+
+# Operating-system and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Generated media and temporary files
+tmp/
+public/media/generated/
+

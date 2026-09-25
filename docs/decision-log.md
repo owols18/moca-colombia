@@ -1,0 +1,27 @@
+# Decision log
+
+## Confirmed
+
+| ID | Decision | Status |
+|---|---|---|
+| D-001 | Projects is a navigation group that links directly to the four project pages; there is no standalone projects landing page in phase 1. | Confirmed |
+| D-002 | English is the fallback locale. A saved user choice has priority over GeoIP and browser-language detection. | Confirmed |
+| D-003 | Each page and locale will have its own JSON content file. | Confirmed |
+| D-004 | Stripe donations use USD only in phase 1. | Confirmed |
+| D-005 | Contact submissions use `fabian.andres82@gmail.com` as the temporary recipient, supplied through an environment variable. | Confirmed |
+| D-006 | Google Analytics is deferred to phase 2. | Confirmed |
+| D-007 | Privacy-policy publication is deferred, so analytics remains disabled during phase 1 previews. | Confirmed |
+| D-008 | GoDaddy is assumed to support the planned Next.js runtime until the exact hosting plan can be verified. | Provisional |
+| D-009 | The Home is the last page to be designed and developed, as a scrollytelling experience. | Confirmed |
+| D-010 | The primary Codex agent owns architecture, Design System, integration and the Home. Subagents require explicit authorization and only receive bounded work. | Confirmed |
+
+## Pending before production
+
+- Exact GoDaddy hosting plan and supported Node.js runtime.
+- Stripe test/live secrets and webhook configuration.
+- Production sender for contact email.
+- Google Analytics measurement ID.
+- Privacy and cookie policy.
+- Final Spanish translation and bilingual editorial approval.
+- Written confirmation of image usage rights, especially for minors and medical contexts.
+
