@@ -128,13 +128,16 @@ export default function DesignSystemPage() {
         <SectionHeading eyebrow="04 · Components" inverted>
           Buttons and actions
         </SectionHeading>
+        <p className={styles.eyebrow}>
+          Manrope Light · 20 px · uppercase · 24 px inline / 14 px block · minimum 130 × 50 px
+        </p>
         <div className={styles.buttonMatrix}>
           <div className={styles.lightPreview}>
-            <span>Primary</span>
+            <span>Primary · default</span>
             <Button>Learn more</Button>
           </div>
           <div className={styles.lightPreview}>
-            <span>Secondary</span>
+            <span>Secondary · default</span>
             <Button variant="secondary">View project</Button>
           </div>
           <div>
@@ -146,14 +149,14 @@ export default function DesignSystemPage() {
             <Button variant="outlineLight">Partner with us</Button>
           </div>
           <div className={styles.lightPreview}>
-            <span>Disabled</span>
+            <span>Primary · disabled</span>
             <Button disabled>Unavailable</Button>
           </div>
-          <div>
-            <span>Link treatment</span>
-            <ButtonLink href="#forms" variant="light">
-              Continue
-            </ButtonLink>
+          <div className={styles.lightPreview}>
+            <span>Secondary · disabled</span>
+            <Button disabled variant="secondary">
+              Unavailable
+            </Button>
           </div>
         </div>
       </section>

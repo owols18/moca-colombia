@@ -18,6 +18,7 @@
 | D-012 | The layout is fluid from 320 px, uses full-bleed sections, and caps content at 1760 px for 2560 px screens. | Confirmed |
 | D-013 | Gold `#C59B50` is a supporting accent inferred from the approved Illustrator rules and borders; it is not a primary brand surface. | Provisional |
 | D-014 | The `/design-system` route is a no-index development reference and is not part of the public sitemap. | Confirmed |
+| D-015 | CTAs use Manrope Light at 20 px in uppercase, 24/14 px padding, a 130 x 50 px adaptive minimum, and the approved primary/secondary interaction colors. | Confirmed |
 
 ## Pending before production
 

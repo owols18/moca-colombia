@@ -316,7 +316,7 @@
   padding: var(--space-5);
 }
 
-.buttonMatrix span {
+.buttonMatrix > div > span {
   color: var(--color-sand);
   font-size: var(--text-caption);
   letter-spacing: 0.12em;
@@ -328,7 +328,7 @@
   border-color: rgb(247 241 231 / 0.65);
 }
 
-.buttonMatrix .lightPreview span {
+.buttonMatrix .lightPreview > span {
   color: var(--color-cacao);
 }
 

@@ -42,7 +42,7 @@ Gold is provisional because it was sampled from recurring visual rules in the ap
 - H1: Comfortaa SemiBold, fluid to 52 px.
 - H2: Comfortaa Medium, fluid to 42 px.
 - Body large: Manrope Light, fluid to 20 px.
-- Buttons: Manrope Regular, uppercase, fluid to 18 px.
+- CTAs: Manrope Light, 20 px, uppercase, 24 px horizontal padding, 14 px vertical padding and an adaptive minimum size of 130 x 50 px.
 - Captions: Manrope Light, 12 px, uppercase where the design calls for it.
 
 The source TTF variable fonts are self-hosted for this stage. WOFF2 subsetting remains a production optimization task once the final bilingual character set is stable.
@@ -59,7 +59,7 @@ The source TTF variable fonts are self-hosted for this stage. WOFF2 subsetting r
 
 ## Reusable components
 
-- `Button` and `ButtonLink`: primary, secondary, light, outline-on-dark, sizes and disabled state.
+- `Button` and `ButtonLink`: primary, secondary, light and outline-on-dark variants, with the approved default, hover, pressed and disabled colors.
 - `TextField` and `TextAreaField`: label, hint, error state and accessible description wiring.
 - `SectionHeading`: standard and inverted section titles.
 - `SiteHeaderPreview`: menu, logo and language affordance.
@@ -72,7 +72,7 @@ The page also records swatches, type scale, spacing scale, form controls, editor
 
 - Visible keyboard focus uses the supporting gold accent.
 - Form labels are persistent and error/hint text is programmatically associated.
-- Interactive controls maintain a minimum height of 40 px, with primary controls at 50 px or more.
+- CTA controls maintain an adaptive minimum size of 130 x 50 px and grow with longer translated labels.
 - Motion tokens respect `prefers-reduced-motion`.
 - Heading hierarchy and semantic page sections are preserved.
 - Mobile grids collapse to one column and horizontal section navigation remains scrollable.
