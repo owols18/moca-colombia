@@ -4,7 +4,7 @@
 }
 
 .card {
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-section);
   color: var(--color-ivory);
   margin-inline: auto;
   max-width: var(--content-max);
@@ -25,7 +25,8 @@
 }
 
 .content {
-  align-items: end;
+  align-content: center;
+  align-items: center;
   display: grid;
   gap: var(--space-7);
   grid-template-columns: minmax(0, 1fr) auto;
@@ -42,6 +43,7 @@
   line-height: 1.15;
   margin: 0 0 var(--space-5);
   text-transform: uppercase;
+  width: fit-content;
 }
 
 .content h2::after {
@@ -50,7 +52,7 @@
   display: block;
   height: 1.5px;
   margin-top: 16px;
-  width: min(16rem, 60vw);
+  width: 100%;
 }
 
 .body {

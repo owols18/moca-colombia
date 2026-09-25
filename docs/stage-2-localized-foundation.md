@@ -48,3 +48,6 @@ Cada página tiene un JSON por idioma dentro de `content/en` y `content/es`. `Ou
 - `Community Challenge` mantiene su imagen a ras del fondo arena y el texto en una capa seleccionable superior.
 - `Long-Term Vision` se centra y conserva una altura fluida con un máximo de 665 px.
 - Se retiraron el texto introductorio adicional del CTA y la frase adicional del footer.
+- Las líneas decorativas ahora heredan dinámicamente el ancho real de cada título.
+- El radio de los bloques de sección se controla con `--radius-section` en `src/app/globals.css`; su valor inicial es `1.875rem` (30 px).
+- El contenido y las acciones de `Change a Life Today` se centran verticalmente dentro del componente.
