@@ -23,7 +23,6 @@ export function SiteFooter({ locale, navigation }: SiteFooterProps) {
             width={264}
           />
         </Link>
-        <p className={styles.tagline}>{navigation.footer.tagline}</p>
         <p className={styles.copyright}>
           © {new Date().getFullYear()} {navigation.footer.copyright}
         </p>

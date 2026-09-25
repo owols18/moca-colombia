@@ -25,7 +25,6 @@ export function SharedCta({ content, locale }: SharedCtaProps) {
         <div className={styles.scrim} />
         <div className={styles.content}>
           <div>
-            <p className={styles.eyebrow}>{content.eyebrow}</p>
             <h2>{content.title}</h2>
             <p className={styles.body}>{content.body}</p>
           </div>

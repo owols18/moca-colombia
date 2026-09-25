@@ -39,7 +39,6 @@ export function CtaPreview() {
   return (
     <section className={styles.cta}>
       <div>
-        <p className={styles.kicker}>Together, change becomes possible.</p>
         <h2>Change a life today</h2>
         <p>
           Support education, healthcare, sustainable livelihoods, and long-term

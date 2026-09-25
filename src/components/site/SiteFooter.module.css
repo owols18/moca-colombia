@@ -18,13 +18,7 @@
   width: clamp(8.25rem, 12vw, 11rem);
 }
 
-.tagline {
-  font-family: var(--font-heading);
-  font-size: var(--text-body);
-  margin: var(--space-5) 0 var(--space-4);
-}
-
 .copyright {
   font-size: var(--text-caption);
-  margin: 0;
+  margin: var(--space-4) 0 0;
 }

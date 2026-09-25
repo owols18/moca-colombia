@@ -41,3 +41,10 @@ Cada página tiene un JSON por idioma dentro de `content/en` y `content/es`. `Ou
 - Aprobar traducciones finales.
 - Completar las páginas interiores restantes.
 - Configurar Stripe, formularios, privacidad y Analytics en sus fases previstas.
+
+## Ajustes posteriores a revisión visual
+
+- Los títulos de `Purpose`, `Community Challenge` y `Long-Term Vision` incorporan la línea dorada del Illustrator: 1.5 px en `#C89C52`, separada 16 px del título.
+- `Community Challenge` mantiene su imagen a ras del fondo arena y el texto en una capa seleccionable superior.
+- `Long-Term Vision` se centra y conserva una altura fluida con un máximo de 665 px.
+- Se retiraron el texto introductorio adicional del CTA y la frase adicional del footer.

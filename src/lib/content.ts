@@ -43,7 +43,6 @@ export type NavigationContent = {
   items: NavigationItem[];
   footer: {
     copyright: string;
-    tagline: string;
   };
 };
 
@@ -74,7 +73,6 @@ export type OurMissionContent = {
     theme: "white" | "sand" | "dark";
   }>;
   cta: {
-    eyebrow: string;
     title: string;
     body: string;
     image: string;

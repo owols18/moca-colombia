@@ -22,7 +22,6 @@
     { "id": "donate", "label": "Donar", "href": "/donate" }
   ],
   "footer": {
-    "copyright": "Moca Colombia. Todos los derechos reservados.",
-    "tagline": "Cambio liderado por la comunidad, creado para perdurar."
+    "copyright": "Moca Colombia. Todos los derechos reservados."
   }
 }

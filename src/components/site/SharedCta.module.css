@@ -8,7 +8,7 @@
   color: var(--color-ivory);
   margin-inline: auto;
   max-width: var(--content-max);
-  min-height: clamp(30rem, 48vw, 42rem);
+  min-height: clamp(24rem, 31.25vw, 37.5rem);
   overflow: hidden;
   position: relative;
 }
@@ -35,14 +35,6 @@
   z-index: 1;
 }
 
-.eyebrow {
-  color: var(--color-sand);
-  font-size: var(--text-caption);
-  letter-spacing: 0.14em;
-  margin: 0 0 var(--space-3);
-  text-transform: uppercase;
-}
-
 .content h2 {
   font-family: var(--font-heading);
   font-size: var(--text-h2);
@@ -53,12 +45,12 @@
 }
 
 .content h2::after {
-  background: var(--color-gold);
+  background: #c89c52;
   content: "";
   display: block;
-  height: 2px;
-  margin-top: var(--space-3);
-  width: min(10rem, 45vw);
+  height: 1.5px;
+  margin-top: 16px;
+  width: min(16rem, 60vw);
 }
 
 .body {

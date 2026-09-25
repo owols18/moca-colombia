@@ -21,6 +21,7 @@
 | D-015 | CTAs use Manrope Light at 20 px in uppercase, 24/14 px padding, a 130 x 50 px adaptive minimum, and the approved primary/secondary interaction colors. | Confirmed |
 | D-016 | The public header is transparent, positioned over each hero and kept above imagery with `z-index: 100`; only the open navigation receives a solid surface. | Confirmed |
 | D-017 | Public URLs use stable English slugs below `/en` and `/es`. Locale priority is saved choice, country, browser language, then English fallback. | Confirmed |
+| D-018 | Interior-page section titles use a 1.5 px `#C89C52` rule placed 16 px below the title; the Our Mission CTA and footer follow the approved Illustrator composition without additional taglines. | Confirmed |
 
 ## Pending before production
 

@@ -22,7 +22,6 @@
     { "id": "donate", "label": "Donate", "href": "/donate" }
   ],
   "footer": {
-    "copyright": "Moca Colombia. All rights reserved.",
-    "tagline": "Community-led change, built to last."
+    "copyright": "Moca Colombia. All rights reserved."
   }
 }

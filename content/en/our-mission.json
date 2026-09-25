@@ -10,7 +10,7 @@
     "description": "Learn how Moca Colombia supports education, healthcare, nutrition, and sustainable livelihoods in rural Colombia."
   },
   "hero": {
-    "title": "Our Mission",
+    "title": "OUR MISSION",
     "image": "/images/our-mission/hero.jpg",
     "alt": "Students walking along a rural path toward their school in La Argentina, Colombia"
   },
@@ -50,7 +50,6 @@
     }
   ],
   "cta": {
-    "eyebrow": "Together, change becomes possible.",
     "title": "Change a Life Today",
     "body": "Whether you donate, volunteer, or partner with us, your support helps strengthen education, healthcare, sustainable livelihoods, and long-term community development.",
     "image": "/images/shared/change-a-life-today.png",
