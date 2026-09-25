@@ -1,0 +1,7 @@
+{
+  "slug": "donate",
+  "status": "deferred",
+  "seo": { "title": "Donate", "description": "Support Moca Colombia's community-led education, nutrition, healthcare, and livelihood initiatives." },
+  "hero": { "eyebrow": "Support the mission", "title": "Donate" },
+  "notice": "Stripe integration and final donation content are intentionally reserved for the final interior page."
+}

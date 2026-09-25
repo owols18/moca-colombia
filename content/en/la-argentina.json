@@ -1,0 +1,7 @@
+{
+  "slug": "la-argentina",
+  "status": "content-ready",
+  "seo": { "title": "La Argentina", "description": "Discover the community, land, and opportunity at the heart of Moca Colombia's work." },
+  "hero": { "eyebrow": "Community", "title": "La Argentina" },
+  "notice": "The route and page-level JSON are ready for the next interior-page implementation."
+}

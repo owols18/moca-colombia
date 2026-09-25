@@ -1,0 +1,7 @@
+{
+  "slug": "about-us",
+  "status": "content-ready",
+  "seo": { "title": "About Us", "description": "Meet Moca Colombia and the people guiding its community-led mission." },
+  "hero": { "eyebrow": "Organization", "title": "About Us" },
+  "notice": "The route and page-level JSON are ready for the next interior-page implementation."
+}

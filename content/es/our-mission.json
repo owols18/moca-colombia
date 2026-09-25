@@ -1,0 +1,63 @@
+{
+  "_meta": {
+    "status": "implemented",
+    "translationStatus": "provisional",
+    "source": "Provisional Spanish translation of the supplied English text"
+  },
+  "slug": "our-mission",
+  "seo": {
+    "title": "Nuestra misión",
+    "description": "Conoce cómo Moca Colombia fortalece la educación, la salud, la nutrición y los medios de vida sostenibles en comunidades rurales de Colombia."
+  },
+  "hero": {
+    "title": "Nuestra misión",
+    "image": "/images/our-mission/hero.jpg",
+    "alt": "Estudiantes caminando por un sendero rural hacia su escuela en La Argentina, Colombia"
+  },
+  "sections": [
+    {
+      "id": "purpose",
+      "title": "Propósito",
+      "body": [
+        "MOCA Colombia trabaja para atender las necesidades fundamentales de comunidades pequeñas y desatendidas en Colombia y promover la independencia económica mediante la agricultura. A través de nuestras iniciativas agrícolas, acciones de incidencia y alianzas, elevamos la calidad de vida y fomentamos un entorno en el que la educación, la medicina y el empoderamiento económico generen un cambio duradero. Impulsamos todo el potencial de las comunidades agrícolas y de sus niños. Proporcionamos comidas nutritivas, apoyo académico y atención médica, y promovemos la prosperidad agrícola. Nuestros esfuerzos comienzan en La Argentina con MOCACAO, donde ayudamos a sustituir cultivos de bajo rendimiento por cacao de alta productividad. De forma gradual, ampliaremos nuestro trabajo a otras comunidades agrícolas desatendidas de Colombia."
+      ],
+      "image": "/images/our-mission/purpose.png",
+      "alt": "Una pareja de agricultores sonríe junto a cacao y productos agrícolas",
+      "layout": "copy-media",
+      "theme": "white"
+    },
+    {
+      "id": "community-challenge",
+      "title": "Desafío comunitario",
+      "body": [
+        "La Argentina es una comunidad rural remota donde el aislamiento geográfico limita el acceso a la educación, la atención médica, los alimentos nutritivos y oportunidades económicas estables. Muchas familias dependen de la agricultura a pequeña escala, mientras que los niños enfrentan barreras que pueden afectar su salud, aprendizaje y desarrollo futuro. Estos desafíos están profundamente conectados y requieren un enfoque integral que fortalezca a las familias, apoye la educación y cree caminos sostenibles hacia la independencia de la comunidad a largo plazo."
+      ],
+      "image": "/images/our-mission/community-challenge.png",
+      "alt": "Cultivos y tierras montañosas que rodean a La Argentina",
+      "layout": "media-copy",
+      "theme": "sand"
+    },
+    {
+      "id": "long-term-vision",
+      "title": "Visión a largo plazo",
+      "body": [
+        "Nuestra visión a largo plazo es una comunidad autosostenible donde las familias cuenten con los recursos, el conocimiento y las oportunidades para construir su propio futuro. Al fortalecer la educación, la salud, la nutrición y la agricultura sostenible, buscamos crear un progreso duradero que continúe a través de las generaciones."
+      ],
+      "image": "/images/our-mission/long-term-vision.jpg",
+      "alt": "Una niña dibujando sobre una mesa",
+      "layout": "image-overlay",
+      "theme": "dark"
+    }
+  ],
+  "cta": {
+    "eyebrow": "Juntos, el cambio es posible.",
+    "title": "Cambia una vida hoy",
+    "body": "Ya sea que dones, seas voluntario o te unas como aliado, tu apoyo ayuda a fortalecer la educación, la salud, los medios de vida sostenibles y el desarrollo comunitario a largo plazo.",
+    "image": "/images/shared/change-a-life-today.png",
+    "actions": [
+      { "label": "Donar ahora", "href": "/donate", "variant": "light" },
+      { "label": "Quiero ser voluntario", "href": "/get-involved#volunteer", "variant": "outlineLight" },
+      { "label": "Crear una alianza", "href": "/get-involved#partner", "variant": "outlineLight" }
+    ]
+  }
+}

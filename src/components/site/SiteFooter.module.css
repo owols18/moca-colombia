@@ -1,0 +1,30 @@
+.footer {
+  background: var(--color-muted);
+  color: var(--color-ivory);
+  padding: var(--space-8) var(--gutter);
+}
+
+.inner {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-inline: auto;
+  max-width: var(--content-max);
+  text-align: center;
+}
+
+.inner img {
+  height: auto;
+  width: clamp(8.25rem, 12vw, 11rem);
+}
+
+.tagline {
+  font-family: var(--font-heading);
+  font-size: var(--text-body);
+  margin: var(--space-5) 0 var(--space-4);
+}
+
+.copyright {
+  font-size: var(--text-caption);
+  margin: 0;
+}

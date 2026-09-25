@@ -1,0 +1,7 @@
+{
+  "slug": "projects/medical-care",
+  "status": "content-ready",
+  "seo": { "title": "Atención médica", "description": "Conexión de niños y familias vulnerables con servicios esenciales de salud." },
+  "hero": { "eyebrow": "Proyecto", "title": "Atención médica" },
+  "notice": "La ruta y el JSON de la página están listos para implementar el proyecto."
+}

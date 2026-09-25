@@ -1,0 +1,7 @@
+{
+  "slug": "projects/academic-support",
+  "status": "content-ready",
+  "seo": { "title": "Apoyo académico", "description": "Ampliación de recursos educativos y oportunidades para los estudiantes de La Argentina." },
+  "hero": { "eyebrow": "Proyecto", "title": "Apoyo académico" },
+  "notice": "La ruta y el JSON de la página están listos para implementar el proyecto."
+}

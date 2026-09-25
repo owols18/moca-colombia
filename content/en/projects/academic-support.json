@@ -1,0 +1,7 @@
+{
+  "slug": "projects/academic-support",
+  "status": "content-ready",
+  "seo": { "title": "Academic Support", "description": "Expanding educational resources and opportunities for students in La Argentina." },
+  "hero": { "eyebrow": "Project", "title": "Academic Support" },
+  "notice": "The route and page-level JSON are ready for project-page implementation."
+}

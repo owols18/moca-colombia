@@ -1,0 +1,7 @@
+{
+  "slug": "get-involved",
+  "status": "content-ready",
+  "seo": { "title": "Get Involved", "description": "Donate, volunteer, or partner with Moca Colombia to create lasting opportunities." },
+  "hero": { "eyebrow": "Take action", "title": "Get Involved" },
+  "notice": "The route and page-level JSON are ready for the next interior-page implementation."
+}

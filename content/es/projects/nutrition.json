@@ -1,0 +1,7 @@
+{
+  "slug": "projects/nutrition",
+  "status": "content-ready",
+  "seo": { "title": "Nutrición", "description": "Apoyo a comidas nutritivas y al acceso sostenible a alimentos para niños y familias." },
+  "hero": { "eyebrow": "Proyecto", "title": "Nutrición" },
+  "notice": "La ruta y el JSON de la página están listos para implementar el proyecto."
+}

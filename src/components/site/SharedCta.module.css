@@ -1,0 +1,87 @@
+.section {
+  background: var(--color-white);
+  padding: var(--section-space) var(--gutter);
+}
+
+.card {
+  border-radius: var(--radius-lg);
+  color: var(--color-ivory);
+  margin-inline: auto;
+  max-width: var(--content-max);
+  min-height: clamp(30rem, 48vw, 42rem);
+  overflow: hidden;
+  position: relative;
+}
+
+.image {
+  filter: grayscale(1);
+  object-fit: cover;
+}
+
+.scrim {
+  background: linear-gradient(90deg, rgb(16 25 22 / 0.86) 0%, rgb(16 25 22 / 0.58) 52%, rgb(16 25 22 / 0.34) 100%);
+  inset: 0;
+  position: absolute;
+}
+
+.content {
+  align-items: end;
+  display: grid;
+  gap: var(--space-7);
+  grid-template-columns: minmax(0, 1fr) auto;
+  min-height: inherit;
+  padding: clamp(2rem, 5vw, 5.5rem);
+  position: relative;
+  z-index: 1;
+}
+
+.eyebrow {
+  color: var(--color-sand);
+  font-size: var(--text-caption);
+  letter-spacing: 0.14em;
+  margin: 0 0 var(--space-3);
+  text-transform: uppercase;
+}
+
+.content h2 {
+  font-family: var(--font-heading);
+  font-size: var(--text-h2);
+  font-weight: 500;
+  line-height: 1.15;
+  margin: 0 0 var(--space-5);
+  text-transform: uppercase;
+}
+
+.content h2::after {
+  background: var(--color-gold);
+  content: "";
+  display: block;
+  height: 2px;
+  margin-top: var(--space-3);
+  width: min(10rem, 45vw);
+}
+
+.body {
+  font-size: var(--text-body);
+  font-weight: 300;
+  line-height: 1.7;
+  margin: 0;
+  max-width: 58ch;
+}
+
+.actions {
+  display: grid;
+  gap: var(--space-3);
+  min-width: min(100%, 17rem);
+}
+
+@media (max-width: 860px) {
+  .content {
+    align-items: start;
+    grid-template-columns: 1fr;
+  }
+
+  .actions {
+    width: min(100%, 22rem);
+  }
+}

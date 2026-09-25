@@ -1,0 +1,7 @@
+{
+  "slug": "donate",
+  "status": "deferred",
+  "seo": { "title": "Donar", "description": "Apoya las iniciativas comunitarias de educación, nutrición, salud y medios de vida de Moca Colombia." },
+  "hero": { "eyebrow": "Apoya la misión", "title": "Donar" },
+  "notice": "La integración con Stripe y el contenido final de donaciones se reservan para la última página interior."
+}

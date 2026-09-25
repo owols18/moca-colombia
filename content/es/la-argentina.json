@@ -1,0 +1,7 @@
+{
+  "slug": "la-argentina",
+  "status": "content-ready",
+  "seo": { "title": "La Argentina", "description": "Conoce la comunidad, la tierra y las oportunidades que están en el centro del trabajo de Moca Colombia." },
+  "hero": { "eyebrow": "Comunidad", "title": "La Argentina" },
+  "notice": "La ruta y el JSON de la página están listos para la siguiente implementación interior."
+}

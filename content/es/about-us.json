@@ -1,0 +1,7 @@
+{
+  "slug": "about-us",
+  "status": "content-ready",
+  "seo": { "title": "Sobre nosotros", "description": "Conoce a Moca Colombia y a las personas que orientan su misión comunitaria." },
+  "hero": { "eyebrow": "Organización", "title": "Sobre nosotros" },
+  "notice": "La ruta y el JSON de la página están listos para la siguiente implementación interior."
+}

@@ -1,0 +1,28 @@
+{
+  "menuOpen": "Abrir navegación",
+  "menuClose": "Cerrar navegación",
+  "languageLabel": "Elegir idioma",
+  "items": [
+    { "id": "mission", "label": "Nuestra misión", "href": "/our-mission" },
+    { "id": "community", "label": "La Argentina", "href": "/la-argentina" },
+    {
+      "id": "projects",
+      "label": "Proyectos",
+      "children": [
+        { "label": "MOCACAO", "href": "/projects/mocacao" },
+        { "label": "Nutrición", "href": "/projects/nutrition" },
+        { "label": "Apoyo académico", "href": "/projects/academic-support" },
+        { "label": "Atención médica", "href": "/projects/medical-care" }
+      ]
+    },
+    { "id": "impact", "label": "Impacto", "href": "/impact" },
+    { "id": "about", "label": "Sobre nosotros", "href": "/about-us" },
+    { "id": "involved", "label": "Participa", "href": "/get-involved" },
+    { "id": "contact", "label": "Contacto", "href": "/contact" },
+    { "id": "donate", "label": "Donar", "href": "/donate" }
+  ],
+  "footer": {
+    "copyright": "Moca Colombia. Todos los derechos reservados.",
+    "tagline": "Cambio liderado por la comunidad, creado para perdurar."
+  }
+}

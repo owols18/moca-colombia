@@ -19,6 +19,8 @@
 | D-013 | Gold `#C59B50` is a supporting accent inferred from the approved Illustrator rules and borders; it is not a primary brand surface. | Provisional |
 | D-014 | The `/design-system` route is a no-index development reference and is not part of the public sitemap. | Confirmed |
 | D-015 | CTAs use Manrope Light at 20 px in uppercase, 24/14 px padding, a 130 x 50 px adaptive minimum, and the approved primary/secondary interaction colors. | Confirmed |
+| D-016 | The public header is transparent, positioned over each hero and kept above imagery with `z-index: 100`; only the open navigation receives a solid surface. | Confirmed |
+| D-017 | Public URLs use stable English slugs below `/en` and `/es`. Locale priority is saved choice, country, browser language, then English fallback. | Confirmed |
 
 ## Pending before production
 

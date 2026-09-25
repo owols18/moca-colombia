@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 
-import { comfortaa, manrope } from "./fonts";
-import "./globals.css";
+import { comfortaa, manrope } from "../fonts";
+import "../globals.css";
 
 export const metadata: Metadata = {
   title: {

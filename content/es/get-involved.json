@@ -1,0 +1,7 @@
+{
+  "slug": "get-involved",
+  "status": "content-ready",
+  "seo": { "title": "Participa", "description": "Dona, sé voluntario o crea una alianza con Moca Colombia para generar oportunidades duraderas." },
+  "hero": { "eyebrow": "Actúa", "title": "Participa" },
+  "notice": "La ruta y el JSON de la página están listos para la siguiente implementación interior."
+}

@@ -1,0 +1,171 @@
+.hero {
+  color: var(--color-ivory);
+  min-height: 100svh;
+  overflow: hidden;
+  position: relative;
+}
+
+.heroImage,
+.visionImage {
+  object-fit: cover;
+}
+
+.heroScrim {
+  background: linear-gradient(180deg, rgb(16 25 22 / 0.42) 0%, rgb(16 25 22 / 0.08) 48%, rgb(16 25 22 / 0.72) 100%);
+  inset: 0;
+  position: absolute;
+}
+
+.heroInner {
+  align-items: end;
+  display: flex;
+  margin-inline: auto;
+  min-height: 100svh;
+  max-width: var(--content-max);
+  padding: clamp(9rem, 16vh, 13rem) 0 clamp(3.5rem, 9vh, 7rem);
+  position: relative;
+  width: calc(100% - (2 * var(--gutter)));
+  z-index: 1;
+}
+
+.hero h1 {
+  font-family: var(--font-heading);
+  font-size: var(--text-display);
+  font-weight: 700;
+  line-height: 1.08;
+  margin: 0;
+  text-shadow: 0 3px 22px rgb(16 25 22 / 0.28);
+}
+
+.section {
+  background: var(--color-white);
+  padding: var(--section-space) var(--gutter);
+}
+
+.sandSection {
+  padding-top: 0;
+}
+
+.split {
+  align-items: center;
+  display: grid;
+  gap: clamp(2.5rem, 6vw, 8rem);
+  grid-template-columns: minmax(0, 1fr) minmax(20rem, 0.88fr);
+  margin-inline: auto;
+  max-width: var(--content-max);
+}
+
+.mediaFirst .copy {
+  order: 2;
+}
+
+.mediaFirst .media {
+  order: 1;
+}
+
+.sandCard {
+  background: var(--color-sand);
+  border-radius: var(--radius-lg);
+  padding: clamp(1.25rem, 3.5vw, 4rem);
+}
+
+.copy h2,
+.visionContent h2 {
+  font-family: var(--font-heading);
+  font-size: var(--text-h1);
+  font-weight: 600;
+  line-height: 1.14;
+  margin: 0 0 var(--space-6);
+  text-transform: uppercase;
+}
+
+.copy h2 {
+  color: var(--color-forest);
+}
+
+.copy p,
+.visionContent p {
+  font-size: var(--text-body-large);
+  font-weight: 300;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.copy p + p,
+.visionContent p + p {
+  margin-top: var(--space-4);
+}
+
+.media {
+  aspect-ratio: 1;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  position: relative;
+}
+
+.media img {
+  object-fit: cover;
+}
+
+.vision {
+  align-items: end;
+  color: var(--color-ivory);
+  display: flex;
+  min-height: clamp(34rem, 58vw, 62rem);
+  overflow: hidden;
+  padding: var(--section-space) var(--gutter);
+  position: relative;
+}
+
+.visionScrim {
+  background: linear-gradient(90deg, rgb(16 25 22 / 0.8) 0%, rgb(16 25 22 / 0.43) 52%, rgb(16 25 22 / 0.12) 100%);
+  inset: 0;
+  position: absolute;
+}
+
+.visionContent {
+  margin-inline: auto;
+  max-width: var(--content-max);
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+
+.visionContent h2,
+.visionContent p {
+  max-width: 24ch;
+}
+
+.visionContent p {
+  max-width: 56ch;
+}
+
+@media (max-width: 800px) {
+  .split {
+    gap: var(--space-7);
+    grid-template-columns: 1fr;
+  }
+
+  .mediaFirst .copy,
+  .mediaFirst .media {
+    order: initial;
+  }
+
+  .mediaFirst .media {
+    order: 2;
+  }
+
+  .sandCard {
+    margin-inline: calc(-1 * var(--gutter));
+    border-radius: 0;
+    padding: var(--space-7) var(--gutter);
+  }
+
+  .vision {
+    min-height: 42rem;
+  }
+
+  .visionImage {
+    object-position: 65% center;
+  }
+}

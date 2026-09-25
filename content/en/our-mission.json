@@ -1,0 +1,63 @@
+{
+  "_meta": {
+    "status": "implemented",
+    "translationStatus": "source-copy",
+    "source": "Approved Illustrator and supplied English text"
+  },
+  "slug": "our-mission",
+  "seo": {
+    "title": "Our Mission",
+    "description": "Learn how Moca Colombia supports education, healthcare, nutrition, and sustainable livelihoods in rural Colombia."
+  },
+  "hero": {
+    "title": "Our Mission",
+    "image": "/images/our-mission/hero.jpg",
+    "alt": "Students walking along a rural path toward their school in La Argentina, Colombia"
+  },
+  "sections": [
+    {
+      "id": "purpose",
+      "title": "Purpose",
+      "body": [
+        "MOCA Colombia strives to address the fundamental needs of small, underserved communities in Colombia and promote economic independence through agriculture. Through our agricultural initiatives, advocacies, and partnerships, we elevate standards of living and foster an environment where education, medicine, and economic empowerment create lasting change. We unlock the full potential of our farming communities and their children. We provide nutritious meals, academic support, and medical care and promote agricultural prosperity. Our efforts begin in La Argentina with MOCACAO, where we are helping to convert farmers' underperforming crops with high-yielding cacao. Steadily, we will grow to include other underserved farming communities of Colombia."
+      ],
+      "image": "/images/our-mission/purpose.png",
+      "alt": "A farming couple smiling together beside cacao and agricultural produce",
+      "layout": "copy-media",
+      "theme": "white"
+    },
+    {
+      "id": "community-challenge",
+      "title": "Community Challenge",
+      "body": [
+        "La Argentina is a remote rural community where geographic isolation limits access to education, healthcare, nutritious food, and stable economic opportunities. Many families depend on small-scale agriculture, while children face barriers that can affect their health, learning, and future development. These challenges are deeply connected, requiring an integrated approach that strengthens families, supports education, and creates sustainable paths toward long-term community independence."
+      ],
+      "image": "/images/our-mission/community-challenge.png",
+      "alt": "Mountainous farmland and cacao crops surrounding La Argentina",
+      "layout": "media-copy",
+      "theme": "sand"
+    },
+    {
+      "id": "long-term-vision",
+      "title": "Long-Term Vision",
+      "body": [
+        "Our long-term vision is a self-sustaining community where families have the resources, knowledge, and opportunities to shape their own future. By strengthening education, health, nutrition, and sustainable agriculture, we aim to create lasting progress that can continue across generations."
+      ],
+      "image": "/images/our-mission/long-term-vision.jpg",
+      "alt": "A child drawing at a table",
+      "layout": "image-overlay",
+      "theme": "dark"
+    }
+  ],
+  "cta": {
+    "eyebrow": "Together, change becomes possible.",
+    "title": "Change a Life Today",
+    "body": "Whether you donate, volunteer, or partner with us, your support helps strengthen education, healthcare, sustainable livelihoods, and long-term community development.",
+    "image": "/images/shared/change-a-life-today.png",
+    "actions": [
+      { "label": "Donate Now", "href": "/donate", "variant": "light" },
+      { "label": "Volunteer With Us", "href": "/get-involved#volunteer", "variant": "outlineLight" },
+      { "label": "Let's Partner", "href": "/get-involved#partner", "variant": "outlineLight" }
+    ]
+  }
+}
