@@ -1,7 +1,81 @@
 {
+  "_meta": {
+    "status": "implemented",
+    "translationStatus": "provisional",
+    "source": "Traducción provisional al español del texto en inglés suministrado"
+  },
   "slug": "projects/mocacao",
-  "status": "content-ready",
-  "seo": { "title": "MOCACAO", "description": "Transformar el cacao en oportunidades sostenibles para las familias agricultoras de La Argentina." },
-  "hero": { "eyebrow": "Proyecto", "title": "MOCACAO" },
-  "notice": "La ruta y el JSON de la página están listos para implementar el proyecto."
+  "seo": {
+    "title": "MOCACAO",
+    "description": "Descubre cómo MOCACAO convierte el cacao colombiano de calidad mundial en oportunidades sostenibles para las familias de La Argentina."
+  },
+  "hero": {
+    "title": "MOCACAO",
+    "image": "/images/projects/mocacao/hero.jpg",
+    "alt": "Manos sosteniendo una mazorca de cacao abierta"
+  },
+  "sections": {
+    "opportunity": {
+      "id": "transformar-cacao-en-oportunidad",
+      "title": "Transformar el cacao en oportunidad",
+      "body": [
+        "Nuestra iniciativa principal es ayudar a La Argentina a convertirse en una comunidad próspera y económicamente autosostenible, capaz de educar a sus jóvenes y ofrecer los servicios de salud necesarios para asegurar un futuro más prometedor.",
+        "Para lograrlo, ayudaremos a la comunidad a ampliar y aprovechar su capacidad única para producir granos de cacao, un producto que ha mostrado un crecimiento de valor sin precedentes desde 2024, superando incluso a Bitcoin y al mercado bursátil de Estados Unidos.",
+        "Esto implicará proporcionar los medios para aumentar la producción de cacao y llevar el producto al mercado de la manera más ética, eficiente y beneficiosa posible."
+      ],
+      "image": "/images/projects/mocacao/opportunity.png",
+      "alt": "Mazorcas maduras de cacao creciendo en un árbol"
+    },
+    "whyCacao": {
+      "id": "por-que-cacao",
+      "title": "¿Por qué cacao?",
+      "body": [
+        "En 2024, Colombia ocupó el décimo lugar en la producción mundial de cacao, con más de 59.000 toneladas métricas anuales. Con aproximadamente 16,7 millones de hectáreas aptas para el cultivo de cacao, el país está bien posicionado para ampliar su presencia en el mercado internacional. Desde 2011, las exportaciones de cacao han aumentado más de un 400 %, reflejando una fuerte demanda mundial y rentabilidad. Cabe destacar que el 95 % del cacao colombiano está clasificado como fino o de aroma por la Organización Internacional del Cacao, lo que confirma su calidad de nivel mundial. A medida que aumenta la demanda de cacao prémium, comunidades como La Argentina están en una posición única para beneficiarse. Al invertir en cacao, no solo cultivamos un producto; cultivamos un futuro sostenible para las familias y los niños de La Argentina."
+      ],
+      "commitmentsIntro": "En MOCA Colombia aprovechamos esta oportunidad para ayudar a La Argentina a convertirse en una comunidad productora de cacao autosostenible. Mediante alianzas estratégicas, educación e inversión directa, buscamos:",
+      "commitments": [
+        "Aumentar la producción local de cacao proporcionando a los agricultores las herramientas, la capacitación y los recursos necesarios para cultivar cacao de alta calidad.",
+        "Conectar a los agricultores con mercados éticos para garantizar que reciban precios justos por sus cosechas y fortalecer su autonomía económica.",
+        "Crear un cambio duradero mediante prácticas agrícolas sostenibles que aseguren el futuro de la comunidad durante generaciones."
+      ],
+      "statistic": "El 95 % del cacao colombiano está clasificado como cacao fino o de aroma, lo que lo convierte en uno de los productos de mayor calidad del mundo.",
+      "image": "/images/projects/mocacao/why-cacao.png",
+      "alt": "Un productor sostiene dos mazorcas de cacao cosechadas"
+    }
+  },
+  "otherProjects": {
+    "title": "Otros proyectos",
+    "previousLabel": "Mostrar el proyecto anterior",
+    "nextLabel": "Mostrar el proyecto siguiente",
+    "items": [
+      {
+        "title": "Atención médica",
+        "href": "/projects/medical-care",
+        "image": "/images/projects/cards/medical-care.png",
+        "alt": "Niños que reciben apoyo a través de la Fundación Clínica Noel"
+      },
+      {
+        "title": "Nutrición",
+        "href": "/projects/nutrition",
+        "image": "/images/projects/cards/nutrition.png",
+        "alt": "Productos frescos exhibidos en un mercado colombiano"
+      },
+      {
+        "title": "Apoyo académico",
+        "href": "/projects/academic-support",
+        "image": "/images/projects/cards/academic-support.png",
+        "alt": "Una estudiante dibujando en un salón de clases"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Cambia una vida hoy",
+    "body": "Ya sea que dones, seas voluntario o te unas como aliado, tu apoyo ayuda a fortalecer la educación, la salud, los medios de vida sostenibles y el desarrollo comunitario a largo plazo.",
+    "image": "/images/shared/change-a-life-today.png",
+    "actions": [
+      { "label": "Donar ahora", "href": "/donate", "variant": "light" },
+      { "label": "Quiero ser voluntario", "href": "/get-involved#volunteer", "variant": "outlineLight" },
+      { "label": "Crear una alianza", "href": "/get-involved#partner", "variant": "outlineLight" }
+    ]
+  }
 }

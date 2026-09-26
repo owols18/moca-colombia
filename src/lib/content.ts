@@ -65,6 +65,18 @@ export type SharedCtaContent = {
   }>;
 };
 
+export type OtherProjectsContent = {
+  title: string;
+  previousLabel: string;
+  nextLabel: string;
+  items: Array<{
+    title: string;
+    href: string;
+    image: string;
+    alt: string;
+  }>;
+};
+
 export type OurMissionContent = {
   _meta: {
     status: string;
@@ -124,6 +136,38 @@ export type LaArgentinaContent = {
   cta: SharedCtaContent;
 };
 
+export type MocacaoContent = {
+  _meta: {
+    status: string;
+    translationStatus: string;
+    source: string;
+  };
+  slug: string;
+  seo: { title: string; description: string };
+  hero: { title: string; image: string; alt: string };
+  sections: {
+    opportunity: {
+      id: string;
+      title: string;
+      body: string[];
+      image: string;
+      alt: string;
+    };
+    whyCacao: {
+      id: string;
+      title: string;
+      body: string[];
+      commitmentsIntro: string;
+      commitments: string[];
+      statistic: string;
+      image: string;
+      alt: string;
+    };
+  };
+  otherProjects: OtherProjectsContent;
+  cta: SharedCtaContent;
+};
+
 type HomeContent = {
   slug: string;
   status: string;
@@ -147,6 +191,11 @@ const laArgentinaByLocale = {
   es: laArgentinaEs,
 } as Record<Locale, LaArgentinaContent>;
 
+const mocacaoByLocale = {
+  en: mocacaoEn,
+  es: mocacaoEs,
+} as Record<Locale, MocacaoContent>;
+
 const homeByLocale = {
   en: homeEn,
   es: homeEs,
@@ -154,7 +203,6 @@ const homeByLocale = {
 
 const pagesByLocale = {
   en: {
-    "projects/mocacao": mocacaoEn,
     "projects/nutrition": nutritionEn,
     "projects/academic-support": academicSupportEn,
     "projects/medical-care": medicalCareEn,
@@ -165,7 +213,6 @@ const pagesByLocale = {
     donate: donateEn,
   },
   es: {
-    "projects/mocacao": mocacaoEs,
     "projects/nutrition": nutritionEs,
     "projects/academic-support": academicSupportEs,
     "projects/medical-care": medicalCareEs,
@@ -187,6 +234,10 @@ export function getOurMission(locale: Locale): OurMissionContent {
 
 export function getLaArgentina(locale: Locale): LaArgentinaContent {
   return laArgentinaByLocale[locale];
+}
+
+export function getMocacao(locale: Locale): MocacaoContent {
+  return mocacaoByLocale[locale];
 }
 
 export function getHome(locale: Locale): HomeContent {

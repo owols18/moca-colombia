@@ -1,7 +1,81 @@
 {
+  "_meta": {
+    "status": "implemented",
+    "translationStatus": "source-copy",
+    "source": "Approved Illustrator and supplied English text"
+  },
   "slug": "projects/mocacao",
-  "status": "content-ready",
-  "seo": { "title": "MOCACAO", "description": "Turning cacao into sustainable opportunity for farming families in La Argentina." },
-  "hero": { "eyebrow": "Project", "title": "MOCACAO" },
-  "notice": "The route and page-level JSON are ready for project-page implementation."
+  "seo": {
+    "title": "MOCACAO",
+    "description": "Discover how MOCACAO turns Colombia's world-class cacao into sustainable opportunity for families in La Argentina."
+  },
+  "hero": {
+    "title": "MOCACAO",
+    "image": "/images/projects/mocacao/hero.jpg",
+    "alt": "Hands holding an opened cacao pod"
+  },
+  "sections": {
+    "opportunity": {
+      "id": "turning-cacao-into-opportunity",
+      "title": "Turning Cacao Into Opportunity",
+      "body": [
+        "Our main initiative is to help La Argentina become a thriving and economically self-sustaining community, able to educate its youth and provide the health services necessary to ensure a brighter future.",
+        "To do so, we will help the community expand and capitalize on its unique ability to produce cacao beans, a product that has shown unprecedented value growth since 2024, outstripping even Bitcoin and the US stock market.",
+        "This will entail providing the means to increase cacao bean production and bring the product to market in the most ethical, efficient, and beneficial way."
+      ],
+      "image": "/images/projects/mocacao/opportunity.png",
+      "alt": "Ripe cacao pods growing on a tree"
+    },
+    "whyCacao": {
+      "id": "why-cacao",
+      "title": "Why Cacao?",
+      "body": [
+        "As of 2024, Colombia ranks 10th in global cocoa production, yielding over 59,000 metric tons annually. With an estimated 16.7 million hectares of land suitable for cacao cultivation, the country is well positioned to expand its presence in the international market. Since 2011, cacao exports have surged by more than 400%, reflecting strong global demand and profitability. Notably, 95% of Colombia's cacao is classified as fine or flavor by the International Cocoa Organization, underscoring its world-class quality. As demand for premium cacao continues to rise, communities like La Argentina are uniquely poised to benefit. By investing in cacao, we're not just growing a crop; we're cultivating a sustainable future for La Argentina's families and children."
+      ],
+      "commitmentsIntro": "At MOCA Colombia, we are harnessing this opportunity to help La Argentina become a self-sustaining cacao-producing community. Through strategic partnerships, education, and direct investment, we aim to:",
+      "commitments": [
+        "Increase local cacao production by providing farmers with the tools, training, and resources needed to grow high-quality cacao.",
+        "Connect farmers to ethical markets to ensure they receive fair prices for their crops, empowering them economically.",
+        "Create lasting change by integrating sustainable farming practices that secure the community's future for generations."
+      ],
+      "statistic": "95% of Colombian cacao is classified as fine or flavor cocoa, making it one of the highest-quality products in the world.",
+      "image": "/images/projects/mocacao/why-cacao.png",
+      "alt": "A cacao producer holding two harvested cacao pods"
+    }
+  },
+  "otherProjects": {
+    "title": "Other Projects",
+    "previousLabel": "Show previous project",
+    "nextLabel": "Show next project",
+    "items": [
+      {
+        "title": "Medical Care",
+        "href": "/projects/medical-care",
+        "image": "/images/projects/cards/medical-care.png",
+        "alt": "Children receiving support through Fundación Clínica Noel"
+      },
+      {
+        "title": "Nutrition",
+        "href": "/projects/nutrition",
+        "image": "/images/projects/cards/nutrition.png",
+        "alt": "Fresh produce displayed at a Colombian market"
+      },
+      {
+        "title": "Academic Support",
+        "href": "/projects/academic-support",
+        "image": "/images/projects/cards/academic-support.png",
+        "alt": "A student drawing in a classroom"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Change a Life Today",
+    "body": "Whether you donate, volunteer, or partner with us, your support helps strengthen education, healthcare, sustainable livelihoods, and long-term community development.",
+    "image": "/images/shared/change-a-life-today.png",
+    "actions": [
+      { "label": "Donate Now", "href": "/donate", "variant": "light" },
+      { "label": "Volunteer With Us", "href": "/get-involved#volunteer", "variant": "outlineLight" },
+      { "label": "Let's Partner", "href": "/get-involved#partner", "variant": "outlineLight" }
+    ]
+  }
 }

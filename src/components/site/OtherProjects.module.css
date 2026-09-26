@@ -1,0 +1,117 @@
+.section {
+  background: var(--color-ivory);
+  padding: 0 var(--gutter) var(--section-space);
+}
+
+.inner {
+  margin-inline: auto;
+  max-width: var(--content-max);
+}
+
+.divider {
+  background: #c89c52;
+  height: 1.5px;
+  margin-bottom: clamp(3.5rem, 6vw, 6rem);
+  width: 100%;
+}
+
+.inner h2 {
+  color: var(--color-forest);
+  font-family: var(--font-heading);
+  font-size: var(--text-h2);
+  font-weight: 500;
+  line-height: 1.2;
+  margin: 0 0 clamp(2.5rem, 5vw, 5rem);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.track {
+  display: grid;
+  gap: clamp(1.5rem, 4vw, 6rem);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.card {
+  color: var(--color-muted);
+  display: grid;
+  gap: var(--space-5);
+  text-decoration: none;
+}
+
+.media {
+  aspect-ratio: 495 / 670;
+  border: 2px solid #c89c52;
+  border-radius: var(--radius-section);
+  display: block;
+  overflow: hidden;
+  position: relative;
+}
+
+.media img {
+  object-fit: cover;
+  transition: transform var(--duration-slow) var(--ease-standard);
+}
+
+.card:hover .media img {
+  transform: scale(1.025);
+}
+
+.cardTitle {
+  font-size: var(--text-body-large);
+  font-weight: 300;
+  line-height: 1.35;
+  text-align: center;
+  text-transform: uppercase;
+  transition: color var(--duration-fast), font-weight var(--duration-fast);
+}
+
+.activeCard {
+  color: var(--color-ink);
+}
+
+.activeCard .cardTitle {
+  font-weight: 600;
+}
+
+.controls {
+  display: flex;
+  gap: var(--space-4);
+  justify-content: center;
+  margin-top: var(--space-6);
+}
+
+.controls button {
+  align-items: center;
+  background: transparent;
+  border: 1.5px solid #c89c52;
+  border-radius: 50%;
+  color: #c89c52;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 1.35rem;
+  height: 2.75rem;
+  justify-content: center;
+  transition: background var(--duration-fast), color var(--duration-fast);
+  width: 2.75rem;
+}
+
+.controls button:hover {
+  background: #c89c52;
+  color: var(--color-ivory);
+}
+
+@media (max-width: 700px) {
+  .track {
+    display: block;
+  }
+
+  .card:not(.activeCard) {
+    display: none;
+  }
+
+  .card {
+    margin-inline: auto;
+    max-width: 22rem;
+  }
+}
