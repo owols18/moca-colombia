@@ -1,7 +1,60 @@
 {
+  "_meta": {
+    "status": "implemented",
+    "translationStatus": "provisional",
+    "source": "Traducción provisional al español del texto en inglés suministrado"
+  },
   "slug": "la-argentina",
-  "status": "content-ready",
-  "seo": { "title": "La Argentina", "description": "Conoce la comunidad, la tierra y las oportunidades que están en el centro del trabajo de Moca Colombia." },
-  "hero": { "eyebrow": "Comunidad", "title": "La Argentina" },
-  "notice": "La ruta y el JSON de la página están listos para la siguiente implementación interior."
+  "seo": {
+    "title": "La Argentina",
+    "description": "Conoce La Argentina, la comunidad rural colombiana que está en el centro del trabajo de Moca Colombia."
+  },
+  "hero": {
+    "title": "LA ARGENTINA",
+    "intro": "Donde la comunidad, la tierra y las oportunidades",
+    "statement": "construyen un futuro más sólido",
+    "emphasis": "PARA TODOS",
+    "image": "/images/la-argentina/background.jpg",
+    "alt": "La Argentina entre montañas verdes y cultivos de cacao en Colombia"
+  },
+  "sections": {
+    "communityContext": {
+      "id": "contexto-de-la-comunidad",
+      "title": "Contexto de la comunidad",
+      "body": [
+        "MOCA Colombia trabaja para atender las necesidades fundamentales de comunidades pequeñas y desatendidas en Colombia y promover la independencia económica mediante la agricultura. A través de nuestras iniciativas agrícolas, acciones de incidencia y alianzas, elevamos la calidad de vida y fomentamos un entorno en el que la educación, la medicina y el empoderamiento económico generen un cambio duradero.",
+        "Impulsamos todo el potencial de las comunidades agrícolas y de sus niños. Proporcionamos comidas nutritivas, apoyo académico y atención médica, y promovemos la prosperidad agrícola. Nuestros esfuerzos comienzan en La Argentina con MOCACAO, donde ayudamos a sustituir cultivos de bajo rendimiento por cacao de alta productividad. De forma gradual, ampliaremos nuestro trabajo a otras comunidades agrícolas desatendidas de Colombia."
+      ],
+      "image": "/images/la-argentina/community.png",
+      "alt": "Trabajadoras agrícolas de la comunidad de La Argentina"
+    },
+    "location": {
+      "id": "ubicacion-y-contexto",
+      "title": "Ubicación y contexto",
+      "body": [
+        "Ubicada en una remota región montañosa de Colombia, La Argentina está rodeada de una gran biodiversidad. Su aislamiento geográfico dificulta el acceso a la educación, la atención médica, los mercados y otros servicios. La agricultura sigue siendo fundamental para los medios de vida locales, en particular la producción familiar y a pequeña escala.",
+        "Durante generaciones, sus habitantes han construido relaciones sólidas con la tierra y entre sí. Esta historia constituye la base de un desarrollo sostenible liderado por la comunidad."
+      ]
+    },
+    "whyItMatters": {
+      "id": "por-que-es-importante",
+      "title": "Por qué es importante",
+      "body": [
+        "Apoyar a La Argentina significa ampliar las oportunidades sin perder su identidad ni sus tradiciones.",
+        "La inversión en educación, salud, nutrición y agricultura fortalece a toda la comunidad.",
+        "Cuando las familias acceden a recursos prácticos e ingresos sostenibles, sus hijos heredan mayores posibilidades.",
+        "El cambio duradero comienza escuchando, colaborando y construyendo soluciones juntos."
+      ]
+    }
+  },
+  "cta": {
+    "title": "Cambia una vida hoy",
+    "body": "Ya sea que dones, seas voluntario o te unas como aliado, tu apoyo ayuda a fortalecer la educación, la salud, los medios de vida sostenibles y el desarrollo comunitario a largo plazo.",
+    "image": "/images/shared/change-a-life-today.png",
+    "actions": [
+      { "label": "Donar ahora", "href": "/donate", "variant": "light" },
+      { "label": "Quiero ser voluntario", "href": "/get-involved#volunteer", "variant": "outlineLight" },
+      { "label": "Crear una alianza", "href": "/get-involved#partner", "variant": "outlineLight" }
+    ]
+  }
 }

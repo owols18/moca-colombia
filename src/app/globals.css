@@ -55,7 +55,7 @@
   --radius-lg: 1.875rem;
   --radius-xl: 2.5rem;
   --radius-pill: 999px;
-  --radius-section: 1.875rem; /* 30px: section cards such as Community and CTA */
+  --radius-section: 3rem; /* 48px: rounded editorial sections and CTA cards */
   --shadow-soft: 0 24px 70px rgb(29 41 37 / 0.12);
   --shadow-focus: 0 0 0 4px rgb(197 155 80 / 0.35);
 

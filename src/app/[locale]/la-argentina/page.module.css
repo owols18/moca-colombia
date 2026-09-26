@@ -1,0 +1,286 @@
+.narrative {
+  color: var(--color-ivory);
+  isolation: isolate;
+  overflow: hidden;
+  position: relative;
+}
+
+.backgroundImage {
+  object-fit: cover;
+  object-position: center top;
+  pointer-events: none;
+  user-select: none;
+  z-index: -2;
+}
+
+.backgroundScrim {
+  background:
+    linear-gradient(180deg, rgb(16 25 22 / 0.18) 0%, rgb(16 25 22 / 0.08) 30%, rgb(16 25 22 / 0.46) 63%, rgb(16 25 22 / 0.66) 100%),
+    linear-gradient(90deg, rgb(16 25 22 / 0.2), transparent 48%, rgb(16 25 22 / 0.08));
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+  z-index: -1;
+}
+
+.hero {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  min-height: 100svh;
+  padding: clamp(8.5rem, 15vh, 12rem) var(--gutter) clamp(3.5rem, 8vh, 6rem);
+  position: relative;
+}
+
+.heroStatement {
+  align-self: center;
+  font-family: var(--font-heading);
+  font-size: clamp(1.125rem, 1.15vw, 1.5rem);
+  font-weight: 500;
+  justify-self: center;
+  letter-spacing: 0.015em;
+  line-height: 1.5;
+  margin: 0;
+  max-width: 42rem;
+  text-align: center;
+  text-shadow: 0 2px 20px rgb(16 25 22 / 0.8);
+}
+
+.heroStatement span {
+  display: block;
+}
+
+.heroStatement strong {
+  font-weight: 700;
+}
+
+.heroInner {
+  margin-inline: auto;
+  max-width: var(--content-max);
+  width: 100%;
+}
+
+.hero h1 {
+  font-family: var(--font-heading);
+  font-size: var(--text-display);
+  font-weight: 700;
+  line-height: 1.05;
+  margin: 0;
+  text-shadow: 0 3px 24px rgb(16 25 22 / 0.44);
+}
+
+.context {
+  align-items: center;
+  display: flex;
+  min-height: clamp(44rem, 42vw, 60rem);
+}
+
+.contextBand {
+  background: rgb(247 241 231 / 0.9);
+  color: var(--color-ink);
+  width: 100%;
+}
+
+.contextInner {
+  align-items: center;
+  display: grid;
+  gap: clamp(3rem, 7vw, 9rem);
+  grid-template-columns: minmax(0, 0.92fr) minmax(25rem, 1.08fr);
+  margin-inline: auto;
+  max-width: var(--content-max);
+  padding: clamp(3rem, 5vw, 6rem) 0;
+  width: calc(100% - (2 * var(--gutter)));
+}
+
+.contextCopy,
+.locationCopy,
+.whyCopy {
+  position: relative;
+  user-select: text;
+  z-index: 2;
+}
+
+.contextCopy h2,
+.locationCopy h2,
+.whyCopy h2 {
+  font-family: var(--font-heading);
+  font-size: var(--text-h2);
+  font-weight: 500;
+  line-height: 1.18;
+  margin: 0 0 var(--space-6);
+  text-transform: uppercase;
+  width: fit-content;
+}
+
+.contextCopy h2 {
+  color: var(--color-forest);
+}
+
+.contextCopy h2::after,
+.locationCopy h2::after,
+.whyCopy h2::after {
+  background: #c89c52;
+  content: "";
+  display: block;
+  height: 1.5px;
+  margin-top: 16px;
+  width: 100%;
+}
+
+.contextCopy p,
+.locationCopy p,
+.whyCopy p {
+  font-size: var(--text-body-large);
+  font-weight: 300;
+  line-height: 1.75;
+  margin: 0;
+}
+
+.contextCopy p + p,
+.locationCopy p + p,
+.whyCopy p + p {
+  margin-top: var(--space-4);
+}
+
+.communityMedia {
+  aspect-ratio: 1;
+  border-radius: 50%;
+  justify-self: end;
+  overflow: hidden;
+  pointer-events: none;
+  position: relative;
+  user-select: none;
+  width: min(43vw, 50rem);
+  z-index: 1;
+}
+
+.communityMedia img {
+  object-fit: cover;
+}
+
+.location {
+  align-items: center;
+  display: grid;
+  gap: clamp(3rem, 9vw, 12rem);
+  grid-template-columns: minmax(16rem, 0.75fr) minmax(0, 1fr);
+  margin-inline: auto;
+  max-width: var(--content-max);
+  min-height: clamp(38rem, 36vw, 55rem);
+  padding: clamp(4rem, 8vw, 9rem) 0;
+  width: calc(100% - (2 * var(--gutter)));
+}
+
+.cocoaMark {
+  justify-self: center;
+  opacity: 0.86;
+  width: min(21vw, 22rem);
+}
+
+.cocoaMark img {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+.locationCopy {
+  justify-self: end;
+  max-width: 48rem;
+}
+
+.why {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  min-height: clamp(25rem, 26vw, 39rem);
+  padding: clamp(4rem, 8vw, 8rem) var(--gutter);
+  text-align: center;
+}
+
+.whyCopy {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  max-width: 72rem;
+}
+
+.whyCopy p {
+  max-width: 72ch;
+}
+
+@media (max-width: 900px) {
+  .context {
+    padding-block: var(--space-7);
+  }
+
+  .contextBand {
+    padding-block: var(--space-7);
+  }
+
+  .contextInner {
+    gap: var(--space-7);
+    grid-template-columns: 1fr;
+    padding-block: 0;
+  }
+
+  .communityMedia {
+    justify-self: center;
+    width: min(88vw, 42rem);
+  }
+
+  .location {
+    gap: var(--space-7);
+    grid-template-columns: 1fr;
+  }
+
+  .cocoaMark {
+    width: min(48vw, 17rem);
+  }
+
+  .locationCopy {
+    justify-self: stretch;
+    max-width: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    min-height: 100svh;
+  }
+
+  .heroStatement {
+    font-size: 1rem;
+    max-width: 20rem;
+  }
+
+  .hero h1 {
+    max-width: 7ch;
+  }
+
+  .context {
+    min-height: 0;
+  }
+
+  .contextBand {
+    background: rgb(247 241 231 / 0.94);
+  }
+
+  .contextCopy h2,
+  .locationCopy h2,
+  .whyCopy h2 {
+    font-size: var(--text-h3);
+  }
+
+  .contextCopy p,
+  .locationCopy p,
+  .whyCopy p {
+    font-size: var(--text-body);
+    line-height: 1.65;
+  }
+
+  .location {
+    min-height: 0;
+  }
+
+  .why {
+    min-height: 36rem;
+  }
+}

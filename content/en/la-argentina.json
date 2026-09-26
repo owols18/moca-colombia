@@ -1,7 +1,60 @@
 {
+  "_meta": {
+    "status": "implemented",
+    "translationStatus": "source-copy",
+    "source": "Approved Illustrator and supplied English text"
+  },
   "slug": "la-argentina",
-  "status": "content-ready",
-  "seo": { "title": "La Argentina", "description": "Discover the community, land, and opportunity at the heart of Moca Colombia's work." },
-  "hero": { "eyebrow": "Community", "title": "La Argentina" },
-  "notice": "The route and page-level JSON are ready for the next interior-page implementation."
+  "seo": {
+    "title": "La Argentina",
+    "description": "Discover La Argentina, the rural Colombian community at the heart of Moca Colombia's work."
+  },
+  "hero": {
+    "title": "LA ARGENTINA",
+    "intro": "Where community, land, and opportunity",
+    "statement": "build a stronger",
+    "emphasis": "FUTURE FOR ALL",
+    "image": "/images/la-argentina/background.jpg",
+    "alt": "La Argentina among green mountains and cacao crops in Colombia"
+  },
+  "sections": {
+    "communityContext": {
+      "id": "community-context",
+      "title": "Community Context",
+      "body": [
+        "MOCA Colombia strives to address the fundamental needs of small, underserved communities in Colombia and promote economic independence through agriculture. Through our agricultural initiatives, advocacy, and partnerships, we elevate standards of living and foster an environment where education, medicine, and economic empowerment create lasting change.",
+        "We unlock the full potential of our farming communities and their children. We provide nutritious meals, academic support, and medical care and promote agricultural prosperity. Our efforts begin in La Argentina with MOCACAO, where we are helping to convert farmers' underperforming crops into high-yielding cacao. Steadily, we will grow to include other underserved farming communities of Colombia."
+      ],
+      "image": "/images/la-argentina/community.png",
+      "alt": "Women agricultural workers from the community of La Argentina"
+    },
+    "location": {
+      "id": "location-and-background",
+      "title": "Location and Background",
+      "body": [
+        "Located in a remote mountainous region of Colombia, La Argentina is surrounded by rich biodiversity. Its geographic isolation makes access to education, healthcare, markets, and services more difficult. Agriculture remains central to local livelihoods, particularly small-scale and family-based production.",
+        "For generations, residents have built strong relationships with their land and one another. This history provides the foundation for sustainable, community-led development."
+      ]
+    },
+    "whyItMatters": {
+      "id": "why-it-matters",
+      "title": "Why It Matters",
+      "body": [
+        "Supporting La Argentina means expanding opportunities without losing its identity or traditions.",
+        "Investments in education, health, nutrition, and agriculture strengthen the entire community.",
+        "When families gain practical resources and sustainable income, children inherit greater possibilities.",
+        "Lasting change begins by listening, collaborating, and building solutions together."
+      ]
+    }
+  },
+  "cta": {
+    "title": "Change a Life Today",
+    "body": "Whether you donate, volunteer, or partner with us, your support helps strengthen education, healthcare, sustainable livelihoods, and long-term community development.",
+    "image": "/images/shared/change-a-life-today.png",
+    "actions": [
+      { "label": "Donate Now", "href": "/donate", "variant": "light" },
+      { "label": "Volunteer With Us", "href": "/get-involved#volunteer", "variant": "outlineLight" },
+      { "label": "Let's Partner", "href": "/get-involved#partner", "variant": "outlineLight" }
+    ]
+  }
 }

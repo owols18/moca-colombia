@@ -54,6 +54,17 @@ export type PageStub = {
   notice: string;
 };
 
+export type SharedCtaContent = {
+  title: string;
+  body: string;
+  image: string;
+  actions: Array<{
+    label: string;
+    href: string;
+    variant: ButtonVariant;
+  }>;
+};
+
 export type OurMissionContent = {
   _meta: {
     status: string;
@@ -72,16 +83,45 @@ export type OurMissionContent = {
     layout: "copy-media" | "media-copy" | "image-overlay";
     theme: "white" | "sand" | "dark";
   }>;
-  cta: {
-    title: string;
-    body: string;
-    image: string;
-    actions: Array<{
-      label: string;
-      href: string;
-      variant: ButtonVariant;
-    }>;
+  cta: SharedCtaContent;
+};
+
+export type LaArgentinaContent = {
+  _meta: {
+    status: string;
+    translationStatus: string;
+    source: string;
   };
+  slug: string;
+  seo: { title: string; description: string };
+  hero: {
+    title: string;
+    intro: string;
+    statement: string;
+    emphasis: string;
+    image: string;
+    alt: string;
+  };
+  sections: {
+    communityContext: {
+      id: string;
+      title: string;
+      body: string[];
+      image: string;
+      alt: string;
+    };
+    location: {
+      id: string;
+      title: string;
+      body: string[];
+    };
+    whyItMatters: {
+      id: string;
+      title: string;
+      body: string[];
+    };
+  };
+  cta: SharedCtaContent;
 };
 
 type HomeContent = {
@@ -102,6 +142,11 @@ const ourMissionByLocale = {
   es: ourMissionEs,
 } as Record<Locale, OurMissionContent>;
 
+const laArgentinaByLocale = {
+  en: laArgentinaEn,
+  es: laArgentinaEs,
+} as Record<Locale, LaArgentinaContent>;
+
 const homeByLocale = {
   en: homeEn,
   es: homeEs,
@@ -109,7 +154,6 @@ const homeByLocale = {
 
 const pagesByLocale = {
   en: {
-    "la-argentina": laArgentinaEn,
     "projects/mocacao": mocacaoEn,
     "projects/nutrition": nutritionEn,
     "projects/academic-support": academicSupportEn,
@@ -121,7 +165,6 @@ const pagesByLocale = {
     donate: donateEn,
   },
   es: {
-    "la-argentina": laArgentinaEs,
     "projects/mocacao": mocacaoEs,
     "projects/nutrition": nutritionEs,
     "projects/academic-support": academicSupportEs,
@@ -140,6 +183,10 @@ export function getNavigation(locale: Locale): NavigationContent {
 
 export function getOurMission(locale: Locale): OurMissionContent {
   return ourMissionByLocale[locale];
+}
+
+export function getLaArgentina(locale: Locale): LaArgentinaContent {
+  return laArgentinaByLocale[locale];
 }
 
 export function getHome(locale: Locale): HomeContent {

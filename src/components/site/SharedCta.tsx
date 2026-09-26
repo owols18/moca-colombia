@@ -1,13 +1,13 @@
 import Image from "next/image";
 
 import { ButtonLink } from "@/components/ui/Button";
-import type { OurMissionContent } from "@/lib/content";
+import type { SharedCtaContent } from "@/lib/content";
 import { localizedHref, type Locale } from "@/lib/i18n";
 
 import styles from "./SharedCta.module.css";
 
 type SharedCtaProps = {
-  content: OurMissionContent["cta"];
+  content: SharedCtaContent;
   locale: Locale;
 };
 
