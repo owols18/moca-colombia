@@ -69,6 +69,8 @@
 }
 
 .context {
+  --context-circle-size: clamp(45rem, 43vw, 50rem);
+
   align-items: center;
   display: flex;
   min-height: clamp(44rem, 42vw, 60rem);
@@ -76,8 +78,12 @@
 
 .contextBand {
   background: rgb(247 241 231 / 0.9);
+  border-radius:
+    0 calc(var(--context-circle-size) / 2)
+    calc(var(--context-circle-size) / 2) 0;
   color: var(--color-ink);
-  width: 100%;
+  overflow: hidden;
+  width: min(calc(100% - var(--gutter)), calc(50% + var(--content-max) / 2));
 }
 
 .contextInner {
@@ -85,10 +91,11 @@
   display: grid;
   gap: clamp(3rem, 7vw, 9rem);
   grid-template-columns: minmax(0, 0.92fr) minmax(25rem, 1.08fr);
-  margin-inline: auto;
+  margin-left: max(var(--gutter), calc((100vw - var(--content-max)) / 2));
   max-width: var(--content-max);
-  padding: clamp(3rem, 5vw, 6rem) 0;
-  width: calc(100% - (2 * var(--gutter)));
+  min-height: var(--context-circle-size);
+  padding: 0;
+  width: calc(100% - max(var(--gutter), calc((100vw - var(--content-max)) / 2)));
 }
 
 .contextCopy,
@@ -149,7 +156,7 @@
   pointer-events: none;
   position: relative;
   user-select: none;
-  width: min(43vw, 50rem);
+  width: var(--context-circle-size);
   z-index: 1;
 }
 
@@ -206,26 +213,37 @@
   max-width: 72ch;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1400px) {
   .context {
+    --context-circle-size: min(88vw, 42rem);
+
+    min-height: 0;
     padding-block: var(--space-7);
   }
 
   .contextBand {
+    border-radius: 0;
+    overflow: visible;
     padding-block: var(--space-7);
+    width: 100%;
   }
 
   .contextInner {
     gap: var(--space-7);
     grid-template-columns: 1fr;
+    margin-inline: auto;
+    min-height: 0;
     padding-block: 0;
+    width: calc(100% - (2 * var(--gutter)));
   }
 
   .communityMedia {
     justify-self: center;
-    width: min(88vw, 42rem);
+    width: var(--context-circle-size);
   }
+}
 
+@media (max-width: 900px) {
   .location {
     gap: var(--space-7);
     grid-template-columns: 1fr;
