@@ -67,8 +67,10 @@ export default async function ImpactPage({ params }: ImpactPageProps) {
             <Image
               alt={keyFigures.alt}
               fill
+              loading="eager"
               sizes="(max-width: 900px) 86vw, (max-width: 2000px) 38vw, 43rem"
               src={keyFigures.image}
+              unoptimized
             />
           </div>
           <div className={styles.keyFiguresCopy}>
