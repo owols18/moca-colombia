@@ -168,6 +168,37 @@ export type MocacaoContent = {
   cta: SharedCtaContent;
 };
 
+export type NutritionContent = {
+  _meta: {
+    status: string;
+    translationStatus: string;
+    source: string;
+  };
+  slug: string;
+  seo: { title: string; description: string };
+  hero: { title: string; image: string; alt: string };
+  sections: {
+    combatingMalnourishment: {
+      id: string;
+      title: string;
+      body: string[];
+      image: string;
+      alt: string;
+    };
+    commitment: {
+      id: string;
+      title: string;
+      body: string[];
+      commitmentsIntro: string;
+      commitments: string[];
+      image: string;
+      alt: string;
+    };
+  };
+  otherProjects: OtherProjectsContent;
+  cta: SharedCtaContent;
+};
+
 type HomeContent = {
   slug: string;
   status: string;
@@ -196,6 +227,11 @@ const mocacaoByLocale = {
   es: mocacaoEs,
 } as Record<Locale, MocacaoContent>;
 
+const nutritionByLocale = {
+  en: nutritionEn,
+  es: nutritionEs,
+} as Record<Locale, NutritionContent>;
+
 const homeByLocale = {
   en: homeEn,
   es: homeEs,
@@ -203,7 +239,6 @@ const homeByLocale = {
 
 const pagesByLocale = {
   en: {
-    "projects/nutrition": nutritionEn,
     "projects/academic-support": academicSupportEn,
     "projects/medical-care": medicalCareEn,
     impact: impactEn,
@@ -213,7 +248,6 @@ const pagesByLocale = {
     donate: donateEn,
   },
   es: {
-    "projects/nutrition": nutritionEs,
     "projects/academic-support": academicSupportEs,
     "projects/medical-care": medicalCareEs,
     impact: impactEs,
@@ -238,6 +272,10 @@ export function getLaArgentina(locale: Locale): LaArgentinaContent {
 
 export function getMocacao(locale: Locale): MocacaoContent {
   return mocacaoByLocale[locale];
+}
+
+export function getNutrition(locale: Locale): NutritionContent {
+  return nutritionByLocale[locale];
 }
 
 export function getHome(locale: Locale): HomeContent {

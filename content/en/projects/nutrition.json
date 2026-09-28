@@ -1,7 +1,80 @@
 {
+  "_meta": {
+    "status": "implemented",
+    "translationStatus": "source-copy",
+    "source": "Approved Illustrator and supplied English text"
+  },
   "slug": "projects/nutrition",
-  "status": "content-ready",
-  "seo": { "title": "Nutrition", "description": "Supporting nutritious meals and sustainable food access for children and families." },
-  "hero": { "eyebrow": "Project", "title": "Nutrition" },
-  "notice": "The route and page-level JSON are ready for project-page implementation."
+  "seo": {
+    "title": "Nutrition",
+    "description": "Learn how MOCA Colombia supports daily nutritious meals, local agriculture, and lasting food security in La Argentina."
+  },
+  "hero": {
+    "title": "Nutrition",
+    "image": "/images/projects/nutrition/hero.jpg",
+    "alt": "Fresh produce displayed at a Colombian market"
+  },
+  "sections": {
+    "combatingMalnourishment": {
+      "id": "combating-malnourishment",
+      "title": "Combating Malnourishment",
+      "body": [
+        "In La Argentina, nutritious food is scarce. We work to provide daily meals for schoolchildren and support local farms to ensure sustainable access to nutrition.",
+        "Malnourishment and related health issues such as diabetes are very prominent in La Argentina, as families' diets are overly reliant on carbohydrates such as potatoes, rice, and yuca. For most families, even these essential carbohydrates are considered a luxury. Many children rely on the school to provide their only meals, but the school often struggles to meet this need. MOCA Colombia works with local farms to create a sustainable solution by supplying students with meals and investing in local communities, ensuring a sustainable, nutritious food supply."
+      ],
+      "image": "/images/projects/nutrition/combating-malnourishment.png",
+      "alt": "A boy carrying a crate of watermelons at a market"
+    },
+    "commitment": {
+      "id": "our-commitment",
+      "title": "Our Commitment",
+      "body": [
+        "Malnutrition remains a significant concern in Colombia, particularly among children under five. As of 2024, 9.6% of children under five are affected by stunting, or chronic undernutrition, and 1.0% suffer from wasting, or acute undernutrition. In the first half of 2024, 123 children under five died due to malnutrition, with Indigenous communities being disproportionately affected.",
+        "Food insecurity exacerbates this crisis. Approximately 13 million Colombians are food insecure, with 3% facing severe food insecurity. Rural areas and marginalized populations, including Indigenous communities, are particularly vulnerable."
+      ],
+      "commitmentsIntro": "At MOCA Colombia, we recognize the urgency of addressing these challenges, particularly in underserved communities like La Argentina. Our nutrition initiatives focus on:",
+      "commitments": [
+        "Providing daily nutritious meals: Ensuring that children receive balanced diets essential for their growth and development.",
+        "Supporting local agriculture: Collaborating with local farmers to boost sustainable food production, thereby enhancing community food security.",
+        "Educational programs: Implementing workshops on nutrition and health to empower families with knowledge for better dietary choices."
+      ],
+      "image": "/images/projects/nutrition/our-commitment.png",
+      "alt": "A vibrant open-air produce market lined with palm trees"
+    }
+  },
+  "otherProjects": {
+    "title": "Other Projects",
+    "previousLabel": "Show previous project",
+    "nextLabel": "Show next project",
+    "items": [
+      {
+        "title": "MOCACAO",
+        "href": "/projects/mocacao",
+        "image": "/images/projects/cards/mocacao.png",
+        "alt": "Hands holding an opened cacao pod"
+      },
+      {
+        "title": "Academic Support",
+        "href": "/projects/academic-support",
+        "image": "/images/projects/cards/academic-support.png",
+        "alt": "A student drawing in a classroom"
+      },
+      {
+        "title": "Medical Care",
+        "href": "/projects/medical-care",
+        "image": "/images/projects/cards/medical-care.png",
+        "alt": "Children receiving support through Fundación Clínica Noel"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Change a Life Today",
+    "body": "Whether you donate, volunteer, or partner with us, your support helps strengthen education, healthcare, sustainable livelihoods, and long-term community development.",
+    "image": "/images/shared/change-a-life-today.png",
+    "actions": [
+      { "label": "Donate Now", "href": "/donate", "variant": "light" },
+      { "label": "Volunteer With Us", "href": "/get-involved#volunteer", "variant": "outlineLight" },
+      { "label": "Let's Partner", "href": "/get-involved#partner", "variant": "outlineLight" }
+    ]
+  }
 }

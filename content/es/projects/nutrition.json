@@ -1,7 +1,80 @@
 {
+  "_meta": {
+    "status": "implemented",
+    "translationStatus": "provisional",
+    "source": "Traducción provisional al español del texto en inglés suministrado"
+  },
   "slug": "projects/nutrition",
-  "status": "content-ready",
-  "seo": { "title": "Nutrición", "description": "Apoyo a comidas nutritivas y al acceso sostenible a alimentos para niños y familias." },
-  "hero": { "eyebrow": "Proyecto", "title": "Nutrición" },
-  "notice": "La ruta y el JSON de la página están listos para implementar el proyecto."
+  "seo": {
+    "title": "Nutrición",
+    "description": "Conoce cómo MOCA Colombia apoya comidas nutritivas, la agricultura local y la seguridad alimentaria duradera en La Argentina."
+  },
+  "hero": {
+    "title": "Nutrición",
+    "image": "/images/projects/nutrition/hero.jpg",
+    "alt": "Productos frescos exhibidos en un mercado colombiano"
+  },
+  "sections": {
+    "combatingMalnourishment": {
+      "id": "combatir-la-desnutricion",
+      "title": "Combatir la desnutrición",
+      "body": [
+        "En La Argentina, los alimentos nutritivos son escasos. Trabajamos para ofrecer comidas diarias a los estudiantes y apoyar a las fincas locales, con el fin de asegurar un acceso sostenible a una buena alimentación.",
+        "La desnutrición y los problemas de salud relacionados, como la diabetes, son muy frecuentes en La Argentina, ya que la alimentación de las familias depende en exceso de carbohidratos como la papa, el arroz y la yuca. Para la mayoría de las familias, incluso estos alimentos esenciales se consideran un lujo. Muchos niños dependen de la escuela para recibir sus únicas comidas, pero el centro educativo a menudo tiene dificultades para cubrir esta necesidad. MOCA Colombia trabaja con las fincas locales para crear una solución sostenible: proporcionar comidas a los estudiantes e invertir en las comunidades, garantizando un suministro de alimentos nutritivos y duradero."
+      ],
+      "image": "/images/projects/nutrition/combating-malnourishment.png",
+      "alt": "Un niño lleva una caja de sandías en un mercado"
+    },
+    "commitment": {
+      "id": "nuestro-compromiso",
+      "title": "Nuestro compromiso",
+      "body": [
+        "La desnutrición sigue siendo una preocupación importante en Colombia, especialmente entre los niños menores de cinco años. En 2024, el 9,6 % de los menores de cinco años presentaba retraso en el crecimiento, o desnutrición crónica, y el 1,0 % sufría emaciación, o desnutrición aguda. Durante el primer semestre de 2024, 123 niños menores de cinco años murieron por causas relacionadas con la desnutrición; las comunidades indígenas se vieron afectadas de manera desproporcionada.",
+        "La inseguridad alimentaria agrava esta crisis. Aproximadamente 13 millones de colombianos enfrentan inseguridad alimentaria y un 3 % se encuentra en situación grave. Las zonas rurales y las poblaciones marginadas, incluidas las comunidades indígenas, son especialmente vulnerables."
+      ],
+      "commitmentsIntro": "En MOCA Colombia reconocemos la urgencia de afrontar estos desafíos, especialmente en comunidades desatendidas como La Argentina. Nuestras iniciativas de nutrición se concentran en:",
+      "commitments": [
+        "Proporcionar comidas nutritivas diariamente: Garantizar que los niños reciban una alimentación equilibrada, esencial para su crecimiento y desarrollo.",
+        "Apoyar la agricultura local: Colaborar con los agricultores locales para impulsar una producción sostenible de alimentos y fortalecer la seguridad alimentaria de la comunidad.",
+        "Desarrollar programas educativos: Implementar talleres sobre nutrición y salud que brinden a las familias conocimientos para tomar mejores decisiones alimentarias."
+      ],
+      "image": "/images/projects/nutrition/our-commitment.png",
+      "alt": "Un colorido mercado al aire libre rodeado de palmeras"
+    }
+  },
+  "otherProjects": {
+    "title": "Otros proyectos",
+    "previousLabel": "Mostrar el proyecto anterior",
+    "nextLabel": "Mostrar el proyecto siguiente",
+    "items": [
+      {
+        "title": "MOCACAO",
+        "href": "/projects/mocacao",
+        "image": "/images/projects/cards/mocacao.png",
+        "alt": "Manos sosteniendo una mazorca de cacao abierta"
+      },
+      {
+        "title": "Apoyo académico",
+        "href": "/projects/academic-support",
+        "image": "/images/projects/cards/academic-support.png",
+        "alt": "Una estudiante dibujando en un salón de clases"
+      },
+      {
+        "title": "Atención médica",
+        "href": "/projects/medical-care",
+        "image": "/images/projects/cards/medical-care.png",
+        "alt": "Niños que reciben apoyo a través de la Fundación Clínica Noel"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Cambia una vida hoy",
+    "body": "Ya sea que dones, seas voluntario o te unas como aliado, tu apoyo ayuda a fortalecer la educación, la salud, los medios de vida sostenibles y el desarrollo comunitario a largo plazo.",
+    "image": "/images/shared/change-a-life-today.png",
+    "actions": [
+      { "label": "Donar ahora", "href": "/donate", "variant": "light" },
+      { "label": "Quiero ser voluntario", "href": "/get-involved#volunteer", "variant": "outlineLight" },
+      { "label": "Crear una alianza", "href": "/get-involved#partner", "variant": "outlineLight" }
+    ]
+  }
 }
