@@ -1,7 +1,49 @@
 {
+  "_meta": {
+    "status": "implemented",
+    "translationStatus": "source-copy",
+    "source": "Approved Illustrator and supplied English text"
+  },
   "slug": "impact",
-  "status": "content-partial",
-  "seo": { "title": "Impact", "description": "Explore the people, families, and opportunities strengthened through collective action." },
-  "hero": { "eyebrow": "Progress", "title": "Impact" },
-  "notice": "The route and content contract are ready; approved metrics and progress figures are still pending."
+  "seo": {
+    "title": "Impact",
+    "description": "Explore the people, families, and opportunities strengthened through community-led action in La Argentina."
+  },
+  "hero": {
+    "title": "Impact",
+    "statement": "Creating lasting impact through opportunity, partnership, and community-led progress for generations.",
+    "image": "/images/impact/hero.jpg",
+    "alt": "A smiling child holding young plants"
+  },
+  "sections": {
+    "keyFigures": {
+      "id": "key-figures",
+      "title": "Key Figures",
+      "body": [
+        "Every number represents a person, a family, or an opportunity strengthened through collective action. Our key figures measure progress across education, nutrition, healthcare, and sustainable livelihoods. Together, they show how community-led initiatives can generate meaningful and lasting results."
+      ],
+      "image": "/images/impact/key-figures.png",
+      "alt": "A family preparing cacao together around a table"
+    },
+    "storiesOfChange": {
+      "id": "stories-of-change",
+      "title": "Stories of Change",
+      "body": [
+        "Change begins when people receive the resources and support needed to move forward. In La Argentina, children gain greater access to education, families strengthen their wellbeing, and farmers develop more sustainable opportunities.",
+        "Each story reflects determination, collaboration, and the community's ability to shape its own future. These transformations extend beyond individual achievements, creating benefits that reach entire families. By sharing their experiences, we celebrate progress while recognizing the work that still lies ahead. Their stories demonstrate that lasting impact is built one opportunity at a time."
+      ],
+      "image": "/images/impact/stories-of-change.png",
+      "alt": "Children gathering cacao pods outdoors"
+    }
+  },
+  "cta": {
+    "title": "Change a Life Today",
+    "body": "Whether you donate, volunteer, or partner with us, your support helps strengthen education, healthcare, sustainable livelihoods, and long-term community development.",
+    "image": "/images/shared/change-a-life-today.png",
+    "actions": [
+      { "label": "Donate Now", "href": "/donate", "variant": "light" },
+      { "label": "Volunteer With Us", "href": "/get-involved#volunteer", "variant": "outlineLight" },
+      { "label": "Let's Partner", "href": "/get-involved#partner", "variant": "outlineLight" }
+    ]
+  }
 }

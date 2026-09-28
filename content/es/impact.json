@@ -1,7 +1,49 @@
 {
+  "_meta": {
+    "status": "implemented",
+    "translationStatus": "provisional",
+    "source": "Traducción provisional al español del texto en inglés suministrado"
+  },
   "slug": "impact",
-  "status": "content-partial",
-  "seo": { "title": "Impacto", "description": "Conoce a las personas, familias y oportunidades fortalecidas mediante la acción colectiva." },
-  "hero": { "eyebrow": "Progreso", "title": "Impacto" },
-  "notice": "La ruta y el contrato de contenido están listos; aún faltan métricas y cifras de progreso aprobadas."
+  "seo": {
+    "title": "Impacto",
+    "description": "Conoce a las personas, familias y oportunidades fortalecidas mediante acciones lideradas por la comunidad en La Argentina."
+  },
+  "hero": {
+    "title": "Impacto",
+    "statement": "Creando un impacto duradero mediante oportunidades, alianzas y progreso comunitario para las generaciones futuras.",
+    "image": "/images/impact/hero.jpg",
+    "alt": "Una niña sonriente sostiene plantas jóvenes"
+  },
+  "sections": {
+    "keyFigures": {
+      "id": "cifras-clave",
+      "title": "Cifras clave",
+      "body": [
+        "Cada cifra representa una persona, una familia o una oportunidad fortalecida mediante la acción colectiva. Nuestras cifras clave miden el progreso en educación, nutrición, salud y medios de vida sostenibles. En conjunto, muestran cómo las iniciativas lideradas por la comunidad pueden generar resultados significativos y duraderos."
+      ],
+      "image": "/images/impact/key-figures.png",
+      "alt": "Una familia prepara cacao alrededor de una mesa"
+    },
+    "storiesOfChange": {
+      "id": "historias-de-cambio",
+      "title": "Historias de cambio",
+      "body": [
+        "El cambio comienza cuando las personas reciben los recursos y el apoyo necesarios para avanzar. En La Argentina, los niños obtienen mayor acceso a la educación, las familias fortalecen su bienestar y los agricultores desarrollan oportunidades más sostenibles.",
+        "Cada historia refleja determinación, colaboración y la capacidad de la comunidad para construir su propio futuro. Estas transformaciones van más allá de los logros individuales y generan beneficios que alcanzan a familias enteras. Al compartir sus experiencias, celebramos los avances mientras reconocemos el trabajo que aún queda por hacer. Sus historias demuestran que un impacto duradero se construye una oportunidad a la vez."
+      ],
+      "image": "/images/impact/stories-of-change.png",
+      "alt": "Niños recolectan mazorcas de cacao al aire libre"
+    }
+  },
+  "cta": {
+    "title": "Cambia una vida hoy",
+    "body": "Ya sea que dones, seas voluntario o te unas como aliado, tu apoyo ayuda a fortalecer la educación, la salud, los medios de vida sostenibles y el desarrollo comunitario a largo plazo.",
+    "image": "/images/shared/change-a-life-today.png",
+    "actions": [
+      { "label": "Donar ahora", "href": "/donate", "variant": "light" },
+      { "label": "Quiero ser voluntario", "href": "/get-involved#volunteer", "variant": "outlineLight" },
+      { "label": "Crear una alianza", "href": "/get-involved#partner", "variant": "outlineLight" }
+    ]
+  }
 }
