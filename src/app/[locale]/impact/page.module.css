@@ -78,8 +78,9 @@
   background: var(--color-sand-soft);
   content: "";
   inset: 0 0 0 22%;
+  pointer-events: none;
   position: absolute;
-  z-index: -1;
+  z-index: 0;
 }
 
 .keyFiguresMedia {
@@ -87,7 +88,10 @@
   border: 5px solid #c89c52;
   border-radius: 50%;
   overflow: hidden;
+  pointer-events: none;
   position: relative;
+  user-select: none;
+  z-index: 1;
 }
 
 .keyFiguresMedia img,
@@ -98,7 +102,9 @@
 .keyFiguresCopy {
   color: var(--color-ink);
   padding: clamp(2.5rem, 5vw, 6rem);
+  position: relative;
   user-select: text;
+  z-index: 2;
 }
 
 .keyFiguresCopy h2,
