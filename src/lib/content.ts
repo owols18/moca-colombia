@@ -230,6 +230,37 @@ export type AcademicSupportContent = {
   cta: SharedCtaContent;
 };
 
+export type MedicalCareContent = {
+  _meta: {
+    status: string;
+    translationStatus: string;
+    source: string;
+  };
+  slug: string;
+  seo: { title: string; description: string };
+  hero: { title: string; image: string; alt: string };
+  sections: {
+    accessHealthcare: {
+      id: string;
+      title: string;
+      body: string[];
+      image: string;
+      alt: string;
+    };
+    clinicNoel: {
+      id: string;
+      title: string;
+      body: string[];
+      commitmentsIntro: string;
+      commitments: string[];
+      image: string;
+      alt: string;
+    };
+  };
+  otherProjects: OtherProjectsContent;
+  cta: SharedCtaContent;
+};
+
 type HomeContent = {
   slug: string;
   status: string;
@@ -268,6 +299,11 @@ const academicSupportByLocale = {
   es: academicSupportEs,
 } as Record<Locale, AcademicSupportContent>;
 
+const medicalCareByLocale = {
+  en: medicalCareEn,
+  es: medicalCareEs,
+} as Record<Locale, MedicalCareContent>;
+
 const homeByLocale = {
   en: homeEn,
   es: homeEs,
@@ -275,7 +311,6 @@ const homeByLocale = {
 
 const pagesByLocale = {
   en: {
-    "projects/medical-care": medicalCareEn,
     impact: impactEn,
     "about-us": aboutUsEn,
     "get-involved": getInvolvedEn,
@@ -283,7 +318,6 @@ const pagesByLocale = {
     donate: donateEn,
   },
   es: {
-    "projects/medical-care": medicalCareEs,
     impact: impactEs,
     "about-us": aboutUsEs,
     "get-involved": getInvolvedEs,
@@ -314,6 +348,10 @@ export function getNutrition(locale: Locale): NutritionContent {
 
 export function getAcademicSupport(locale: Locale): AcademicSupportContent {
   return academicSupportByLocale[locale];
+}
+
+export function getMedicalCare(locale: Locale): MedicalCareContent {
+  return medicalCareByLocale[locale];
 }
 
 export function getHome(locale: Locale): HomeContent {

@@ -1,7 +1,79 @@
 {
+  "_meta": {
+    "status": "implemented",
+    "translationStatus": "provisional",
+    "source": "Traducción provisional al español del texto en inglés suministrado"
+  },
   "slug": "projects/medical-care",
-  "status": "content-ready",
-  "seo": { "title": "Atención médica", "description": "Conexión de niños y familias vulnerables con servicios esenciales de salud." },
-  "hero": { "eyebrow": "Proyecto", "title": "Atención médica" },
-  "notice": "La ruta y el JSON de la página están listos para implementar el proyecto."
+  "seo": {
+    "title": "Atención médica",
+    "description": "Conoce cómo MOCA Colombia y Fundación Clínica Noel conectan a niños vulnerables con atención médica especializada y apoyo familiar."
+  },
+  "hero": {
+    "title": "Atención médica",
+    "image": "/images/projects/medical-care/hero.jpg",
+    "alt": "Niños apoyados por Fundación Clínica Noel"
+  },
+  "sections": {
+    "accessHealthcare": {
+      "id": "acceso-a-la-atencion-medica-para-ninos-vulnerables",
+      "title": "Acceso a la atención médica para niños vulnerables",
+      "body": [
+        "En regiones como La Argentina, el acceso a una atención médica de calidad sigue siendo un desafío persistente, especialmente para los niños de familias de bajos ingresos. En MOCA Colombia respondemos a esta necesidad urgente mediante una alianza con Fundación Clínica Noel, una institución pediátrica de confianza con un siglo de experiencia atendiendo a las poblaciones más vulnerables de Colombia.",
+        "Juntos, estamos comprometidos a garantizar que los niños de La Argentina y otras zonas desatendidas reciban la atención médica que merecen, sin importar su situación económica. Al eliminar barreras financieras y geográficas, buscamos mejorar no solo los resultados de salud, sino también el bienestar a largo plazo de familias enteras."
+      ],
+      "image": "/images/projects/medical-care/access-to-healthcare.png",
+      "alt": "Un equipo médico pediátrico conversa con una paciente joven"
+    },
+    "clinicNoel": {
+      "id": "acerca-de-fundacion-clinica-noel",
+      "title": "Acerca de Fundación Clínica Noel",
+      "body": [
+        "Fundada en 1924 en Medellín, Fundación Clínica Noel es una destacada clínica pediátrica sin ánimo de lucro, reconocida en toda América Latina por su atención especializada. Cada año, su equipo interdisciplinario proporciona servicios médicos que transforman la vida de más de 50.000 niños, muchos de ellos con condiciones craneofaciales y musculoesqueléticas."
+      ],
+      "commitmentsIntro": "Mediante nuestra alianza estratégica, MOCA Colombia y Fundación Clínica Noel trabajan conjuntamente para:",
+      "commitments": [
+        "Brindar atención médica especializada: Incluidas cirugías y terapias para condiciones craneofaciales y musculoesqueléticas que afectan a los niños de La Argentina.",
+        "Proporcionar apoyo psicosocial: Ofrecer orientación y apoyo emocional a niños y familias que enfrentan diagnósticos médicos complejos.",
+        "Promover la educación preventiva en salud: Realizar talleres y capacitaciones para generar conciencia sobre detección temprana, higiene y recursos de salud disponibles en la comunidad."
+      ],
+      "image": "/images/projects/medical-care/clinica-noel.png",
+      "alt": "Niños apoyados por Fundación Clínica Noel"
+    }
+  },
+  "otherProjects": {
+    "title": "Otros proyectos",
+    "previousLabel": "Mostrar el proyecto anterior",
+    "nextLabel": "Mostrar el proyecto siguiente",
+    "items": [
+      {
+        "title": "Apoyo académico",
+        "href": "/projects/academic-support",
+        "image": "/images/projects/cards/academic-support.png",
+        "alt": "Una estudiante dibujando en un salón de clases"
+      },
+      {
+        "title": "MOCACAO",
+        "href": "/projects/mocacao",
+        "image": "/images/projects/cards/mocacao.png",
+        "alt": "Manos sosteniendo una mazorca de cacao abierta"
+      },
+      {
+        "title": "Nutrición",
+        "href": "/projects/nutrition",
+        "image": "/images/projects/cards/nutrition.png",
+        "alt": "Productos frescos exhibidos en un mercado colombiano"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Cambia una vida hoy",
+    "body": "Ya sea que dones, seas voluntario o te unas como aliado, tu apoyo ayuda a fortalecer la educación, la salud, los medios de vida sostenibles y el desarrollo comunitario a largo plazo.",
+    "image": "/images/shared/change-a-life-today.png",
+    "actions": [
+      { "label": "Donar ahora", "href": "/donate", "variant": "light" },
+      { "label": "Quiero ser voluntario", "href": "/get-involved#volunteer", "variant": "outlineLight" },
+      { "label": "Crear una alianza", "href": "/get-involved#partner", "variant": "outlineLight" }
+    ]
+  }
 }

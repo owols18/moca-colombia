@@ -5,7 +5,6 @@ export type Locale = (typeof locales)[number];
 export const defaultLocale: Locale = "en";
 
 export const plannedPagePaths = [
-  "projects/medical-care",
   "impact",
   "about-us",
   "get-involved",

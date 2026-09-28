@@ -1,7 +1,79 @@
 {
+  "_meta": {
+    "status": "implemented",
+    "translationStatus": "source-copy",
+    "source": "Approved Illustrator and supplied English text"
+  },
   "slug": "projects/medical-care",
-  "status": "content-ready",
-  "seo": { "title": "Medical Care", "description": "Connecting vulnerable children and families with essential healthcare services." },
-  "hero": { "eyebrow": "Project", "title": "Medical Care" },
-  "notice": "The route and page-level JSON are ready for project-page implementation."
+  "seo": {
+    "title": "Medical Care",
+    "description": "Learn how MOCA Colombia and Fundación Clínica Noel connect vulnerable children with specialized healthcare and family support."
+  },
+  "hero": {
+    "title": "Medical Care",
+    "image": "/images/projects/medical-care/hero.jpg",
+    "alt": "Children supported by Fundación Clínica Noel"
+  },
+  "sections": {
+    "accessHealthcare": {
+      "id": "access-to-healthcare-for-vulnerable-children",
+      "title": "Access to Healthcare for Vulnerable Children",
+      "body": [
+        "In regions like La Argentina, access to quality healthcare remains a persistent challenge, especially for children from low-income families. At MOCA Colombia, we are addressing this urgent need by partnering with Fundación Clínica Noel, a trusted pediatric institution with a century of experience serving Colombia's most vulnerable populations.",
+        "Together, we are committed to ensuring that children in La Argentina and other underserved areas receive the medical care they deserve, regardless of their economic status. By removing financial and geographic barriers, we aim to improve not just health outcomes, but the long-term well-being of entire families."
+      ],
+      "image": "/images/projects/medical-care/access-to-healthcare.png",
+      "alt": "A pediatric medical team speaking with a young patient"
+    },
+    "clinicNoel": {
+      "id": "about-fundacion-clinica-noel",
+      "title": "About Fundación Clínica Noel",
+      "body": [
+        "Founded in 1924 in Medellín, Fundación Clínica Noel is a distinguished non-profit pediatric clinic recognized across Latin America for its specialized care. Each year, its dedicated interdisciplinary team provides life-changing medical services to over 50,000 children, many with craniofacial and musculoskeletal conditions."
+      ],
+      "commitmentsIntro": "Through our strategic partnership, MOCA Colombia and Fundación Clínica Noel are working hand in hand to:",
+      "commitments": [
+        "Deliver specialized medical care: Including surgeries and therapies for craniofacial and musculoskeletal conditions affecting children in La Argentina.",
+        "Provide psychosocial support: Offering counseling and emotional support to children and families navigating complex medical diagnoses.",
+        "Promote preventive health education: Conducting workshops and training to raise awareness about early detection, hygiene, and available healthcare resources within the community."
+      ],
+      "image": "/images/projects/medical-care/clinica-noel.png",
+      "alt": "Children supported by Fundación Clínica Noel"
+    }
+  },
+  "otherProjects": {
+    "title": "Other Projects",
+    "previousLabel": "Show previous project",
+    "nextLabel": "Show next project",
+    "items": [
+      {
+        "title": "Academic Support",
+        "href": "/projects/academic-support",
+        "image": "/images/projects/cards/academic-support.png",
+        "alt": "A student drawing in a classroom"
+      },
+      {
+        "title": "MOCACAO",
+        "href": "/projects/mocacao",
+        "image": "/images/projects/cards/mocacao.png",
+        "alt": "Hands holding an opened cacao pod"
+      },
+      {
+        "title": "Nutrition",
+        "href": "/projects/nutrition",
+        "image": "/images/projects/cards/nutrition.png",
+        "alt": "Fresh produce displayed at a Colombian market"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Change a Life Today",
+    "body": "Whether you donate, volunteer, or partner with us, your support helps strengthen education, healthcare, sustainable livelihoods, and long-term community development.",
+    "image": "/images/shared/change-a-life-today.png",
+    "actions": [
+      { "label": "Donate Now", "href": "/donate", "variant": "light" },
+      { "label": "Volunteer With Us", "href": "/get-involved#volunteer", "variant": "outlineLight" },
+      { "label": "Let's Partner", "href": "/get-involved#partner", "variant": "outlineLight" }
+    ]
+  }
 }
