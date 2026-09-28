@@ -65,6 +65,11 @@
 
 .keyFiguresCard {
   align-items: center;
+  background: linear-gradient(
+    90deg,
+    transparent 0 22%,
+    var(--color-sand-soft) 22% 100%
+  );
   display: grid;
   grid-template-columns: minmax(22rem, 0.9fr) minmax(0, 1.1fr);
   isolation: isolate;
@@ -72,15 +77,6 @@
   max-width: var(--content-max);
   min-height: clamp(34rem, 36vw, 44rem);
   position: relative;
-}
-
-.keyFiguresCard::before {
-  background: var(--color-sand-soft);
-  content: "";
-  inset: 0 0 0 22%;
-  pointer-events: none;
-  position: absolute;
-  z-index: -1;
 }
 
 .keyFiguresMedia {
@@ -185,11 +181,12 @@
   }
 
   .keyFiguresCard {
+    background: linear-gradient(
+      180deg,
+      transparent 0 18%,
+      var(--color-sand-soft) 18% 100%
+    );
     grid-template-columns: 1fr;
-  }
-
-  .keyFiguresCard::before {
-    inset: 18% 0 0;
   }
 
   .keyFiguresMedia {
