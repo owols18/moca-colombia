@@ -1,7 +1,79 @@
 {
+  "_meta": {
+    "status": "implemented",
+    "translationStatus": "source-copy",
+    "source": "Approved Illustrator and supplied English text"
+  },
   "slug": "projects/academic-support",
-  "status": "content-ready",
-  "seo": { "title": "Academic Support", "description": "Expanding educational resources and opportunities for students in La Argentina." },
-  "hero": { "eyebrow": "Project", "title": "Academic Support" },
-  "notice": "The route and page-level JSON are ready for project-page implementation."
+  "seo": {
+    "title": "Academic Support",
+    "description": "Learn how MOCA Colombia expands educational resources, scholarships, and community opportunities for students in La Argentina."
+  },
+  "hero": {
+    "title": "Academic Support",
+    "image": "/images/projects/academic-support/hero.jpg",
+    "alt": "A student drawing at a classroom table"
+  },
+  "sections": {
+    "empoweringEducation": {
+      "id": "empowering-education-and-community-growth",
+      "title": "Empowering Education & Community Growth",
+      "body": [
+        "We are dedicated to empowering the students of La Argentina through key initiatives that address critical gaps in education and community infrastructure.",
+        "From building a much-needed library and restoring a vital soccer field to providing scholarships for higher education, our mission is to create opportunities that inspire learning, foster unity, and open doors for future generations."
+      ],
+      "image": "/images/projects/academic-support/education-and-community.png",
+      "alt": "A woman and a child reading outside beside a stack of books"
+    },
+    "culture": {
+      "id": "fostering-a-culture",
+      "title": "Fostering a Culture",
+      "body": [
+        "Educational disparities persist in Colombia, particularly in rural areas. As of 2024, only 55% of young people aged 17 to 21 access higher education, significantly below the OECD average of 70%. This gap is even more pronounced in remote regions, where students often face limited access to quality educational resources."
+      ],
+      "commitmentsIntro": "At MOCA Colombia, we are committed to bridging these educational gaps in La Argentina through targeted initiatives:",
+      "commitments": [
+        "Infrastructure development: Constructing and enhancing educational facilities, including libraries and classrooms, to create conducive learning environments.",
+        "Scholarship programs: Providing financial assistance to students, enabling them to pursue higher education and vocational training.",
+        "Community engagement: Collaborating with local leaders and organizations to promote the value of education and encourage community involvement in school activities."
+      ],
+      "image": "/images/projects/academic-support/fostering-a-culture.png",
+      "alt": "A student studying at a table with books and a laptop"
+    }
+  },
+  "otherProjects": {
+    "title": "Other Projects",
+    "previousLabel": "Show previous project",
+    "nextLabel": "Show next project",
+    "items": [
+      {
+        "title": "Nutrition",
+        "href": "/projects/nutrition",
+        "image": "/images/projects/cards/nutrition.png",
+        "alt": "Fresh produce displayed at a Colombian market"
+      },
+      {
+        "title": "Medical Care",
+        "href": "/projects/medical-care",
+        "image": "/images/projects/cards/medical-care.png",
+        "alt": "Children receiving support through Fundación Clínica Noel"
+      },
+      {
+        "title": "MOCACAO",
+        "href": "/projects/mocacao",
+        "image": "/images/projects/cards/mocacao.png",
+        "alt": "Hands holding an opened cacao pod"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Change a Life Today",
+    "body": "Whether you donate, volunteer, or partner with us, your support helps strengthen education, healthcare, sustainable livelihoods, and long-term community development.",
+    "image": "/images/shared/change-a-life-today.png",
+    "actions": [
+      { "label": "Donate Now", "href": "/donate", "variant": "light" },
+      { "label": "Volunteer With Us", "href": "/get-involved#volunteer", "variant": "outlineLight" },
+      { "label": "Let's Partner", "href": "/get-involved#partner", "variant": "outlineLight" }
+    ]
+  }
 }

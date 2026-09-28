@@ -1,7 +1,79 @@
 {
+  "_meta": {
+    "status": "implemented",
+    "translationStatus": "provisional",
+    "source": "Traducción provisional al español del texto en inglés suministrado"
+  },
   "slug": "projects/academic-support",
-  "status": "content-ready",
-  "seo": { "title": "Apoyo académico", "description": "Ampliación de recursos educativos y oportunidades para los estudiantes de La Argentina." },
-  "hero": { "eyebrow": "Proyecto", "title": "Apoyo académico" },
-  "notice": "La ruta y el JSON de la página están listos para implementar el proyecto."
+  "seo": {
+    "title": "Apoyo académico",
+    "description": "Conoce cómo MOCA Colombia amplía los recursos educativos, las becas y las oportunidades comunitarias para los estudiantes de La Argentina."
+  },
+  "hero": {
+    "title": "Apoyo académico",
+    "image": "/images/projects/academic-support/hero.jpg",
+    "alt": "Una estudiante dibujando en una mesa de clase"
+  },
+  "sections": {
+    "empoweringEducation": {
+      "id": "impulsar-la-educacion-y-el-crecimiento-comunitario",
+      "title": "Impulsar la educación y el crecimiento comunitario",
+      "body": [
+        "Nos dedicamos a fortalecer a los estudiantes de La Argentina mediante iniciativas clave que responden a las brechas críticas en educación e infraestructura comunitaria.",
+        "Desde construir una biblioteca muy necesaria y restaurar una cancha de fútbol esencial hasta proporcionar becas para la educación superior, nuestra misión es crear oportunidades que inspiren el aprendizaje, fomenten la unidad y abran puertas para las generaciones futuras."
+      ],
+      "image": "/images/projects/academic-support/education-and-community.png",
+      "alt": "Una mujer y un niño leen al aire libre junto a una pila de libros"
+    },
+    "culture": {
+      "id": "fomentar-una-cultura",
+      "title": "Fomentar una cultura",
+      "body": [
+        "Las desigualdades educativas persisten en Colombia, especialmente en las zonas rurales. En 2024, solo el 55 % de los jóvenes entre 17 y 21 años accedía a la educación superior, una cifra considerablemente inferior al promedio del 70 % de la OCDE. Esta brecha es aún más pronunciada en las regiones apartadas, donde los estudiantes suelen tener acceso limitado a recursos educativos de calidad."
+      ],
+      "commitmentsIntro": "En MOCA Colombia estamos comprometidos con cerrar estas brechas educativas en La Argentina mediante iniciativas específicas:",
+      "commitments": [
+        "Desarrollo de infraestructura: Construir y mejorar instalaciones educativas, incluidas bibliotecas y aulas, para crear entornos favorables para el aprendizaje.",
+        "Programas de becas: Brindar asistencia financiera a los estudiantes para que puedan acceder a la educación superior y a la formación vocacional.",
+        "Participación comunitaria: Colaborar con líderes y organizaciones locales para promover el valor de la educación e incentivar la participación de la comunidad en las actividades escolares."
+      ],
+      "image": "/images/projects/academic-support/fostering-a-culture.png",
+      "alt": "Un estudiante estudia en una mesa con libros y un computador portátil"
+    }
+  },
+  "otherProjects": {
+    "title": "Otros proyectos",
+    "previousLabel": "Mostrar el proyecto anterior",
+    "nextLabel": "Mostrar el proyecto siguiente",
+    "items": [
+      {
+        "title": "Nutrición",
+        "href": "/projects/nutrition",
+        "image": "/images/projects/cards/nutrition.png",
+        "alt": "Productos frescos exhibidos en un mercado colombiano"
+      },
+      {
+        "title": "Atención médica",
+        "href": "/projects/medical-care",
+        "image": "/images/projects/cards/medical-care.png",
+        "alt": "Niños que reciben apoyo a través de la Fundación Clínica Noel"
+      },
+      {
+        "title": "MOCACAO",
+        "href": "/projects/mocacao",
+        "image": "/images/projects/cards/mocacao.png",
+        "alt": "Manos sosteniendo una mazorca de cacao abierta"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Cambia una vida hoy",
+    "body": "Ya sea que dones, seas voluntario o te unas como aliado, tu apoyo ayuda a fortalecer la educación, la salud, los medios de vida sostenibles y el desarrollo comunitario a largo plazo.",
+    "image": "/images/shared/change-a-life-today.png",
+    "actions": [
+      { "label": "Donar ahora", "href": "/donate", "variant": "light" },
+      { "label": "Quiero ser voluntario", "href": "/get-involved#volunteer", "variant": "outlineLight" },
+      { "label": "Crear una alianza", "href": "/get-involved#partner", "variant": "outlineLight" }
+    ]
+  }
 }
