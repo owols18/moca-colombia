@@ -25,8 +25,20 @@ pnpm dev
 - Inicio espanol: `http://localhost:3000/es`
 - Our Mission: `http://localhost:3000/en/our-mission`
 - Nuestra mision: `http://localhost:3000/es/our-mission`
+- Contact Us: `http://localhost:3000/en/contact`
+- Contacto: `http://localhost:3000/es/contact`
 - Design System: `http://localhost:3000/design-system`
 - Validacion completa: `pnpm check`
+
+## Formulario de contacto
+
+El formulario envia al correo definido en `CONTACT_TO_EMAIL` (por defecto,
+`fabian.andres82@gmail.com`) mediante SMTP. Copia `.env.example` como `.env.local` y completa
+las variables privadas de la cuenta de correo antes de publicar. Las credenciales solo se usan
+en el servidor y nunca deben llevar el prefijo `NEXT_PUBLIC_`.
+
+Los accesos desde Get Involved usan `?interest=volunteer` y
+`?interest=partnership` para seleccionar automaticamente el tipo de solicitud.
 
 ## Documentacion
 

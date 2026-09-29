@@ -370,6 +370,48 @@ type GetInvolvedSection = {
   };
 };
 
+export type ContactContent = {
+  _meta: {
+    status: string;
+    translationStatus: string;
+    source: string;
+  };
+  slug: string;
+  seo: { title: string; description: string };
+  hero: {
+    title: string;
+    statement: string;
+    image: string;
+    alt: string;
+  };
+  intro: {
+    title: string;
+    body: string[];
+    image: string;
+    alt: string;
+  };
+  form: {
+    labels: {
+      name: string;
+      phone: string;
+      email: string;
+      interest: string;
+      message: string;
+    };
+    interestOptions: Array<{
+      value: "general" | "volunteer" | "partnership" | "donation" | "other";
+      label: string;
+    }>;
+    submitLabel: string;
+    submittingLabel: string;
+    successMessage: string;
+    errorMessage: string;
+    configurationMessage: string;
+    privacyNotice: string;
+  };
+  cta: SharedCtaContent;
+};
+
 type HomeContent = {
   slug: string;
   status: string;
@@ -428,6 +470,11 @@ const getInvolvedByLocale = {
   es: getInvolvedEs,
 } as Record<Locale, GetInvolvedContent>;
 
+const contactByLocale = {
+  en: contactEn,
+  es: contactEs,
+} as Record<Locale, ContactContent>;
+
 const homeByLocale = {
   en: homeEn,
   es: homeEs,
@@ -435,11 +482,9 @@ const homeByLocale = {
 
 const pagesByLocale = {
   en: {
-    contact: contactEn,
     donate: donateEn,
   },
   es: {
-    contact: contactEs,
     donate: donateEs,
   },
 } satisfies Record<Locale, Record<PlannedPagePath, PageStub>>;
@@ -482,6 +527,10 @@ export function getAboutUs(locale: Locale): AboutUsContent {
 
 export function getGetInvolved(locale: Locale): GetInvolvedContent {
   return getInvolvedByLocale[locale];
+}
+
+export function getContact(locale: Locale): ContactContent {
+  return contactByLocale[locale];
 }
 
 export function getHome(locale: Locale): HomeContent {

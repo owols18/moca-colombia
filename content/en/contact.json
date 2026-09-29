@@ -1,7 +1,60 @@
 {
+  "_meta": {
+    "status": "implemented",
+    "translationStatus": "source-copy",
+    "source": "Approved Illustrator and supplied English text"
+  },
   "slug": "contact",
-  "status": "content-partial",
-  "seo": { "title": "Contact Us", "description": "Connect with Moca Colombia and help build lasting change." },
-  "hero": { "eyebrow": "Connect", "title": "Contact Us" },
-  "notice": "The route and content contract are ready; final form consent copy remains pending."
+  "seo": {
+    "title": "Contact Us",
+    "description": "Connect with Moca Colombia and help build lasting change in La Argentina."
+  },
+  "hero": {
+    "title": "Contact Us",
+    "statement": "Connect with us and help build lasting change.",
+    "image": "/images/contact/hero.jpg",
+    "alt": "A panoramic view of the mountains and farmland surrounding La Argentina"
+  },
+  "intro": {
+    "title": "We Would Love to Hear From You",
+    "body": [
+      "Whether you have a question, want to support our work, or explore a partnership, we would be glad to hear from you.",
+      "Your ideas, experience, and commitment can help strengthen the initiatives we develop alongside local communities.",
+      "Reach out and discover how we can create meaningful and lasting impact together."
+    ],
+    "image": "/images/contact/hear-from-you.jpg",
+    "alt": "Hands holding fresh produce harvested from the land"
+  },
+  "form": {
+    "labels": {
+      "name": "Your Full Name *",
+      "phone": "Your Phone *",
+      "email": "Your Email *",
+      "interest": "How Would You Like to Help? *",
+      "message": "Tell Us About You *"
+    },
+    "interestOptions": [
+      { "value": "general", "label": "General inquiry" },
+      { "value": "volunteer", "label": "Volunteering" },
+      { "value": "partnership", "label": "Partnership" },
+      { "value": "donation", "label": "Donation" },
+      { "value": "other", "label": "Other" }
+    ],
+    "submitLabel": "Send",
+    "submittingLabel": "Sending...",
+    "successMessage": "Thank you. Your message has been sent successfully.",
+    "errorMessage": "We could not send your message. Please try again.",
+    "configurationMessage": "The form is ready, but email delivery still needs to be configured on the server.",
+    "privacyNotice": "Your information will be used only to respond to this request."
+  },
+  "cta": {
+    "title": "Change a Life Today",
+    "body": "Whether you donate, volunteer, or partner with us, your support helps strengthen education, healthcare, sustainable livelihoods, and long-term community development.",
+    "image": "/images/shared/change-a-life-today.png",
+    "actions": [
+      { "label": "Donate Now", "href": "/donate", "variant": "light" },
+      { "label": "Volunteer With Us", "href": "/contact?interest=volunteer", "variant": "outlineLight" },
+      { "label": "Let's Partner", "href": "/contact?interest=partnership", "variant": "outlineLight" }
+    ]
+  }
 }

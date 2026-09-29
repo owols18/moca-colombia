@@ -1,7 +1,60 @@
 {
+  "_meta": {
+    "status": "implemented",
+    "translationStatus": "provisional",
+    "source": "Traducción provisional al español del texto en inglés suministrado"
+  },
   "slug": "contact",
-  "status": "content-partial",
-  "seo": { "title": "Contacto", "description": "Conecta con Moca Colombia y ayuda a construir un cambio duradero." },
-  "hero": { "eyebrow": "Conecta", "title": "Contacto" },
-  "notice": "La ruta y el contrato de contenido están listos; falta aprobar el consentimiento final del formulario."
+  "seo": {
+    "title": "Contacto",
+    "description": "Conecta con Moca Colombia y ayuda a construir un cambio duradero en La Argentina."
+  },
+  "hero": {
+    "title": "Contacto",
+    "statement": "Conecta con nosotros y ayuda a construir un cambio duradero.",
+    "image": "/images/contact/hero.jpg",
+    "alt": "Vista panorámica de las montañas y cultivos que rodean La Argentina"
+  },
+  "intro": {
+    "title": "Nos encantaría saber de ti",
+    "body": [
+      "Si tienes una pregunta, quieres apoyar nuestro trabajo o explorar una alianza, nos encantará escucharte.",
+      "Tus ideas, experiencia y compromiso pueden ayudar a fortalecer las iniciativas que desarrollamos junto a las comunidades locales.",
+      "Contáctanos y descubre cómo podemos crear juntos un impacto significativo y duradero."
+    ],
+    "image": "/images/contact/hear-from-you.jpg",
+    "alt": "Unas manos sostienen productos frescos cosechados de la tierra"
+  },
+  "form": {
+    "labels": {
+      "name": "Nombre completo *",
+      "phone": "Teléfono *",
+      "email": "Correo electrónico *",
+      "interest": "¿Cómo te gustaría ayudar? *",
+      "message": "Cuéntanos sobre ti *"
+    },
+    "interestOptions": [
+      { "value": "general", "label": "Consulta general" },
+      { "value": "volunteer", "label": "Voluntariado" },
+      { "value": "partnership", "label": "Alianza" },
+      { "value": "donation", "label": "Donación" },
+      { "value": "other", "label": "Otro" }
+    ],
+    "submitLabel": "Enviar",
+    "submittingLabel": "Enviando...",
+    "successMessage": "Gracias. Tu mensaje fue enviado correctamente.",
+    "errorMessage": "No pudimos enviar tu mensaje. Inténtalo nuevamente.",
+    "configurationMessage": "El formulario está listo, pero todavía falta configurar el servicio de correo en el servidor.",
+    "privacyNotice": "Tu información se utilizará únicamente para responder esta solicitud."
+  },
+  "cta": {
+    "title": "Cambia una vida hoy",
+    "body": "Ya sea que dones, seas voluntario o te unas como aliado, tu apoyo ayuda a fortalecer la educación, la salud, los medios de vida sostenibles y el desarrollo comunitario a largo plazo.",
+    "image": "/images/shared/change-a-life-today.png",
+    "actions": [
+      { "label": "Donar ahora", "href": "/donate", "variant": "light" },
+      { "label": "Quiero ser voluntario", "href": "/contact?interest=volunteer", "variant": "outlineLight" },
+      { "label": "Crear una alianza", "href": "/contact?interest=partnership", "variant": "outlineLight" }
+    ]
+  }
 }
