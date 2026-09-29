@@ -1,7 +1,53 @@
 {
+  "_meta": {
+    "status": "implemented",
+    "translationStatus": "provisional",
+    "source": "Traducción provisional al español del texto en inglés suministrado"
+  },
   "slug": "get-involved",
-  "status": "content-ready",
-  "seo": { "title": "Participa", "description": "Dona, sé voluntario o crea una alianza con Moca Colombia para generar oportunidades duraderas." },
-  "hero": { "eyebrow": "Actúa", "title": "Participa" },
-  "notice": "La ruta y el JSON de la página están listos para la siguiente implementación interior."
+  "seo": {
+    "title": "Participa",
+    "description": "Dona, participa como voluntario o crea una alianza con Moca Colombia para generar oportunidades duraderas en La Argentina."
+  },
+  "hero": {
+    "title": "Participa",
+    "statement": "Únete a nosotros para crear juntos oportunidades duraderas para las comunidades de La Argentina.",
+    "image": "/images/get-involved/hero.jpg",
+    "alt": "Personas voluntarias trabajan juntas y comparten suministros"
+  },
+  "sections": {
+    "donate": {
+      "id": "donate",
+      "title": "Dona",
+      "body": "Tu donación ayuda a ampliar el acceso a la educación, la nutrición, la salud y los medios de vida sostenibles. Cada contribución respalda iniciativas prácticas desarrolladas en torno a las prioridades de la comunidad. Juntos podemos crear oportunidades que sigan marcando la diferencia durante generaciones.",
+      "image": "/images/get-involved/donate.png",
+      "alt": "Unas manos sostienen una alcancía mientras otra aporta un corazón",
+      "action": { "label": "Donar ahora", "href": "/donate" }
+    },
+    "volunteer": {
+      "id": "volunteer",
+      "title": "Voluntariado",
+      "body": "Comparte tu tiempo, conocimientos y habilidades para apoyar un trabajo significativo liderado por la comunidad. Las personas voluntarias ayudan a fortalecer nuestros programas mientras construyen vínculos genuinos con quienes acompañamos. Tu participación puede convertir el compromiso en un impacto medible y duradero.",
+      "image": "/images/get-involved/volunteer.jpg",
+      "alt": "Una educadora voluntaria comparte con estudiantes en un salón de clases",
+      "action": { "label": "Quiero ser voluntario", "href": "/contact?interest=volunteer" }
+    },
+    "partner": {
+      "id": "partner",
+      "title": "Crea una alianza",
+      "body": "Colaboramos con organizaciones, instituciones y empresas que comparten nuestro compromiso con el desarrollo sostenible. Las alianzas estratégicas aportan experiencia, recursos y oportunidades que fortalecen cada iniciativa. Al trabajar juntos podemos ampliar nuestro alcance y construir soluciones duraderas.",
+      "image": "/images/get-involved/partner.jpg",
+      "alt": "Dos personas unen sus manos para representar una alianza",
+      "action": { "label": "Crear una alianza", "href": "/contact?interest=partnership" }
+    }
+  },
+  "cta": {
+    "title": "",
+    "body": "Ya sea que dones, seas voluntario o te unas como aliado, tu apoyo ayuda a fortalecer la educación, la salud, los medios de vida sostenibles y el desarrollo comunitario a largo plazo.",
+    "image": "/images/shared/change-a-life-today.png",
+    "actions": [
+      { "label": "Quiero ser voluntario", "href": "/contact?interest=volunteer", "variant": "outlineLight" },
+      { "label": "Crear una alianza", "href": "/contact?interest=partnership", "variant": "outlineLight" }
+    ]
+  }
 }

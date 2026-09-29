@@ -336,6 +336,40 @@ export type AboutUsContent = {
   cta: SharedCtaContent;
 };
 
+export type GetInvolvedContent = {
+  _meta: {
+    status: string;
+    translationStatus: string;
+    source: string;
+  };
+  slug: string;
+  seo: { title: string; description: string };
+  hero: {
+    title: string;
+    statement: string;
+    image: string;
+    alt: string;
+  };
+  sections: {
+    donate: GetInvolvedSection;
+    volunteer: GetInvolvedSection;
+    partner: GetInvolvedSection;
+  };
+  cta: SharedCtaContent;
+};
+
+type GetInvolvedSection = {
+  id: string;
+  title: string;
+  body: string;
+  image: string;
+  alt: string;
+  action: {
+    label: string;
+    href: string;
+  };
+};
+
 type HomeContent = {
   slug: string;
   status: string;
@@ -389,6 +423,11 @@ const aboutUsByLocale = {
   es: aboutUsEs,
 } as Record<Locale, AboutUsContent>;
 
+const getInvolvedByLocale = {
+  en: getInvolvedEn,
+  es: getInvolvedEs,
+} as Record<Locale, GetInvolvedContent>;
+
 const homeByLocale = {
   en: homeEn,
   es: homeEs,
@@ -396,12 +435,10 @@ const homeByLocale = {
 
 const pagesByLocale = {
   en: {
-    "get-involved": getInvolvedEn,
     contact: contactEn,
     donate: donateEn,
   },
   es: {
-    "get-involved": getInvolvedEs,
     contact: contactEs,
     donate: donateEs,
   },
@@ -441,6 +478,10 @@ export function getImpact(locale: Locale): ImpactContent {
 
 export function getAboutUs(locale: Locale): AboutUsContent {
   return aboutUsByLocale[locale];
+}
+
+export function getGetInvolved(locale: Locale): GetInvolvedContent {
+  return getInvolvedByLocale[locale];
 }
 
 export function getHome(locale: Locale): HomeContent {

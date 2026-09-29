@@ -1,7 +1,53 @@
 {
+  "_meta": {
+    "status": "implemented",
+    "translationStatus": "source-copy",
+    "source": "Approved Illustrator and supplied English text"
+  },
   "slug": "get-involved",
-  "status": "content-ready",
-  "seo": { "title": "Get Involved", "description": "Donate, volunteer, or partner with Moca Colombia to create lasting opportunities." },
-  "hero": { "eyebrow": "Take action", "title": "Get Involved" },
-  "notice": "The route and page-level JSON are ready for the next interior-page implementation."
+  "seo": {
+    "title": "Get Involved",
+    "description": "Donate, volunteer, or partner with Moca Colombia to create lasting opportunities in La Argentina."
+  },
+  "hero": {
+    "title": "Get Involved",
+    "statement": "Join us in creating lasting opportunities for communities across La Argentina together.",
+    "image": "/images/get-involved/hero.jpg",
+    "alt": "Volunteers working together and sharing supplies"
+  },
+  "sections": {
+    "donate": {
+      "id": "donate",
+      "title": "Donate",
+      "body": "Your donation helps expand access to education, nutrition, healthcare, and sustainable livelihoods. Every contribution supports practical initiatives developed around the community's priorities. Together, we can create opportunities that continue making a difference for generations.",
+      "image": "/images/get-involved/donate.png",
+      "alt": "Hands supporting a piggy bank while another hand contributes a heart",
+      "action": { "label": "Donate Now", "href": "/donate" }
+    },
+    "volunteer": {
+      "id": "volunteer",
+      "title": "Volunteer",
+      "body": "Share your time, knowledge, and skills to support meaningful community-led work. Volunteers help strengthen our programs while building genuine connections with the people we serve. Your involvement can turn commitment into measurable and lasting impact.",
+      "image": "/images/get-involved/volunteer.jpg",
+      "alt": "A volunteer educator engaging with students in a classroom",
+      "action": { "label": "Volunteer With Us", "href": "/contact?interest=volunteer" }
+    },
+    "partner": {
+      "id": "partner",
+      "title": "Partner With Us",
+      "body": "We collaborate with organizations, institutions, and businesses that share our commitment to sustainable development. Strategic partnerships provide expertise, resources, and opportunities that strengthen every initiative. By working together, we can expand our reach and build lasting solutions.",
+      "image": "/images/get-involved/partner.jpg",
+      "alt": "Two people joining hands to represent partnership",
+      "action": { "label": "Let's Partner", "href": "/contact?interest=partnership" }
+    }
+  },
+  "cta": {
+    "title": "",
+    "body": "Whether you donate, volunteer, or partner with us, your support helps strengthen education, healthcare, sustainable livelihoods, and long-term community development.",
+    "image": "/images/shared/change-a-life-today.png",
+    "actions": [
+      { "label": "Volunteer With Us", "href": "/contact?interest=volunteer", "variant": "outlineLight" },
+      { "label": "Let's Partner", "href": "/contact?interest=partnership", "variant": "outlineLight" }
+    ]
+  }
 }

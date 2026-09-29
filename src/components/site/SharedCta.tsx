@@ -25,7 +25,7 @@ export function SharedCta({ content, locale }: SharedCtaProps) {
         <div className={styles.scrim} />
         <div className={styles.content}>
           <div>
-            <h2>{content.title}</h2>
+            {content.title ? <h2>{content.title}</h2> : null}
             <p className={styles.body}>{content.body}</p>
           </div>
           <div className={styles.actions}>
