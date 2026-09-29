@@ -130,7 +130,7 @@
   "cta": {
     "title": "Change a Life Today",
     "body": "Whether you donate, volunteer, or partner with us, your support helps strengthen education, healthcare, sustainable livelihoods, and long-term community development.",
-    "image": "/images/shared/change-a-life-today.webp",
+    "image": "/images/shared/change-a-life-today.png",
     "actions": [
       { "label": "Donate Now", "href": "/donate", "variant": "secondary" },
       { "label": "Volunteer With Us", "href": "/get-involved#volunteer", "variant": "secondary" },

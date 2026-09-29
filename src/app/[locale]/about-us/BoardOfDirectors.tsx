@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 
 import type { AboutUsContent } from "@/lib/content";
 
@@ -13,22 +13,10 @@ type BoardOfDirectorsProps = {
 
 export function BoardOfDirectors({ content }: BoardOfDirectorsProps) {
   const [activeIndex, setActiveIndex] = useState(0);
-  const activeCardRef = useRef<HTMLButtonElement>(null);
-  const previousIndexRef = useRef(activeIndex);
   const activeDirector = content.directors[activeIndex];
-
-  useEffect(() => {
-    if (previousIndexRef.current === activeIndex) {
-      return;
-    }
-
-    previousIndexRef.current = activeIndex;
-    activeCardRef.current?.scrollIntoView({
-      behavior: "smooth",
-      block: "nearest",
-      inline: "center",
-    });
-  }, [activeIndex]);
+  const controlsClassName = `${styles.boardControls} ${
+    content.directors.length > 7 ? styles.boardControlsDesktop : ""
+  }`;
 
   function selectPrevious() {
     setActiveIndex((current) =>
@@ -45,10 +33,16 @@ export function BoardOfDirectors({ content }: BoardOfDirectorsProps) {
       <div className={styles.boardInner}>
         <h2 className={styles.boardTitle}>{content.title}</h2>
 
-        <article className={styles.featuredDirector} key={activeDirector.id}>
+        <article aria-live="polite" className={styles.featuredDirector} key={activeDirector.id}>
           <div className={styles.featuredVisual}>
-            <span aria-hidden="true" className={styles.portraitAccentBack} />
-            <span aria-hidden="true" className={styles.portraitAccentFront} />
+            <Image
+              alt=""
+              aria-hidden="true"
+              className={styles.portraitBackground}
+              fill
+              sizes="(max-width: 700px) 78vw, (max-width: 1100px) 40vw, 31rem"
+              src="/images/about-us/teams-cards-background.svg"
+            />
             <div className={styles.featuredPortrait}>
               <Image
                 alt={activeDirector.alt}
@@ -73,7 +67,12 @@ export function BoardOfDirectors({ content }: BoardOfDirectorsProps) {
           </div>
         </article>
 
-        <div aria-label={content.selectLabel} className={styles.directorRail} role="group">
+        <div
+          aria-label={content.selectLabel}
+          className={styles.directorRail}
+          id="board-director-cards"
+          role="group"
+        >
           {content.directors.map((director, index) => {
             const isActive = index === activeIndex;
 
@@ -83,7 +82,6 @@ export function BoardOfDirectors({ content }: BoardOfDirectorsProps) {
                 className={`${styles.directorCard} ${isActive ? styles.directorCardActive : ""}`}
                 key={director.id}
                 onClick={() => setActiveIndex(index)}
-                ref={isActive ? activeCardRef : null}
                 type="button"
               >
                 <span className={styles.cardPortrait}>
@@ -101,12 +99,22 @@ export function BoardOfDirectors({ content }: BoardOfDirectorsProps) {
           })}
         </div>
 
-        <div className={styles.boardControls}>
-          <button aria-label={content.previousLabel} onClick={selectPrevious} type="button">
+        <div className={controlsClassName}>
+          <button
+            aria-controls="board-director-cards"
+            aria-label={content.previousLabel}
+            onClick={selectPrevious}
+            type="button"
+          >
             <span aria-hidden="true">←</span>
             <span>{content.previousLabel}</span>
           </button>
-          <button aria-label={content.nextLabel} onClick={selectNext} type="button">
+          <button
+            aria-controls="board-director-cards"
+            aria-label={content.nextLabel}
+            onClick={selectNext}
+            type="button"
+          >
             <span>{content.nextLabel}</span>
             <span aria-hidden="true">→</span>
           </button>
