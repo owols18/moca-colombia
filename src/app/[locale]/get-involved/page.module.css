@@ -72,9 +72,21 @@
 .donateBand {
   --donate-size: clamp(38rem, 42.55vw, 51.0625rem);
 
-  background: var(--color-sand-soft);
+  background: var(--color-white);
   height: var(--donate-size);
+  isolation: isolate;
   overflow: hidden;
+  position: relative;
+}
+
+.donateBand::before {
+  background: var(--color-sand-soft);
+  content: "";
+  inset-block: 0;
+  left: 0;
+  position: absolute;
+  width: calc(50% + min(50%, 60rem) - var(--gutter) - (var(--donate-size) / 2));
+  z-index: -1;
 }
 
 .donateInner {
@@ -214,6 +226,10 @@
 
   .donateBand {
     --donate-size: clamp(36rem, 68vw, 42rem);
+  }
+
+  .donateBand::before {
+    width: 100%;
   }
 
   .donateInner {

@@ -42,10 +42,11 @@
     }
   },
   "cta": {
-    "title": "",
+    "title": "Cambia una vida hoy",
     "body": "Ya sea que dones, seas voluntario o te unas como aliado, tu apoyo ayuda a fortalecer la educación, la salud, los medios de vida sostenibles y el desarrollo comunitario a largo plazo.",
     "image": "/images/shared/change-a-life-today.png",
     "actions": [
+      { "label": "Donar ahora", "href": "/donate", "variant": "light" },
       { "label": "Quiero ser voluntario", "href": "/contact?interest=volunteer", "variant": "outlineLight" },
       { "label": "Crear una alianza", "href": "/contact?interest=partnership", "variant": "outlineLight" }
     ]
