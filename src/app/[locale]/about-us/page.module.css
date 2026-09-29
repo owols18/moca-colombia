@@ -175,6 +175,11 @@
   object-fit: cover;
 }
 
+.cardPortrait img {
+  transform: scale(1);
+  transition: transform var(--duration-slow) var(--ease-standard);
+}
+
 .featuredCopy {
   color: var(--color-ink);
   min-width: 0;
@@ -254,11 +259,16 @@
   min-width: 0;
   padding: 0 0 var(--space-4);
   text-align: left;
-  transition: color var(--duration-base) var(--ease-standard), transform var(--duration-base) var(--ease-standard);
+  transition: color var(--duration-base) var(--ease-standard);
 }
 
 .directorCard:hover {
   color: var(--color-forest);
+}
+
+.directorCard:hover .cardPortrait img,
+.directorCard:focus-visible .cardPortrait img {
+  transform: scale(1.055);
 }
 
 .directorCard:focus-visible {
@@ -315,13 +325,9 @@
 }
 
 .boardControls {
-  display: none;
+  display: flex;
   justify-content: space-between;
   margin-top: var(--space-5);
-}
-
-.boardControlsDesktop {
-  display: flex;
 }
 
 .boardControls button {
@@ -358,7 +364,7 @@
   }
 
   .boardControls {
-    display: flex;
+    display: none;
   }
 }
 

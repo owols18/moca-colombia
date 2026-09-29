@@ -14,9 +14,7 @@ type BoardOfDirectorsProps = {
 export function BoardOfDirectors({ content }: BoardOfDirectorsProps) {
   const [activeIndex, setActiveIndex] = useState(0);
   const activeDirector = content.directors[activeIndex];
-  const controlsClassName = `${styles.boardControls} ${
-    content.directors.length > 7 ? styles.boardControlsDesktop : ""
-  }`;
+  const showControls = content.directors.length > 7;
 
   function selectPrevious() {
     setActiveIndex((current) =>
@@ -99,26 +97,28 @@ export function BoardOfDirectors({ content }: BoardOfDirectorsProps) {
           })}
         </div>
 
-        <div className={controlsClassName}>
-          <button
-            aria-controls="board-director-cards"
-            aria-label={content.previousLabel}
-            onClick={selectPrevious}
-            type="button"
-          >
-            <span aria-hidden="true">←</span>
-            <span>{content.previousLabel}</span>
-          </button>
-          <button
-            aria-controls="board-director-cards"
-            aria-label={content.nextLabel}
-            onClick={selectNext}
-            type="button"
-          >
-            <span>{content.nextLabel}</span>
-            <span aria-hidden="true">→</span>
-          </button>
-        </div>
+        {showControls ? (
+          <div className={styles.boardControls}>
+            <button
+              aria-controls="board-director-cards"
+              aria-label={content.previousLabel}
+              onClick={selectPrevious}
+              type="button"
+            >
+              <span aria-hidden="true">←</span>
+              <span>{content.previousLabel}</span>
+            </button>
+            <button
+              aria-controls="board-director-cards"
+              aria-label={content.nextLabel}
+              onClick={selectNext}
+              type="button"
+            >
+              <span>{content.nextLabel}</span>
+              <span aria-hidden="true">→</span>
+            </button>
+          </div>
+        ) : null}
       </div>
     </section>
   );
