@@ -1,7 +1,140 @@
 {
+  "_meta": {
+    "status": "implemented",
+    "translationStatus": "provisional",
+    "source": "Diseño de Moca Colombia en Illustrator y archivo de contenido aprobado en inglés"
+  },
   "slug": "about-us",
-  "status": "content-ready",
-  "seo": { "title": "Sobre nosotros", "description": "Conoce a Moca Colombia y a las personas que orientan su misión comunitaria." },
-  "hero": { "eyebrow": "Organización", "title": "Sobre nosotros" },
-  "notice": "La ruta y el JSON de la página están listos para la siguiente implementación interior."
+  "seo": {
+    "title": "Sobre Nosotros",
+    "description": "Conoce a Moca Colombia y a las personas que orientan su misión comunitaria."
+  },
+  "hero": {
+    "title": "Sobre Nosotros",
+    "statement": "Arraigados en la Comunidad, Unidos por un Propósito, Construyendo un Cambio Duradero en Toda Colombia",
+    "image": "/images/about-us/hero.jpg",
+    "alt": "Integrantes de la comunidad de La Argentina reunidos al aire libre"
+  },
+  "belief": {
+    "id": "creemos-en-el-cambio",
+    "title": "Creemos en el Cambio",
+    "body": [
+      "MOCA Colombia es una organización sin ánimo de lucro dedicada a transformar vidas en La Argentina, Medellín, mediante el desarrollo sostenible, la educación, la atención médica y el empoderamiento económico. Nuestro trabajo parte de la convicción de que el cambio duradero surge al atender las necesidades fundamentales y, al mismo tiempo, brindar a las comunidades las herramientas para construir su propio futuro."
+    ],
+    "intro": "Nos enfocamos en tres pilares fundamentales:",
+    "pillars": [
+      {
+        "title": "Crecimiento Económico Sostenible",
+        "body": "A través de nuestra iniciativa MOCACAO, ayudamos a La Argentina a desarrollar su industria del cacao, creando estabilidad financiera y autosuficiencia a largo plazo."
+      },
+      {
+        "title": "Educación y Nutrición",
+        "body": "Proporcionamos alimentación diaria, recursos escolares y becas para que cada niño tenga la oportunidad de prosperar."
+      },
+      {
+        "title": "Atención Médica",
+        "body": "En alianza con la Fundación Clínica Noel, conectamos a los niños con servicios esenciales de salud para garantizar que ninguno se quede sin el tratamiento que necesita."
+      }
+    ]
+  },
+  "board": {
+    "id": "junta-directiva",
+    "title": "Junta Directiva",
+    "selectLabel": "Selecciona un integrante de la junta directiva",
+    "previousLabel": "Anterior",
+    "nextLabel": "Siguiente",
+    "directors": [
+      {
+        "id": "olivia-ospina-lerner",
+        "name": "Olivia Ospina Lerner",
+        "role": "Fundadora y Presidenta",
+        "image": "/images/about-us/olivia-ospina-lerner.png",
+        "alt": "Retrato de Olivia Ospina Lerner",
+        "biography": [
+          "Mi nombre es Olivia Ospina-Lerner. Nací en 2007 y crecí en la ciudad de Nueva York comiendo deliciosos fríjoles con arroz y bailando —aunque debo admitir que sin mucho ritmo— al sonido enérgico de la salsa y la cumbia. Durante mi infancia, mi familia y yo visitamos Colombia constantemente; es el lugar de nacimiento de mi madre y mis abuelos.",
+          "He disfrutado la belleza de este magnífico país y de su gente alegre y hospitalaria, tanto con familiares y amigos como mediante mis profundamente importantes encuentros con comunidades marginadas.",
+          "Mis recuerdos combinan acontecimientos alegres y profundamente conmovedores con momentos difíciles. La celebración de los quince años de mi hermana y los míos será siempre uno de los momentos más especiales de mi vida, al igual que el tiempo significativo que compartí con personas menos favorecidas.",
+          "Desde que tengo memoria, incluso desde los cuatro años, mi familia y yo pasábamos días en orfanatos, hogares para niños con cáncer y comunas de Medellín afectadas por la pobreza.",
+          "A los 16 años visité una comunidad agrícola aislada y empobrecida, en lo profundo de las montañas de Antioquia, y allí encontré la inspiración para crear MOCA Colombia.",
+          "Toda una vida de viajes a Colombia me ha mantenido conectada con mi herencia colombiana y profundamente agradecida por ella. Recibo de todo corazón la oportunidad de invitarlos a acompañarme en este recorrido de MOCA Colombia.",
+          "¡Gracias por dedicar tiempo a conocer y apoyar nuestra misión!"
+        ]
+      },
+      {
+        "id": "claudia-ospina",
+        "name": "Claudia Ospina",
+        "role": "Tesorera",
+        "image": "/images/about-us/claudia-ospina.png",
+        "alt": "Retrato de Claudia Ospina",
+        "biography": [
+          "Con una perspectiva verdaderamente internacional, Claudia nació en Colombia y creció y estudió en Londres, Nueva York, Lugano, París y Tokio, donde culminó su formación con un MBA internacional. Gracias a su amplia visión global, sus habilidades multilingües y su experiencia empresarial, ha trabajado con éxito con compañías de todo el mundo. Después de una breve pausa motivada por el nacimiento de sus hijas gemelas, fundó MOCA Ventures para hacer realidad su sueño de fortalecer los vínculos internacionales por medio de los negocios e incorporar excelencia a los proyectos de sus clientes. Su pasión por la excelencia, su meticulosa atención al detalle y su voluntad de superar las expectativas de los clientes impulsan a MOCA Ventures y la filosofía que orienta el éxito de la empresa.",
+          "Claudia es una visionaria dentro y fuera de su vida profesional, y ha mantenido siempre su compromiso de contribuir a la humanidad y defender un mundo más equitativo y solidario. Ha criado a sus hijas con el mismo espíritu y, durante décadas, ha dedicado innumerables ocasiones a apoyar de manera significativa a comunidades marginadas, especialmente en Colombia. Claudia es la orgullosa madre de dos hijas sumamente bondadosas y conscientes, con quienes comparte con entusiasmo sus esfuerzos humanitarios."
+        ]
+      },
+      {
+        "id": "georgina-israel",
+        "name": "Georgina Israel",
+        "role": "Secretaria",
+        "image": "/images/about-us/georgina-israel.png",
+        "alt": "Retrato de Georgina Israel",
+        "biography": [
+          "Georgina, madre de tres hijos, ha dedicado esta etapa de su vida a criarlos sobre una base sólida de viajes, cultura y diversidad. Tras alejarse de su carrera en radiología, se ha mantenido estrechamente vinculada con Northwell Health y explora nuevas formas de apoyar su misión, especialmente en la concientización sobre la salud de la mujer y la recaudación de fondos. Con raíces colombianas por parte de su madre, oriunda de Bogotá, Georgina siente una profunda conexión con la misión de MOCA Colombia y una gran pasión por contribuir a las comunidades desatendidas."
+        ]
+      },
+      {
+        "id": "anisa-kamadoli",
+        "name": "Anisa Kamadoli",
+        "role": "Directora",
+        "image": "/images/about-us/anisa-kamadoli.png",
+        "alt": "Retrato de Anisa Kamadoli",
+        "biography": [
+          "Anisa Kamadoli Costa es una reconocida líder en filantropía y sostenibilidad, apasionada por promover prácticas responsables en los sectores empresarial y sin ánimo de lucro. Amplía programas orientados al impacto, fomenta la colaboración entre sectores y construye estrategias para un cambio duradero.",
+          "Anisa es presidenta fundadora y miembro del consejo de la Rivian Foundation, y se desempeña como directora de Sostenibilidad de Rivian. Desde estas dos funciones dirige las iniciativas globales de sostenibilidad y filantropía de la compañía para impulsar sus prioridades de impacto.",
+          "Antes de Rivian, Anisa trabajó cerca de dos décadas en Tiffany & Co., donde se convirtió en su primera directora de Sostenibilidad y se desempeñó como presidenta de The Tiffany & Co. Foundation. Desarrolló la estrategia filantrópica de la compañía, centrada en la minería responsable y la conservación marina, y diseñó su estrategia de impacto basada en métricas y su compromiso de convertirse en una empresa con emisiones netas cero.",
+          "Anisa también integra los consejos de varias organizaciones destacadas, entre ellas KERING Foundation in the Americas, Geraldine Rockefeller Dodge Foundation y Friends of the High Line. Forma parte del Comité Ejecutivo de la Escuela de Asuntos Internacionales y Públicos de Columbia University, del Consejo de Liderazgo de Conservation International y del Global Future Council on Responsible Resource Use del Foro Económico Mundial. Anteriormente participó en los consejos de Derechos Humanos y de Minería y Metales del Foro.",
+          "Anisa obtuvo su título universitario en Barnard College y una maestría en la Escuela de Asuntos Internacionales y Públicos de Columbia University. También completó el programa ejecutivo PLD de Harvard Business School."
+        ]
+      },
+      {
+        "id": "abbie-newman",
+        "name": "Abbie Newman",
+        "role": "Directora",
+        "image": "/images/about-us/abbie-newman.png",
+        "alt": "Retrato de Abbie Newman",
+        "biography": [
+          "Abbie Newman es una emprendedora altamente motivada que cofundó y desarrolló una de las firmas de gestión de estilo de vida más exitosas de Nueva York. Ha recibido múltiples reconocimientos como concierge y fue miembro de la prestigiosa sociedad internacional Les Clefs d’Or. Aunque el servicio de hospitalidad permanece en el centro de su vocación, se enorgullece especialmente de haber identificado la necesidad de ofrecer servicios con estándares hoteleros en propiedades residenciales y comerciales, lo que la llevó en 2001 a cofundar Abigail Michaels Concierge. Su amplia red de contactos y su impecable reputación la convierten en un recurso clave para desarrolladores inmobiliarios, administradores de propiedades y propietarios de hoteles que buscan diferenciar sus espacios. Hoy, después de una adquisición, una fusión y un cambio de marca, su empresa LIVunLtd ofrece gestión de amenidades, activaciones de eventos, programas de bienestar y acondicionamiento físico, servicios acuáticos, consultoría y servicios de estilo de vida para todas las clases de activos inmobiliarios."
+        ]
+      },
+      {
+        "id": "andrea-ferrara",
+        "name": "Andrea Ferrara",
+        "role": "Directora",
+        "image": "/images/about-us/andrea-ferrara.png",
+        "alt": "Retrato de Andrea Ferrara",
+        "biography": [
+          "Andi Ferrara es una líder destacada con amplia experiencia en la industria musical, donde se desempeñó como vicepresidenta de Relaciones con Artistas de Atlantic Records en Nueva York. Ha trabajado con Robert Plant, Jimmy Page, Genesis, Tori Amos, Matchbox 20, Hootie and the Blowfish, The Corrs y muchos otros artistas, acumulando una valiosa experiencia en su campo. Después de dejar Atlantic en 2004, fundó su propia empresa, Drive By Entertainment, desde la cual trabajó hasta 2007 con The Corrs y con Epic Records en proyectos de Shakira y JLo. Andi posee una capacidad especial para conectarse con personas y equipos diversos, creando entornos colaborativos orientados a resultados. Defiende no solo el bien común de la humanidad, sino también la equidad, la justicia, el respeto y el éxito para todos. Su visión, pensamiento estratégico y capacidad para inspirar y unir a otras personas garantizan una contribución invaluable al éxito de la organización."
+        ]
+      },
+      {
+        "id": "julie-russak",
+        "name": "Julie Russak, M.D.",
+        "role": "Directora",
+        "image": "/images/about-us/julie-russak.png",
+        "alt": "Retrato de Julie Russak",
+        "biography": [
+          "Julie Russak, M.D., FAAD, es dermatóloga certificada y fundadora de Russak Dermatology Clinic y Russak + Aesthetic Center. Reconocida por su enfoque integral y su experiencia en estética regenerativa, combina investigación avanzada con tratamientos innovadores en dermatología médica, cosmética y quirúrgica. Su práctica de última generación ofrece numerosos servicios, entre ellos procedimientos bioestimuladores, rejuvenecimiento con láser, reafirmación de la piel, contorno corporal y atención avanzada del cáncer de piel. Solicitada internacionalmente por sus técnicas de restauración facial regenerativa, se dedica a brindar una atención personalizada y métodos regenerativos que mejoran el bienestar de sus pacientes y producen resultados naturales y transformadores."
+        ]
+      }
+    ]
+  },
+  "cta": {
+    "title": "Cambia una Vida Hoy",
+    "body": "Ya sea que dones, seas voluntario o te unas como aliado, tu apoyo ayuda a fortalecer la educación, la salud, los medios de vida sostenibles y el desarrollo comunitario a largo plazo.",
+    "image": "/images/shared/change-a-life-today.webp",
+    "actions": [
+      { "label": "Dona Ahora", "href": "/donate", "variant": "secondary" },
+      { "label": "Quiero Ser Voluntario", "href": "/get-involved#volunteer", "variant": "secondary" },
+      { "label": "Crear una Alianza", "href": "/get-involved#partnerships", "variant": "secondary" }
+    ]
+  }
 }

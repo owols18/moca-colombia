@@ -294,6 +294,48 @@ export type ImpactContent = {
   cta: SharedCtaContent;
 };
 
+export type AboutUsContent = {
+  _meta: {
+    status: string;
+    translationStatus: string;
+    source: string;
+  };
+  slug: string;
+  seo: { title: string; description: string };
+  hero: {
+    title: string;
+    statement: string;
+    image: string;
+    alt: string;
+  };
+  belief: {
+    id: string;
+    title: string;
+    body: string[];
+    intro: string;
+    pillars: Array<{
+      title: string;
+      body: string;
+    }>;
+  };
+  board: {
+    id: string;
+    title: string;
+    selectLabel: string;
+    previousLabel: string;
+    nextLabel: string;
+    directors: Array<{
+      id: string;
+      name: string;
+      role: string;
+      image: string;
+      alt: string;
+      biography: string[];
+    }>;
+  };
+  cta: SharedCtaContent;
+};
+
 type HomeContent = {
   slug: string;
   status: string;
@@ -342,6 +384,11 @@ const impactByLocale = {
   es: impactEs,
 } as Record<Locale, ImpactContent>;
 
+const aboutUsByLocale = {
+  en: aboutUsEn,
+  es: aboutUsEs,
+} as Record<Locale, AboutUsContent>;
+
 const homeByLocale = {
   en: homeEn,
   es: homeEs,
@@ -349,13 +396,11 @@ const homeByLocale = {
 
 const pagesByLocale = {
   en: {
-    "about-us": aboutUsEn,
     "get-involved": getInvolvedEn,
     contact: contactEn,
     donate: donateEn,
   },
   es: {
-    "about-us": aboutUsEs,
     "get-involved": getInvolvedEs,
     contact: contactEs,
     donate: donateEs,
@@ -392,6 +437,10 @@ export function getMedicalCare(locale: Locale): MedicalCareContent {
 
 export function getImpact(locale: Locale): ImpactContent {
   return impactByLocale[locale];
+}
+
+export function getAboutUs(locale: Locale): AboutUsContent {
+  return aboutUsByLocale[locale];
 }
 
 export function getHome(locale: Locale): HomeContent {

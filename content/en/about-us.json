@@ -1,7 +1,140 @@
 {
+  "_meta": {
+    "status": "implemented",
+    "translationStatus": "source",
+    "source": "Moca Colombia Illustrator design and approved English content file"
+  },
   "slug": "about-us",
-  "status": "content-ready",
-  "seo": { "title": "About Us", "description": "Meet Moca Colombia and the people guiding its community-led mission." },
-  "hero": { "eyebrow": "Organization", "title": "About Us" },
-  "notice": "The route and page-level JSON are ready for the next interior-page implementation."
+  "seo": {
+    "title": "About Us",
+    "description": "Meet Moca Colombia and the people guiding its community-led mission."
+  },
+  "hero": {
+    "title": "About Us",
+    "statement": "Rooted in Community, United by Purpose, Building Lasting Change Across Colombia",
+    "image": "/images/about-us/hero.jpg",
+    "alt": "Members of the La Argentina community gathered outdoors"
+  },
+  "belief": {
+    "id": "we-believe-in-change",
+    "title": "We Believe in Change",
+    "body": [
+      "MOCA Colombia is a non-profit organization dedicated to transforming lives in La Argentina, Medellín, through sustainable development, education, healthcare, and economic empowerment. Our work is rooted in the belief that lasting change comes from addressing fundamental needs while equipping communities with the tools to build their own futures."
+    ],
+    "intro": "We focus on three core pillars:",
+    "pillars": [
+      {
+        "title": "Sustainable Economic Growth",
+        "body": "Through our MOCACAO initiative, we help La Argentina develop its cacao industry, creating long-term financial stability and self-sufficiency."
+      },
+      {
+        "title": "Education & Nutrition",
+        "body": "We provide daily meals, school resources, and scholarships to ensure every child has the opportunity to thrive."
+      },
+      {
+        "title": "Medical Care",
+        "body": "In partnership with Fundación Clínica Noel, we connect children to essential healthcare services, ensuring that no child is left without the treatment they need."
+      }
+    ]
+  },
+  "board": {
+    "id": "board-of-directors",
+    "title": "Board of Directors",
+    "selectLabel": "Select a board member",
+    "previousLabel": "Previous",
+    "nextLabel": "Next",
+    "directors": [
+      {
+        "id": "olivia-ospina-lerner",
+        "name": "Olivia Ospina Lerner",
+        "role": "Founder & President",
+        "image": "/images/about-us/olivia-ospina-lerner.png",
+        "alt": "Portrait of Olivia Ospina Lerner",
+        "biography": [
+          "My name is Olivia Ospina-Lerner. I was born in 2007 and raised in New York City on delicious rice and beans, and dancing (admittedly unrhythmically) to the energetic sounds of salsa and cumbia. Growing up, my family and I visited Colombia constantly; it is the birthplace of my mother and grandparents.",
+          "I have enjoyed the beauty of this magnificent country and its joyful, hospitable people, both with family and friends, and also through my immensely important interactions with marginalized communities.",
+          "My memories are a mix of joyous and profoundly moving events and sobering moments. My sister’s and my Quinceañera celebration will forever be a highlight in my life, and so will the meaningful time I spent with those less fortunate.",
+          "As long as I can remember, as early as four years old, my family and I would spend days in orphanages, homes for children suffering from cancer, and the poverty-stricken comunas of Medellín.",
+          "When I was 16, I visited an isolated, impoverished farming community deep in the mountains of Antioquia, and there I was inspired to create MOCA Colombia.",
+          "A lifetime of journeys to Colombia has kept me connected to, and deeply grateful for, my Colombian heritage, and I welcome—wholeheartedly—the opportunity to bring you with me on this journey of MOCA Colombia.",
+          "Thank you for taking the time to read and care about our mission!"
+        ]
+      },
+      {
+        "id": "claudia-ospina",
+        "name": "Claudia Ospina",
+        "role": "Treasurer",
+        "image": "/images/about-us/claudia-ospina.png",
+        "alt": "Portrait of Claudia Ospina",
+        "biography": [
+          "Truly internationally focused, Claudia was born in Colombia, raised and educated in London, New York, Lugano, Paris and Tokyo where she culminated her education with an International MBA degree. Utilizing her vast global perspective, multi-lingual abilities, and business acumen, Claudia has successfully worked with companies from all around the world. Following a small hiatus, precipitated by the birth of her twin girls, Claudia founded MOCA Ventures to fulfill her dream of strengthening international bonds through business, and infusing excellence into the projects of her clients and their customers. With her unsurpassed passion for excellence, meticulous attention to detail, and eager willingness to surpass her clients’ expectations, Claudia is the driving force behind MOCA Ventures and the philosophy that guides the company’s success.",
+          "Claudia is a visionary—in and out of her professional life—and has unfailingly remained true to her need to give back to humanity, championing always for a more equitable, caring world. She has raised her girls in the same spirit, devoting innumerable occasions, over decades, to meaningfully helping marginalized communities, specifically in Colombia. Claudia is the proud mother of two extremely kind and conscientious daughters, with whom she is thrilled to share their humanitarian endeavors."
+        ]
+      },
+      {
+        "id": "georgina-israel",
+        "name": "Georgina Israel",
+        "role": "Secretary",
+        "image": "/images/about-us/georgina-israel.png",
+        "alt": "Portrait of Georgina Israel",
+        "biography": [
+          "Georgina, a mother of three, has devoted this chapter of her life to raising her children with a strong foundation in travel, culture, and diversity. After stepping away from her career in radiology, she has remained closely connected to Northwell Health and is exploring new ways to support its mission—particularly in the areas of women’s health awareness and fundraising. With Colombian roots through her mother from Bogotá, Georgina feels a deep connection to MOCA Colombia’s mission and is passionate about giving back to underserved communities."
+        ]
+      },
+      {
+        "id": "anisa-kamadoli",
+        "name": "Anisa Kamadoli",
+        "role": "Director",
+        "image": "/images/about-us/anisa-kamadoli.png",
+        "alt": "Portrait of Anisa Kamadoli",
+        "biography": [
+          "Anisa Kamadoli Costa is a recognized leader in philanthropy and sustainability and is passionate about advancing responsible practices in the corporate and nonprofit sectors. She scales impact-driven programs, fosters cross-sector collaboration, and builds strategies for lasting change.",
+          "Anisa is the founding President and Trustee of the Rivian Foundation and serves as Chief Sustainability Officer at Rivian. In these dual roles, she drives the company’s global sustainability and philanthropic initiatives to advance Rivian’s impact priorities.",
+          "Before Rivian, Anisa spent nearly two decades at Tiffany & Co., where she became its first Chief Sustainability Officer and served as Chairman and President of The Tiffany & Co. Foundation. She developed the company’s philanthropic strategy focused on responsible mining and marine conservation and was the architect of its metrics-driven impact strategy and commitment to becoming a net-zero company.",
+          "Anisa also serves as a Trustee for several prominent organizations, including the KERING Foundation in the Americas, the Geraldine Rockefeller Dodge Foundation, and Friends of the High Line. She serves on the Executive Committee of Columbia University’s School of International and Public Affairs and Conservation International’s Leadership Council, as well as on the World Economic Forum’s Global Future Council on Responsible Resource Use. Previously, she served on WEF’s Human Rights and Mining & Metals Councils.",
+          "Anisa holds a bachelor’s degree from Barnard College and a master’s degree from Columbia University’s School of International and Public Affairs. She also completed Harvard Business School’s PLD Executive Management Program."
+        ]
+      },
+      {
+        "id": "abbie-newman",
+        "name": "Abbie Newman",
+        "role": "Director",
+        "image": "/images/about-us/abbie-newman.png",
+        "alt": "Portrait of Abbie Newman",
+        "biography": [
+          "Abbie Newman is a highly motivated entrepreneur who co-founded and created one of the most successful lifestyle management firms in NYC. Abbie is a multi award-winning concierge, and a former member of the prestigious International Concierge Society’s ‘Les Clefs d’Or.’ While hospitality service remains at the core of her DNA, she is extremely proud to have identified the need for hotel-caliber services in residential and commercial properties, leading, in 2001, to her co-founding Abigail Michaels Concierge. Abbie’s vast network of contacts and her impeccable reputation make her the go-to resource for real estate developers, property managers and hotel owners who seek to differentiate their properties. Today, after an acquisition, a merger, and a rebranding, Abbie’s company, LIVunLtd, offers amenity management, event activations, fitness and wellness programming, aquatics, consulting and lifestyle services, provided across all asset classes of real estate."
+        ]
+      },
+      {
+        "id": "andrea-ferrara",
+        "name": "Andrea Ferrara",
+        "role": "Director",
+        "image": "/images/about-us/andrea-ferrara.png",
+        "alt": "Portrait of Andrea Ferrara",
+        "biography": [
+          "Andi Ferrara is an accomplished leader with extensive experience in the music industry, having served as the Vice President of Artist Relations at Atlantic Records in New York City. Having worked with Robert Plant, Jimmy Page, Genesis, Tori Amos, Matchbox 20, Hootie and the Blowfish, The Corrs, and many others, she holds a wealth of expertise in her field. After leaving Atlantic in 2004, until 2007, she formed her own company, Drive By Entertainment, working with The Corrs and Epic Records with Shakira and JLo. Andi has a unique ability to connect with diverse individuals and teams, creating collaborative, results-driven environments. She is a champion not just for the common good of humanity but for the fairness, justice, respect, and success of all. Her vision, strategic thinking, and ability to inspire and unite others ensures her invaluable contribution to the organization’s success."
+        ]
+      },
+      {
+        "id": "julie-russak",
+        "name": "Julie Russak, M.D.",
+        "role": "Director",
+        "image": "/images/about-us/julie-russak.png",
+        "alt": "Portrait of Julie Russak",
+        "biography": [
+          "Julie Russak, M.D., FAAD, is a board-certified dermatologist and founder of Russak Dermatology Clinic and Russak + Aesthetic Center. Renowned for her holistic approach and expertise in regenerative aesthetics, she combines advanced research with innovative treatments across all aspects of medical, cosmetic, and surgical dermatology. Her state-of-the-art practice offers a multitude of services, including bio-stimulatory procedures, laser rejuvenation, skin tightening, body contouring, and advanced skin cancer care. Globally sought after for her regenerative facial restoration techniques, she is dedicated to providing personalized care and regenerative methods that enhance patient well-being and deliver natural, transformative results."
+        ]
+      }
+    ]
+  },
+  "cta": {
+    "title": "Change a Life Today",
+    "body": "Whether you donate, volunteer, or partner with us, your support helps strengthen education, healthcare, sustainable livelihoods, and long-term community development.",
+    "image": "/images/shared/change-a-life-today.webp",
+    "actions": [
+      { "label": "Donate Now", "href": "/donate", "variant": "secondary" },
+      { "label": "Volunteer With Us", "href": "/get-involved#volunteer", "variant": "secondary" },
+      { "label": "Let’s Partner", "href": "/get-involved#partnerships", "variant": "secondary" }
+    ]
+  }
 }
