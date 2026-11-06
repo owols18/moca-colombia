@@ -1,0 +1,2 @@
+:HL["/moca-colombia/_next/static/css/7986981cb7e2450c.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"(dev)","param":null,"prefetchHints":4208,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}},"staleTime":300,"buildId":"Otiwutgt9osjmYsJnnV-h"}

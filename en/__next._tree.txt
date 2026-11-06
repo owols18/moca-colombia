@@ -1,0 +1,4 @@
+:HL["/moca-colombia/_next/static/css/7986981cb7e2450c.css","style"]
+:HL["/moca-colombia/_next/static/css/8df137309f5e1e2d.css","style"]
+:HL["/moca-colombia/_next/static/css/f4e159189dedb231.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"locale","param":{"type":"d","key":"en","siblings":["_not-found","_global-error","design-system"]},"prefetchHints":4208,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}},"staleTime":300,"buildId":"Otiwutgt9osjmYsJnnV-h"}
