@@ -20,12 +20,14 @@ type SubmitState = "idle" | "submitting" | "success" | "error" | "configuration"
 const phoneCodes = ["+1", "+57", "+34", "+44"];
 
 export function ContactForm({ content, initialInterest, locale }: ContactFormProps) {
+  const reviewOnly = process.env.NEXT_PUBLIC_REVIEW_ONLY === "true";
   const [interest, setInterest] = useState(initialInterest);
   const [phoneCode, setPhoneCode] = useState("+1");
   const [submitState, setSubmitState] = useState<SubmitState>("idle");
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    if (reviewOnly) return;
     const form = event.currentTarget;
     const formData = new FormData(form);
 
@@ -160,13 +162,15 @@ export function ContactForm({ content, initialInterest, locale }: ContactFormPro
         <input autoComplete="off" id="contact-website" name="website" tabIndex={-1} type="text" />
       </div>
 
-      <p className={styles.privacyNotice}>{content.privacyNotice}</p>
+      <p className={styles.privacyNotice}>{reviewOnly
+        ? (locale === "es" ? "Versión de revisión: el envío de mensajes está desactivado." : "Review version: message sending is disabled.")
+        : content.privacyNotice}</p>
 
       <div className={styles.formFooter}>
         <div aria-live="polite" className={styles.formStatus} role="status">
           {statusMessage}
         </div>
-        <Button disabled={submitState === "submitting"} size="small" type="submit" variant="light">
+        <Button disabled={reviewOnly || submitState === "submitting"} size="small" type="submit" variant="light">
           {submitState === "submitting" ? content.submittingLabel : content.submitLabel}
         </Button>
       </div>

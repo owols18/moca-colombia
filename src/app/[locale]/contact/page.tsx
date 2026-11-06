@@ -36,7 +36,8 @@ export async function generateMetadata({ params }: ContactPageProps): Promise<Me
 }
 
 export default async function ContactPage({ params, searchParams }: ContactPageProps) {
-  const [{ locale }, query] = await Promise.all([params, searchParams]);
+  const { locale } = await params;
+  const query = process.env.NEXT_PUBLIC_REVIEW_ONLY === "true" ? {} : await searchParams;
 
   if (!hasLocale(locale)) {
     notFound();

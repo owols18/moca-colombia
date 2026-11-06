@@ -1,4 +1,5 @@
 import clsx from "clsx";
+import { publicHref } from "@/lib/publicHref";
 import type { AnchorHTMLAttributes, ButtonHTMLAttributes, ReactNode } from "react";
 
 import styles from "./Button.module.css";
@@ -40,7 +41,7 @@ export function ButtonLink({
   ...props
 }: SharedProps & AnchorHTMLAttributes<HTMLAnchorElement>) {
   return (
-    <a className={clsx(styles.button, styles[variant], styles[size], className)} {...props}>
+    <a className={clsx(styles.button, styles[variant], styles[size], className)} {...props} href={publicHref(props.href)}>
       <span>{children}</span>
     </a>
   );

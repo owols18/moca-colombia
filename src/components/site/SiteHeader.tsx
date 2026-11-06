@@ -90,7 +90,7 @@ export function SiteHeader({ locale, navigation }: SiteHeaderProps) {
     }
 
     document.cookie = `moca_locale=${pendingLanguage.locale}; Path=/; Max-Age=31536000; SameSite=Lax`;
-    window.location.assign(pendingLanguage.href);
+    window.location.assign(`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}${pendingLanguage.href}`);
   }, [pendingLanguage]);
 
   const switchLanguage = (event: MouseEvent<HTMLAnchorElement>, nextLocale: Locale) => {

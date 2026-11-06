@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { publicHref } from "@/lib/publicHref";
 import type { HomePartDContent } from "@/lib/content";
 import homeStyles from "./HomeStory.module.css";
 import styles from "./ProjectsScene.module.css";
@@ -32,7 +33,7 @@ export function ProjectsScene({ content }: { content: HomePartDContent }) {
         <h2 id="home-projects-title" className={`${homeStyles.missionTitle} ${styles.title}`}>{content.title}</h2>
         <div className={styles.cards}>
           {content.projects.map(project => (
-            <a className={styles.card} href={project.href} key={project.href}>
+            <a className={styles.card} href={publicHref(project.href)} key={project.href}>
               <div className={styles.info}>
                 <h3>{project.title}</h3>
                 <p>{project.summary}</p>
