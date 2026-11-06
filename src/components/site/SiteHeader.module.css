@@ -10,7 +10,7 @@
   position: absolute;
   right: 0;
   top: 0;
-  z-index: 100;
+  z-index: 1200;
 }
 
 .menuButton {
@@ -22,6 +22,25 @@
   gap: 6px;
   justify-self: start;
   padding: var(--space-3);
+}
+
+/* Both home languages have a light hero. Position stays absolute,
+   so the header leaves with the document instead of following the story. */
+.header[data-home]:not([data-menu-open]) {
+  color: var(--color-forest);
+}
+
+.header[data-home]:not([data-menu-open]) .logo {
+  background: var(--color-forest);
+  mask: url("/brand/moca-colombia-logo.svg") center / contain no-repeat;
+}
+
+.header[data-home]:not([data-menu-open]) .logo img {
+  opacity: 0;
+}
+
+.header[data-menu-open] {
+  position: fixed;
 }
 
 .menuButton span {
@@ -76,7 +95,10 @@
 }
 
 .overlay {
-  background: var(--color-forest-pressed);
+  /* Editable menu background only: text stays fully opaque. */
+  --menu-background-color: var(--color-forest-pressed);
+  --menu-background-opacity: 70%;
+  background: color-mix(in srgb, var(--menu-background-color) var(--menu-background-opacity), transparent);
   inset: 0;
   opacity: 0;
   overflow-y: auto;
@@ -86,7 +108,7 @@
   transform: translateY(-1rem);
   transition: opacity var(--duration-base) var(--ease-standard), transform var(--duration-base) var(--ease-standard);
   visibility: hidden;
-  z-index: 90;
+  z-index: 1100;
 }
 
 .overlay[data-open] {
@@ -97,6 +119,10 @@
 }
 
 .navigation {
+  display: grid;
+  align-items: start;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(2rem, 8vw, 10rem);
   margin-inline: auto;
   max-width: var(--content-max);
 }
@@ -110,7 +136,7 @@
 .navigation > ul {
   display: grid;
   gap: clamp(1.1rem, 2.3vh, 2rem);
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  min-width: 0;
 }
 
 .navigationItem > a,
@@ -121,6 +147,7 @@
   font-weight: 500;
   line-height: 1.2;
   text-decoration: none;
+  text-transform: uppercase;
 }
 
 .navigationItem > a {
@@ -133,8 +160,42 @@
 }
 
 .groupLabel {
-  display: block;
-  margin-bottom: var(--space-3);
+  display: inline-flex;
+  align-items: center;
+  gap: .65rem;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  text-align: left;
+  cursor: pointer;
+}
+
+.chevron {
+  flex-shrink: 0;
+  transition: transform var(--duration-base);
+}
+
+.groupLabel[aria-expanded="true"] .chevron {
+  transform: rotate(180deg);
+}
+
+.navigation a:focus-visible,
+.groupLabel:focus-visible {
+  outline: 2px solid var(--color-ivory);
+  outline-offset: 6px;
+}
+
+.word { display: inline-block; white-space: nowrap; }
+.letter { display: inline-block; }
+
+.overlay[data-open] .letter {
+  animation: menuLetterIn 650ms cubic-bezier(.22, 1, .36, 1) both;
+  animation-delay: var(--letter-delay, 0ms);
+}
+
+@keyframes menuLetterIn {
+  from { opacity: 0; filter: blur(12px); transform: translateY(18px); }
+  to { opacity: 1; filter: blur(0); transform: translateY(0); }
 }
 
 .projectLinks {
@@ -142,11 +203,18 @@
   gap: var(--space-2);
 }
 
+.navigation .projectLinks {
+  padding-top: var(--space-4);
+}
+
+.projectLinks[hidden] { display: none; }
+
 .projectLinks a {
   color: var(--color-ivory);
   font-size: var(--text-body);
   font-weight: 300;
   text-decoration: none;
+  text-transform: uppercase;
 }
 
 @media (max-width: 720px) {
@@ -163,7 +231,13 @@
     width: 7.4rem;
   }
 
-  .navigation > ul {
+  .navigation {
     grid-template-columns: 1fr;
+    gap: clamp(1.1rem, 2.3vh, 2rem);
   }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .overlay, .chevron, .menuButton span { transition: none; }
+  .overlay[data-open] .letter { animation: none; }
 }

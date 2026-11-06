@@ -1,0 +1,16 @@
+.scene { position: relative; z-index: 10; }
+.landscape { display: none; pointer-events: none; }
+.content { position: relative; padding: 5svh 0; }
+.cta > section { background: transparent; }
+.scene[data-enhanced] { position: absolute; inset: 0; transform: translateY(var(--vegetation-travel, 0px)); visibility: hidden; pointer-events: none; }
+.scene[data-enhanced][data-visible="true"] { visibility: visible; }
+.scene[data-enhanced] .landscape { display: block; position: absolute; inset: 0; z-index: 1; filter: blur(var(--donation-blur, 0px)); transform: translateY(var(--donation-pan, 0px)); }
+.tree, .grains { position: absolute; left: var(--asset-x); top: var(--asset-y); width: var(--asset-width); visibility: hidden; }
+.tree { z-index: 1; transform: translate3d(0, var(--cocoa-rise, 110svh), 0); }
+.grains { z-index: 2; transform: translate3d(0, var(--cocoa-rise, 110svh), 0); }
+.tree[data-visible="true"], .grains[data-visible="true"] { visibility: visible; }
+.tree img, .grains img { width: 100%; height: auto; display: block; }
+.scene[data-enhanced] .content { position: absolute; inset: 0 0 auto; min-height: 100%; padding: 5svh 0; display: flex; flex-direction: column; justify-content: center; z-index: 4; transform: translateY(var(--donation-content-y, 0px)); }
+.scene[data-enhanced] .cta { width: 100%; flex-shrink: 0; visibility: hidden; opacity: var(--donation-opacity, 0); transform: translateY(calc((1 - var(--donation-opacity, 0)) * 48px)); }
+.scene[data-enhanced][data-cta-visible="true"] .cta { visibility: visible; pointer-events: auto; }
+.scene[data-enhanced] .cta > section { padding-block: 0; }

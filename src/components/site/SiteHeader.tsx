@@ -3,8 +3,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import type { MouseEvent } from "react";
-import { useEffect, useState } from "react";
+import type { CSSProperties, MouseEvent } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import type { NavigationContent } from "@/lib/content";
 import {
@@ -20,9 +20,28 @@ type SiteHeaderProps = {
   navigation: NavigationContent;
 };
 
+function MenuLetters({ text, row = 0 }: { text: string; row?: number }) {
+  let index = 0;
+  return <span aria-hidden="true">{text.split(" ").map((word, wordIndex) => (
+    <span key={wordIndex}>
+      {wordIndex > 0 ? " " : null}
+      <span className={styles.word}>{Array.from(word).map((letter) => {
+        const letterIndex = index++;
+        return <span className={styles.letter} key={letterIndex}
+          style={{ "--letter-delay": `${row * 80 + letterIndex * 25}ms` } as CSSProperties}>{letter}</span>;
+      })}</span>
+    </span>
+  ))}</span>;
+}
+
 export function SiteHeader({ locale, navigation }: SiteHeaderProps) {
   const pathname = usePathname();
+  const isAnimatedHome = /^\/(en|es)\/?$/.test(pathname);
   const [isOpen, setIsOpen] = useState(false);
+  const [projectsOpen, setProjectsOpen] = useState(false);
+  const menuButtonRef = useRef<HTMLButtonElement>(null);
+  const headerRef = useRef<HTMLElement>(null);
+  const overlayRef = useRef<HTMLDivElement>(null);
   const [pendingLanguage, setPendingLanguage] = useState<{
     locale: Locale;
     href: string;
@@ -37,6 +56,22 @@ export function SiteHeader({ locale, navigation }: SiteHeaderProps) {
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
         setIsOpen(false);
+        setProjectsOpen(false);
+        menuButtonRef.current?.focus();
+      }
+      if (event.key === "Tab") {
+        const controls = [headerRef.current, overlayRef.current].flatMap(root =>
+          Array.from(root?.querySelectorAll<HTMLElement>("a[href], button:not([disabled])") ?? [])
+            .filter(element => element.getClientRects().length > 0 && !element.closest("[hidden]")));
+        const first = controls[0];
+        const last = controls[controls.length - 1];
+        if (event.shiftKey && document.activeElement === first) {
+          event.preventDefault();
+          last?.focus();
+        } else if (!event.shiftKey && document.activeElement === last) {
+          event.preventDefault();
+          first?.focus();
+        }
       }
     };
 
@@ -67,17 +102,21 @@ export function SiteHeader({ locale, navigation }: SiteHeaderProps) {
     });
   };
 
-  const closeMenu = () => setIsOpen(false);
+  const closeMenu = () => {
+    setIsOpen(false);
+    setProjectsOpen(false);
+  };
 
   return (
     <>
-      <header className={styles.header} data-menu-open={isOpen || undefined}>
+      <header ref={headerRef} className={styles.header} data-home={isAnimatedHome || undefined} data-menu-open={isOpen || undefined}>
         <button
+          ref={menuButtonRef}
           aria-controls="site-navigation"
           aria-expanded={isOpen}
           aria-label={isOpen ? navigation.menuClose : navigation.menuOpen}
           className={styles.menuButton}
-          onClick={() => setIsOpen((current) => !current)}
+          onClick={() => { setProjectsOpen(false); setIsOpen((current) => !current); }}
           type="button"
         >
           <span />
@@ -115,23 +154,30 @@ export function SiteHeader({ locale, navigation }: SiteHeaderProps) {
         </Link>
       </header>
 
-      <div className={styles.overlay} data-open={isOpen || undefined}>
-        <nav aria-label="Primary" className={styles.navigation} id="site-navigation">
-          <ul>
-            {navigation.items.map((item) => (
+      <div ref={overlayRef} className={styles.overlay} data-open={isOpen || undefined} inert={!isOpen}>
+        <nav aria-label={locale === "es" ? "Navegación principal" : "Main navigation"} className={styles.navigation} id="site-navigation">
+          {[navigation.items.slice(0, 4), navigation.items.slice(4)].map((column, columnIndex) => <ul key={columnIndex}>
+            {column.map((item, row) => (
               <li className={styles.navigationItem} key={item.id}>
                 {item.href ? (
-                  <Link href={localizedHref(locale, item.href)} onClick={closeMenu}>
-                    {item.label}
+                  <Link href={localizedHref(locale, item.href)} onClick={closeMenu} aria-label={item.label}>
+                    <MenuLetters text={item.label} row={row} />
                   </Link>
                 ) : (
                   <>
-                    <span className={styles.groupLabel}>{item.label}</span>
-                    <ul className={styles.projectLinks}>
-                      {item.children?.map((child) => (
+                    <button type="button" className={styles.groupLabel}
+                      aria-label={item.label} aria-expanded={projectsOpen} aria-controls="navigation-projects"
+                      onClick={() => setProjectsOpen(open => !open)}>
+                      <MenuLetters text={item.label} row={row} />
+                      <svg className={styles.chevron} width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <path d="m6 9 6 6 6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </button>
+                    <ul id="navigation-projects" className={styles.projectLinks} hidden={!projectsOpen}>
+                      {item.children?.map((child, index) => (
                         <li key={child.href}>
-                          <Link href={localizedHref(locale, child.href)} onClick={closeMenu}>
-                            {child.label}
+                          <Link href={localizedHref(locale, child.href)} onClick={closeMenu} aria-label={child.label}>
+                            <MenuLetters text={child.label} row={index} />
                           </Link>
                         </li>
                       ))}
@@ -140,7 +186,7 @@ export function SiteHeader({ locale, navigation }: SiteHeaderProps) {
                 )}
               </li>
             ))}
-          </ul>
+          </ul>)}
         </nav>
       </div>
     </>

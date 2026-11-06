@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-
+import impactHero from "../../../../public/images/impact/hero.jpg";
 import { SharedCta } from "@/components/site/SharedCta";
 import { getImpact } from "@/lib/content";
 import { hasLocale } from "@/lib/i18n";
@@ -52,7 +52,7 @@ export default async function ImpactPage({ params }: ImpactPageProps) {
           fill
           preload
           sizes="100vw"
-          src={content.hero.image}
+          src={impactHero}
         />
         <div aria-hidden="true" className={styles.heroScrim} />
         <div className={styles.heroInner}>

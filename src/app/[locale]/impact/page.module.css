@@ -75,13 +75,11 @@
   isolation: isolate;
   margin-inline: auto;
   max-width: var(--content-max);
-  min-height: clamp(34rem, 36vw, 44rem);
   position: relative;
 }
 
 .keyFiguresMedia {
   aspect-ratio: 1;
-  border: 5px solid #c89c52;
   border-radius: 50%;
   overflow: hidden;
   pointer-events: none;

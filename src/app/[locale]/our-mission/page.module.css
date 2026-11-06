@@ -87,6 +87,7 @@
 }
 
 .copy {
+  min-width: 0;
   position: relative;
   user-select: text;
   z-index: 2;
@@ -122,6 +123,8 @@
 
 .media {
   aspect-ratio: 1;
+  min-width: 0;
+  width: 100%;
   border-radius: var(--radius-md);
   overflow: hidden;
   position: relative;
@@ -135,8 +138,10 @@
 }
 
 .sandCard .media {
+  align-self: stretch;
+  aspect-ratio: auto;
   border-radius: 0;
-  height: 100%;
+  min-height: 0;
 }
 
 .vision {
@@ -150,7 +155,7 @@
 }
 
 .visionScrim {
-  background: rgb(16 25 22 / 0.52);
+  background: rgb(16 25 22 / 0.08);
   inset: 0;
   position: absolute;
 }
@@ -201,6 +206,11 @@
 
   .sandCard .copy {
     padding: var(--space-7) var(--gutter);
+  }
+
+  .sandCard .media {
+    aspect-ratio: 1;
+    height: auto;
   }
 
   .vision {

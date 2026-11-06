@@ -1,0 +1,93 @@
+.scene {
+  /* Edit only this variable to change OUR PROJECTS, not other titles. */
+  --projects-title-color: var(--color-ivory);
+  position: relative;
+  background: var(--color-forest);
+  isolation: isolate;
+  z-index: 7;
+}
+.landscape { display: none; pointer-events: none; }
+.scene[data-enhanced] .landscape { filter: blur(calc(var(--impact-blur, 0px) + var(--donation-blur, 0px))); }
+.projects { padding: 5svh 4vw; }
+.title { color: var(--projects-title-color); white-space: normal; margin-bottom: 4svh; text-shadow: 0 2px 4px rgb(29 41 37 / 95%), 0 4px 14px rgb(29 41 37 / 70%); }
+.cards { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-radius: var(--radius-section); overflow: hidden; }
+.card {
+  --info-height: clamp(7rem, 15svh, 13rem);
+  position: relative;
+  display: block;
+  min-width: 0;
+  height: clamp(18rem, 51svh, 47rem);
+  background: var(--color-ivory);
+  color: var(--color-forest);
+  text-decoration: none;
+  isolation: isolate;
+  overflow: hidden;
+}
+.info { position: absolute; inset: 0 0 auto; height: var(--info-height); display: flex; flex-direction: column; justify-content: center; padding: 1rem; text-align: center; }
+.info h3, .restTitle { font-family: var(--font-heading); font-size: clamp(1rem, 1.65vw, 2.65rem); font-weight: 600; line-height: 1.25; letter-spacing: -.035em; }
+.info h3 { margin: 0 0 .5rem; }
+.info p { margin: 0; font-size: clamp(.75rem, .95vw, 1.2rem); line-height: 1.4; }
+.photo { position: absolute; inset: 0; transition: top .6s cubic-bezier(.22, 1, .36, 1); }
+.photo img { width: 100%; height: 100%; display: block; object-fit: cover; transition: transform .6s cubic-bezier(.22, 1, .36, 1); transform: scale(1.04); }
+.overlay { position: absolute; inset: 0; background: linear-gradient(rgb(29 41 37 / 65%), transparent 65%); opacity: 1; transition: opacity .4s; }
+.restTitle { position: absolute; top: 2rem; left: .75rem; right: .75rem; color: #fff; text-align: center; opacity: 1; transition: opacity .3s, transform .5s; pointer-events: none; text-shadow: 0 2px 6px rgb(0 0 0 / 40%); }
+.card:focus-visible { outline: 3px solid var(--color-forest); outline-offset: -5px; z-index: 1; }
+.card:focus-visible .photo { top: var(--info-height); }
+.card:focus-visible .photo img { transform: scale(1); }
+.card:focus-visible .restTitle { opacity: 0; transform: translateY(-1rem); }
+.card:focus-visible .overlay { opacity: 0; }
+@media (hover: hover) and (pointer: fine) {
+  .card:hover .photo { top: var(--info-height); }
+  .card:hover .photo img { transform: scale(1); }
+  .card:hover .restTitle { opacity: 0; transform: translateY(-1rem); }
+  .card:hover .overlay { opacity: 0; }
+  .cards:has(.card:hover) .card:not(:hover) .overlay { background: rgb(29 41 37 / 35%); }
+}
+.scene[data-enhanced] { position: absolute; inset: 0; background: none; visibility: hidden; pointer-events: none; transform: translateY(var(--vegetation-travel, 0px)); }
+.scene[data-enhanced][data-visible="true"] { visibility: visible; }
+.scene[data-enhanced] .landscape { display: block; position: absolute; inset: 0; transform: translate3d(0, var(--projects-pan, 0px), 0); }
+.tree, .way, .church { position: absolute; left: var(--asset-x, 0px); top: var(--asset-y, 0px); width: var(--asset-width, 0px); }
+.tree img, .way img, .church img { display: block; width: 100%; height: auto; }
+.pathVegetation { position: absolute; left: var(--asset-x, 0px); top: var(--asset-y, 0px); width: var(--asset-width, 0px); z-index: 0; transform: translate3d(0, var(--church-rise, 110svh), 0); visibility: hidden; mask-image: linear-gradient(to bottom, transparent, #000 var(--vegetation-blend, 14svh)); pointer-events: none; }
+.pathVegetation[data-visible="true"] { visibility: visible; }
+.pathVegetation img { display: block; width: 100%; height: auto; }
+.tree { z-index: 1; transform: translate3d(0, var(--tree-rise, 110svh), 0); visibility: hidden; }
+.tree[data-visible="true"] { visibility: visible; }
+.tree:nth-child(2) { z-index: 2; }
+.tree:nth-child(3) { z-index: 3; }
+.way { z-index: 4; clip-path: inset(0 0 var(--way-hidden, 100%) 0); transform: translate3d(0, var(--church-rise, 110svh), 0); }
+.church { z-index: 5; transform: translate3d(0, var(--church-rise, 110svh), 0); visibility: hidden; }
+.church[data-visible="true"] { visibility: visible; }
+.scene[data-enhanced] .projects { position: absolute; inset: 0; z-index: 6; display: flex; flex-direction: column; justify-content: center; opacity: var(--projects-opacity, 0); visibility: hidden; }
+.scene[data-enhanced][data-projects-visible="true"] .projects { visibility: visible; }
+.scene[data-enhanced][data-interactive="true"] .projects { pointer-events: auto; }
+@media (max-width: 900px) and (orientation: portrait) {
+  .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .card { height: clamp(9rem, 28svh, 22rem); --info-height: 6.5rem; }
+  .info { padding: .5rem; }
+  .info h3, .restTitle { font-size: clamp(.85rem, 2.8vw, 1.4rem); }
+  .info p { font-size: .7rem; }
+  .restTitle { top: 1.25rem; }
+  .photo { top: var(--info-height); }
+  .photo img { transform: none; }
+  .restTitle { display: none; }
+  .overlay { opacity: 0; }
+  .title { font-size: clamp(2rem, 8vw, 4rem); margin-bottom: 3svh; }
+}
+@media (hover: none), (pointer: coarse) {
+  .photo { top: var(--info-height); }
+  .photo img { transform: none; }
+  .restTitle { display: none; }
+  .overlay { opacity: 0; }
+}
+@media (max-height: 600px) and (orientation: landscape) {
+  .title { font-size: 10svh; margin-bottom: 3svh; }
+  .card { height: 62svh; --info-height: 6rem; }
+  .info h3, .restTitle { font-size: clamp(.8rem, 1.7vw, 1.25rem); }
+  .info { padding: .5rem; }
+  .info p { font-size: .7rem; }
+  .restTitle { top: 1rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .photo, .photo img, .restTitle, .overlay { transition: none; }
+}

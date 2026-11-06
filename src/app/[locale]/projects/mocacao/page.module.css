@@ -15,7 +15,7 @@
 }
 
 .heroScrim {
-  background: linear-gradient(180deg, rgb(16 25 22 / 0.24) 0%, rgb(16 25 22 / 0.08) 48%, rgb(16 25 22 / 0.58) 100%);
+  /*background: linear-gradient(180deg, rgb(16 25 22 / 0.24) 0%, rgb(16 25 22 / 0.08) 48%, rgb(16 25 22 / 0.58) 100%);*/
   inset: 0;
   position: absolute;
 }

@@ -17,9 +17,9 @@
     },
     { "id": "impact", "label": "Impacto", "href": "/impact" },
     { "id": "about", "label": "Sobre nosotros", "href": "/about-us" },
-    { "id": "involved", "label": "Participa", "href": "/get-involved" },
-    { "id": "contact", "label": "Contacto", "href": "/contact" },
-    { "id": "donate", "label": "Donar", "href": "/donate" }
+    { "id": "involved", "label": "Únete a nosotros", "href": "/get-involved" },
+    { "id": "donate", "label": "Dona Ahora", "href": "/donate" },
+    { "id": "contact", "label": "Contáctanos", "href": "/contact" }
   ],
   "footer": {
     "copyright": "Moca Colombia. Todos los derechos reservados."

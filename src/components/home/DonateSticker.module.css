@@ -1,0 +1,60 @@
+.sticker {
+  /* Editable sticker size and position. Below menu (1100) and header (1200). */
+  --sticker-size: clamp(88px, 7.5vw, 128px);
+  position: fixed;
+  left: calc(clamp(8px, 1.5vw, 24px) + env(safe-area-inset-left, 0px));
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1000;
+  width: var(--sticker-size);
+  height: var(--sticker-size);
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: var(--color-ivory);
+  text-decoration: none;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.shape {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 4px 6px rgb(29 41 37 / 25%));
+  transition: transform 180ms ease;
+}
+
+.label {
+  position: relative;
+  display: grid;
+  text-align: center;
+  font-family: var(--font-body);
+  font-size: clamp(14px, 1.1vw, 20px);
+  font-weight: 500;
+  line-height: 1.25;
+  text-transform: uppercase;
+  pointer-events: none;
+}
+
+.sticker:focus-visible {
+  outline: 3px solid var(--color-forest);
+  outline-offset: 4px;
+}
+
+@media (hover: hover) {
+  .sticker:hover .shape { transform: rotate(-6deg) scale(1.04); }
+}
+
+.sticker:active .shape { transform: scale(.96); }
+
+@media (max-width: 700px) {
+  .sticker { --sticker-size: 76px; }
+  .label { font-size: 13px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .shape { transition: none; }
+  .sticker:hover .shape, .sticker:active .shape { transform: none; }
+}

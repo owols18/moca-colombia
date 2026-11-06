@@ -1,0 +1,58 @@
+.scene { position: relative; z-index: 9; background: var(--color-ink); color: var(--color-ivory); }
+.landscape, .overlay { display: none; pointer-events: none; }
+.content { position: relative; text-align: center; padding: 4rem 0; display: flex; flex-direction: column; align-items: center; gap: clamp(.7rem, 1.8svh, 2rem); }
+.title { font-family: var(--font-heading); font-size: clamp(2.3rem, min(6.4vw, 10svh), 10rem); font-weight: 600; letter-spacing: -.055em; line-height: 1.15; margin: 0; color: var(--color-ivory); white-space: nowrap; }
+.title span { display: inline-block; }
+.description { font-weight: 300; font-size: clamp(1rem, 1.6vw, 2rem); line-height: 1.5; max-width: 48ch; margin: 0; padding: 0 1.5rem; text-wrap: balance; }
+.gallery { --slide-width: 84vw; --slide-gap: clamp(12px, 2vw, 40px); width: 100%; }
+/* Use the school panorama (1919 × 859) as the common visible photo height. */
+.galleryWindow { position: relative; height: calc(var(--slide-width) * 859 / 1919); overflow: clip; touch-action: pan-y; cursor: grab; }
+.galleryWindow:active { cursor: grabbing; }
+.slide { position: absolute; left: 50%; top: 0; width: var(--slide-width); height: 100%; border-radius: min(var(--radius-section), 4vw); overflow: hidden; transform: translateX(calc(-50% + var(--slide-offset) * (var(--slide-width) + var(--slide-gap)))) scale(.92); opacity: .45; transition: transform .65s cubic-bezier(.22, 1, .36, 1), opacity .65s; user-select: none; }
+.slide[data-active="true"] { opacity: 1; transform: translateX(-50%) scale(1); }
+.slide img { display: block; width: auto; max-width: 100%; height: 100%; margin-inline: auto; border-radius: min(var(--radius-section), 4vw); object-fit: contain; pointer-events: none; }
+.controls { display: flex; align-items: center; justify-content: center; gap: .6rem; margin-top: .6rem; }
+.controls button { border: 1px solid rgb(247 241 231 / 35%); border-radius: 999px; width: 44px; height: 44px; color: var(--color-ivory); background: rgb(29 41 37 / 65%); cursor: pointer; font-size: 1.2rem; }
+.controls button:focus-visible { outline: 2px solid var(--color-ivory); outline-offset: 3px; }
+.dots { display: flex; align-items: center; }
+.dots button { border: 0; background: none; width: 30px; display: grid; place-items: center; padding: 0; }
+.dots span { display: block; width: 6px; height: 6px; border-radius: 99px; background: var(--color-ivory); opacity: .45; transition: width .3s, opacity .3s; }
+.dots [aria-current="true"] span { width: 22px; opacity: 1; }
+.srOnly { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+.scene[data-enhanced] { position: absolute; inset: 0; background: none; transform: translateY(var(--vegetation-travel, 0px)); pointer-events: none; visibility: hidden; }
+.scene[data-enhanced][data-visible="true"] { visibility: visible; }
+.scene[data-enhanced] .landscape { display: block; position: absolute; inset: 0; transform: translate3d(0, var(--about-pan, 0px), 0); }
+.house, .grain { position: absolute; left: var(--asset-x); top: var(--asset-y); width: var(--asset-width); visibility: hidden; }
+.house img, .grain img { width: 100%; height: auto; display: block; }
+.house { z-index: 1; transform: translate3d(var(--house-x, 110vw), 0, 0); }
+.grain { z-index: 2; transform: translate3d(0, var(--grain-y, 110svh), 0); }
+.house[data-visible="true"], .grain[data-visible="true"] { visibility: visible; }
+.scene[data-enhanced] .overlay { display: block; position: absolute; inset: 0; z-index: 3; background: var(--color-ink); opacity: var(--about-overlay, 0); }
+.scene[data-enhanced] .content { position: absolute; inset: 0 0 auto; min-height: 100%; z-index: 4; justify-content: center; padding: 3svh 0; visibility: hidden; transform: translateY(var(--about-content-y, 0px)); }
+.scene[data-enhanced] .content > * { flex-shrink: 0; }
+.scene[data-enhanced] .content { opacity: var(--about-exit-opacity, 1); }
+.scene[data-enhanced] .landscape { filter: blur(var(--donation-blur, 0px)); }
+.scene[data-enhanced][data-copy-visible="true"] .content { visibility: visible; }
+.scene[data-enhanced] .title span { opacity: var(--about-letter-opacity, 0); filter: blur(var(--about-letter-blur, 12px)); transform: translateY(var(--about-letter-y, 18px)); }
+.scene[data-enhanced] .description { opacity: var(--about-paragraph, 0); transform: translateY(calc((1 - var(--about-paragraph, 0)) * 12px)); }
+.scene[data-enhanced] .action { opacity: var(--about-cta, 0); transform: scale(var(--about-cta-scale, .85)); clip-path: inset(0 var(--about-cta-clip, 50%) round 999px); visibility: hidden; }
+.scene[data-enhanced][data-cta-visible="true"] .action { visibility: visible; pointer-events: auto; }
+.scene[data-enhanced] .gallery { opacity: var(--about-gallery, 0); transform: translateY(calc((1 - var(--about-gallery, 0)) * 20px)); visibility: hidden; }
+.scene[data-enhanced][data-gallery-visible="true"] .gallery { visibility: visible; pointer-events: auto; }
+.scene[data-enhanced][data-copy-visible="true"] .title, .scene[data-enhanced][data-copy-visible="true"] .description { pointer-events: auto; }
+@media (max-width: 700px) {
+  .gallery { --slide-width: 90vw; }
+  .title { font-size: clamp(2.2rem, 10vw, 4rem); }
+  .description { font-size: clamp(1rem, 4.2vw, 1.3rem); max-width: 36ch; }
+}
+@media (max-height: 500px) and (orientation: landscape) {
+  .content { gap: 1svh; }
+  .title { font-size: 9svh; }
+  .description { font-size: 3.6svh; max-width: 70ch; }
+  .scene[data-enhanced] .content { padding: 1svh 0; }
+}
+/* Spanish heading is longer; preserve the approved English sizing. */
+@media (max-width: 380px) {
+  .title:lang(es) { font-size: 9.2vw; }
+}
+@media (prefers-reduced-motion: reduce) { .slide, .dots span { transition: none; } }

@@ -6,6 +6,7 @@ import { notFound } from "next/navigation";
 import { SharedCta } from "@/components/site/SharedCta";
 import { getOurMission } from "@/lib/content";
 import { hasLocale } from "@/lib/i18n";
+import missionHero from "../../../../public/images/our-mission/hero.jpg";
 
 import styles from "./page.module.css";
 
@@ -51,7 +52,7 @@ export default async function OurMissionPage({ params }: OurMissionPageProps) {
           fill
           preload
           sizes="100vw"
-          src={content.hero.image}
+          src={content.hero.image === "/images/our-mission/hero.jpg" ? missionHero : content.hero.image}
         />
         <div className={styles.heroScrim} />
         <div className={styles.heroInner}>

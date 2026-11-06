@@ -1,0 +1,45 @@
+.scene { position: relative; z-index: 11; color: white; background: var(--color-cacao, #8a5639); }
+.landscape { display: none; pointer-events: none; }
+.content { position: relative; padding: 5svh 5vw 180px; min-height: 100svh; }
+.columns { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 5vw; max-width: 2400px; margin: auto; }
+.visual { position: relative; padding-bottom: 22%; }
+.photo { border-radius: var(--radius-section); overflow: hidden; clip-path: inset(0 round var(--radius-section)); }
+.photo img { display: block; width: 100%; height: auto; }
+.fruit { pointer-events: none; user-select: none; }
+.fruit img { display: block; width: 100%; height: auto; }
+/* Photo is 16:9; visual reserves .22 of its width below it. Top = 90% of photo height. */
+.fruitOne { position: absolute; width: 72%; left: 22%; top: 53.7%; z-index: 2; }
+.copy { text-align: center; display: flex; flex-direction: column; align-items: center; gap: clamp(16px, 2svh, 32px); }
+.title { font-family: var(--font-heading); font-size: clamp(1.65rem, 3.25vw, 5.2rem); font-weight: 600; line-height: 1.22; letter-spacing: -.055em; margin: 0; color: white; text-shadow: 0 2px 14px rgb(0 0 0 / 65%); }
+.titleLine { display: block; white-space: nowrap; }
+.letter { display: inline-block; }
+.description { font-size: clamp(1rem, 1.6vw, 2rem); font-weight: 300; line-height: 1.5; max-width: 32ch; margin: 0; text-wrap: balance; text-shadow: 0 2px 8px black, 0 0 24px rgb(0 0 0 / 80%); }
+.action { position: relative; z-index: 3; }
+.fruitTwo { width: clamp(90px, 10vw, 330px); align-self: flex-end; margin-top: -8px; margin-right: 10%; position: relative;
+  left: 20px; /* positivo: derecha; negativo: izquierda */
+  top: 30px;  /* positivo: abajo; negativo: arriba */ }
+.scene[data-enhanced] { position: absolute; inset: 0; background: none; transform: translateY(var(--vegetation-travel, 0px)); visibility: hidden; pointer-events: none; }
+.scene[data-enhanced][data-visible="true"] { visibility: visible; }
+.scene[data-enhanced] .landscape { display: block; position: absolute; inset: 0; transform: translateY(var(--contact-pan, 0px)); }
+.grain { position: absolute; top: var(--asset-y); left: var(--asset-x); width: var(--asset-width); transform: translateX(var(--grain-x, 120vw)); visibility: hidden; }
+.grain img { display: block; width: 100%; height: auto; }
+.grain[data-visible="true"] { visibility: visible; }
+.scene[data-enhanced] .content { position: absolute; inset: 0 0 auto; display: flex; flex-direction: column; justify-content: center; transform: translateY(var(--contact-content-y, 0px)); visibility: hidden; }
+.scene[data-enhanced][data-copy-visible="true"] .content { visibility: visible; }
+.scene[data-enhanced] .columns { width: 100%; }
+.scene[data-enhanced] .photo { clip-path: inset(0 calc((1 - var(--contact-photo, 0)) * 50%) round var(--radius-section)); opacity: var(--contact-photo, 0); }
+.scene[data-enhanced] .photo img { transform: scale(calc(1.08 - var(--contact-photo, 0) * .08)); }
+.scene[data-enhanced] .letter { opacity: var(--about-letter-opacity, 0); filter: blur(var(--about-letter-blur, 12px)); transform: translateY(var(--about-letter-y, 18px)); }
+.scene[data-enhanced] .description { opacity: var(--contact-paragraph, 0); transform: translateY(calc((1 - var(--contact-paragraph, 0)) * 12px)); }
+.scene[data-enhanced] .action { opacity: var(--contact-cta, 0); transform: scale(calc(.85 + var(--contact-cta, 0) * .15)); clip-path: inset(0 calc((1 - var(--contact-cta, 0)) * 50%) round 999px); visibility: hidden; }
+.scene[data-enhanced][data-cta-visible="true"] .action { pointer-events: auto; visibility: visible; }
+.scene[data-enhanced] .fruit { opacity: var(--contact-fruits, 0); transform: translateY(calc((1 - var(--contact-fruits, 0)) * 60px)); }
+.scene[data-enhanced][data-copy-visible="true"] .title, .scene[data-enhanced][data-copy-visible="true"] .description { pointer-events: auto; }
+@media (max-width: 800px) {
+  .content { padding: 5svh 6vw 180px; }
+  .columns { grid-template-columns: 1fr; gap: 2rem; }
+  .visual { width: 100%; max-width: 620px; margin: auto; }
+  .title { font-size: clamp(1.4rem, 5.8vw, 2.8rem); }
+  .fruitTwo { width: clamp(85px, 22vw, 140px); }
+  .description { font-size: clamp(1rem, 3.9vw, 1.3rem); }
+}

@@ -1,7 +1,130 @@
 {
   "slug": "",
-  "status": "reserved-for-final-phase",
+  "status": "part-h-review",
   "seo": { "title": "Moca Colombia", "description": "Community-led initiatives supporting lasting change in rural Colombia." },
-  "hero": { "eyebrow": "Moca Colombia", "title": "The Home experience is reserved for the final scrollytelling phase." },
-  "notice": "The bilingual route, navigation, and content contract are ready. Narrative scenes and motion will be developed after all interior pages are approved."
+  "hero": { "eyebrow": "Moca Colombia", "title": "MAKE A DIFFERENCE" },
+  "partA": {
+    "titleLines": ["MAKE A", "DIFFERENCE"],
+    "statement": "A future for Colombia’s youth starts with a chance",
+    "scrollLabel": "Scroll to explore",
+    "images": {
+      "sun": "/images/home/sun.webp",
+      "clouds": ["/images/home/cloud1.webp", "/images/home/cloud2.webp", "/images/home/cloud3.webp"]
+    }
+  },
+  "partB": {
+    "title": "OUR MISSION",
+    "description": "MOCA Colombia strives to address the fundamental needs of small, underserved communities in Colombia and promote economic independence through agriculture. Through our agricultural initiatives, advocacies, and partnerships, we elevate standards of living and foster an environment where education, medicine, and economic empowerment create lasting change. We unlock the full potential of our farming communities and their children.",
+    "cta": { "label": "LEARN MORE", "href": "/en/our-mission" },
+    "mountains": [
+      { "src": "/images/home/mountain1.webp", "width": 2943, "height": 1257 },
+      { "src": "/images/home/mountain2.webp", "width": 2950, "height": 1287 },
+      { "src": "/images/home/mountain3.webp", "width": 2581, "height": 992 },
+      { "src": "/images/home/mountain4.webp", "width": 3138, "height": 1182 },
+      { "src": "/images/home/mountain5.webp", "width": 2932, "height": 1245 },
+      { "src": "/images/home/mountain6.webp", "width": 2847, "height": 1043 }
+    ]
+  },
+  "partC": {
+    "vegetation": [
+      { "src": "/images/home/vegetation1.webp", "width": 1680, "height": 770 },
+      { "src": "/images/home/vegetation2.webp", "width": 2410, "height": 1023 },
+      { "src": "/images/home/vegetation3.webp", "width": 1860, "height": 868 }
+    ]
+  },
+  "partC1": {
+    "titleLines": ["LA ARGENTINA", "COLOMBIA"],
+    "cta": { "label": "SEE HOW WE HELP", "href": "/en/la-argentina" },
+    "description": "Reaching La Argentina, home to just 273 people and isolated by miles of the Andes mountains, is an adventure. Yet, those who make the journey discover a place rich in resilience and potential. At the heart of La Argentina lies its school, a humble building that serves as the community’s center and the focus of MOCA Colombia’s efforts. The school faces immense economic hardships and a lack of resources, as access to basic necessities is limited. In La Argentina, the challenges are many, but so is the spirit of hope. With its vibrant culture centered around coffee and cacao, the community dreams of a brighter future where education, health, and prosperity are within reach. Through the efforts of MOCA Colombia and the indomitable will of La Argentina’s people, that future is being forged.",
+    "images": [
+      { "src": "/images/home/la-argentina-1.webp", "width": 1500, "height": 2225, "alt": "Illustration of cacao farming and a village in the Colombian mountains." },
+      { "src": "/images/home/la-argentina-2.webp", "width": 1500, "height": 2223, "alt": "Illustration of children walking toward a rural school in the mountains." },
+      { "src": "/images/home/la-argentina-3.webp", "width": 1500, "height": 2225, "alt": "Two women crafting a model house together." }
+    ]
+  },
+  "partH": {
+    "titleLines": ["WE WOULD LOVE", "TO HEAR FROM YOU"],
+    "description": "Connect with Us and help build lasting change",
+    "cta": { "label": "CONTACT US", "href": "/en/contact" },
+    "image": { "src": "/images/home/contac-us.webp", "width": 1920, "height": 1080, "alt": "A collage of MOCA Colombia’s education, healthcare and community activities." },
+    "grains": [
+      { "src": "/images/home/cocoagrain4.webp", "width": 2408, "height": 1629 },
+      { "src": "/images/home/cocoagrain5.webp", "width": 2787, "height": 2118 }
+    ],
+    "fruits": [
+      { "src": "/images/home/cocoafruit1.webp", "width": 1547, "height": 829 },
+      { "src": "/images/home/cocoafruit2.webp", "width": 972, "height": 1340 }
+    ]
+  },
+  "partG": {
+    "background": { "src": "/images/home/vegetation-path-2.webp", "width": 2787, "height": 2118 },
+    "trees": [
+      { "src": "/images/home/cocoatree1.webp", "width": 1804, "height": 2680 },
+      { "src": "/images/home/cocoatree2.webp", "width": 1842, "height": 2713 }
+    ],
+    "grains": { "src": "/images/home/cocoagrain3.webp", "width": 3934, "height": 1530 },
+    "cta": {
+      "title": "Change a Life Today",
+      "body": "Whether you donate, volunteer, or partner with us, your support helps strengthen education, healthcare, sustainable livelihoods, and long-term community development.",
+      "image": "/images/shared/change-a-life-today.png",
+      "actions": [
+        { "label": "Donate Now", "href": "/donate", "variant": "secondary" },
+        { "label": "Volunteer With Us", "href": "/get-involved#volunteer", "variant": "secondary" },
+        { "label": "Let’s Partner", "href": "/get-involved#partnerships", "variant": "secondary" }
+      ]
+    }
+  },
+  "partF": {
+    "title": "ABOUT US",
+    "galleryLabels": { "label": "MOCA Colombia photo gallery", "role": "carousel", "slideRole": "slide", "previous": "Previous photo", "next": "Next photo", "goToPhoto": "Go to photo", "photo": "Photo", "of": "of" },
+    "description": "Rooted in community, united by purpose, building lasting change across La Argentina",
+    "cta": { "label": "DISCOVER OUR STORY", "href": "/en/about-us" },
+    "house": { "src": "/images/home/house5.webp", "width": 2480, "height": 1440 },
+    "grains": [
+      { "src": "/images/home/cocoagrain1.webp", "width": 1678, "height": 1146 },
+      { "src": "/images/home/cocoagrain2.webp", "width": 1704, "height": 1916 }
+    ],
+    "images": [
+      { "src": "/images/home/about-us-slider1.webp", "width": 1920, "height": 1080, "alt": "Hands holding a basket of freshly harvested coffee cherries." },
+      { "src": "/images/home/about-us-slider2.webp", "width": 1920, "height": 1080, "alt": "Three people standing beside the La Argentina school mural." },
+      { "src": "/images/home/about-us-slider3.webp", "width": 1920, "height": 1080, "alt": "A farmer gathering cacao pods in a shaded plantation." },
+      { "src": "/images/home/about-us-slider4.webp", "width": 1920, "height": 1080, "alt": "Cultivated hills and mountain scenery in rural Colombia." },
+      { "src": "/images/home/about-us-slider5.webp", "width": 1920, "height": 1080, "alt": "An aerial view of a neighborhood and its sports court." },
+      { "src": "/images/home/about-us-slider6.webp", "width": 1920, "height": 1080, "alt": "Children and adults gathered around tables for a shared meal." }
+    ]
+  },
+  "partE": {
+    "title": "IMPACT",
+    "description": "Creating lasting impact through opportunity, Partnership, and Community-Led Progress for Generations",
+    "descriptionLines": [
+      "Creating lasting impact through opportunity,",
+      "Partnership, and Community-Led Progress",
+      "for Generations"
+    ],
+    "cta": { "label": "EXPLORE OUR IMPACT", "href": "/en/impact" },
+    "houses": [
+      { "src": "/images/home/house1.webp", "width": 1364, "height": 961 },
+      { "src": "/images/home/house2.webp", "width": 1280, "height": 1130 },
+      { "src": "/images/home/house3.webp", "width": 2903, "height": 1411 },
+      { "src": "/images/home/house4.webp", "width": 1450, "height": 1640 }
+    ]
+  },
+  "partD": {
+    "vegetationPath": { "src": "/images/home/vegetation-path.webp", "width": 2560, "height": 3840 },
+    "title": "OUR PROJECTS",
+    "trees": [
+      { "src": "/images/home/tree1.webp", "width": 971, "height": 1466 },
+      { "src": "/images/home/tree2.webp", "width": 1024, "height": 1281 },
+      { "src": "/images/home/tree3.webp", "width": 1532, "height": 1956 }
+    ],
+    "way": { "src": "/images/home/way.webp", "width": 3040, "height": 4137 },
+    "church": { "src": "/images/home/church.webp", "width": 1600, "height": 1546 },
+    "projects": [
+      { "title": "MOCACAO", "summary": "Growing opportunity through cacao.", "href": "/en/projects/mocacao", "image": { "src": "/images/home/project-mocacao.png", "width": 1920, "height": 1080 } },
+      { "title": "NUTRITION", "summary": "Nourishing healthier futures.", "href": "/en/projects/nutrition", "image": { "src": "/images/home/project-nutrition.png", "width": 1920, "height": 1080 } },
+      { "title": "ACADEMIC SUPPORT", "summary": "Supporting children’s learning.", "href": "/en/projects/academic-support", "image": { "src": "/images/home/project-academic-support.png", "width": 1920, "height": 1080 } },
+      { "title": "MEDICAL CARE", "summary": "Improving access to healthcare.", "href": "/en/projects/medical-care", "image": { "src": "/images/home/project-medical-care.png", "width": 1200, "height": 675 } }
+    ]
+  },
+  "notice": "Parts A–G are approved. Part H is available for review in English. The Spanish home awaits approval."
 }

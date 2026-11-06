@@ -1,0 +1,417 @@
+.story {
+  background: var(--color-ivory);
+  color: var(--color-forest);
+  position: relative;
+  --sun-y: 120svh;
+  --sun-opacity: 0;
+  --statement-opacity: 0;
+  --hint-opacity: 1;
+  /* Separate distances: extending Part B must not stretch approved Part A. */
+  --part-a-scroll: 260svh;
+  --part-b-scroll: 520svh;
+  --part-b1-scroll: 400svh;
+  --part-c-scroll: 400svh;
+  --part-c1-scroll: 600svh;
+  --part-d-scroll: 900svh;
+  --part-e-scroll: 650svh;
+  --part-f-scroll: 800svh;
+  --part-g-scroll: 600svh;
+  --part-h-scroll: 600svh;
+}
+.scrollMeasure { display: none; position: absolute; width: 0; visibility: hidden; pointer-events: none; }
+.story[data-enhanced] .scrollMeasure { display: block; }
+.distanceA { height: var(--part-a-scroll); }
+.distanceB { height: 0; }
+.story[data-has-part-b] .distanceB { height: var(--part-b-scroll); }
+.distanceB1 { height: 0; }
+.story[data-has-part-b1] .distanceB1 { height: var(--part-b1-scroll); }
+.distanceC { height: 0; }
+.story[data-has-part-c] .distanceC { height: var(--part-c-scroll); }
+.distanceC1 { height: 0; }
+.story[data-has-part-c1] .distanceC1 { height: var(--part-c1-scroll); }
+.distanceD { height: 0; }
+.story[data-has-part-d] .distanceD { height: var(--part-d-scroll); }
+.distanceE { height: 0; }
+.distanceF { height: 0; }
+.distanceG { height: var(--part-g-scroll); }
+.distanceH { height: var(--part-h-scroll); }
+.story[data-has-part-f] .distanceF { height: var(--part-f-scroll); }
+.story[data-has-part-e] .distanceE { height: var(--part-e-scroll); }
+.stage { isolation: isolate; overflow: clip; position: relative; }
+.titleScene, .statementScene {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  min-height: 100svh;
+  padding: 7rem var(--gutter);
+  position: relative;
+  text-align: center;
+  z-index: 3;
+}
+.title {
+  font-family: var(--font-heading);
+  font-size: clamp(2.3rem, 8.4vw, 13.4rem);
+  font-weight: 700;
+  letter-spacing: -.065em;
+  line-height: 1.18;
+  margin: 0;
+}
+.titleLine { display: block; white-space: nowrap; }
+/* Conceal before hydration too, so the first frame only shows the clouds. */
+@media (prefers-reduced-motion: no-preference) {
+  .title { clip-path: circle(var(--title-radius, 0px) at 0% 100%); }
+}
+.sun {
+  left: 50%;
+  pointer-events: none;
+  position: absolute;
+  top: 150svh;
+  transform: translate(-50%, -50%);
+  width: min(64vw, 78svh, 940px);
+  z-index: 1;
+}
+.sunImage { display: block; height: auto; width: 100%; }
+.clouds { inset: 0; pointer-events: none; position: absolute; z-index: 2; }
+.cloud { position: absolute; width: var(--cloud-width); }
+.cloud img { display: block; height: auto; width: 100%; }
+.cloud1 {
+  left: 0; top: 16%; --cloud-width: min(36vw, 800px);
+  --from: -7vw; --to: calc(107vw - var(--cloud-width)); --loop: 22.429s;
+}
+.cloud2 {
+  left: 0; top: 8%; --cloud-width: min(31vw, 700px);
+  --from: calc(106vw - var(--cloud-width)); --to: -6vw; --loop: 27.103s;
+}
+.cloud3 {
+  left: 50%; bottom: 3%; --cloud-width: min(28vw, 630px);
+  --from: -50%; --to: calc(44vw - 100%); --loop: 30.841s;
+}
+.statement {
+  color: var(--color-ink);
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 4.1vw, 6.5rem);
+  font-weight: 600;
+  letter-spacing: -.045em;
+  line-height: 1.3;
+  margin: 0;
+  max-width: 20ch;
+  text-wrap: balance;
+}
+.word { display: inline-block; position: relative; white-space: pre; }
+.scrollHint { display: none; }
+/* Without JS / with reduced motion, both messages remain readable in flow. */
+.story[data-enhanced] { height: calc(100svh + var(--part-a-scroll)); }
+.story[data-enhanced][data-has-part-b] { height: calc(100svh + var(--part-a-scroll) + var(--part-b-scroll)); }
+.story[data-enhanced][data-has-part-b1] { height: calc(100svh + var(--part-a-scroll) + var(--part-b-scroll) + var(--part-b1-scroll)); }
+.story[data-enhanced][data-has-part-c] { height: calc(100svh + var(--part-a-scroll) + var(--part-b-scroll) + var(--part-b1-scroll) + var(--part-c-scroll)); }
+.story[data-enhanced][data-has-part-c1] { height: calc(100svh + var(--part-a-scroll) + var(--part-b-scroll) + var(--part-b1-scroll) + var(--part-c-scroll) + var(--part-c1-scroll)); }
+.story[data-enhanced][data-has-part-d] { height: calc(100svh + var(--part-a-scroll) + var(--part-b-scroll) + var(--part-b1-scroll) + var(--part-c-scroll) + var(--part-c1-scroll) + var(--part-d-scroll) + var(--vegetation-travel, 0px)); }
+.stageFrame { position: relative; }
+/* Independent static layer: mountains (5) < backdrop (6) < road scene (7). */
+.donationBackdrop { display: none; pointer-events: none; }
+.story[data-enhanced] .donationBackdrop { display: block; position: absolute; inset: -5%; z-index: 6; visibility: hidden; transform: translateY(var(--vegetation-travel, 0px)); }
+.story[data-enhanced][data-donation-backdrop-visible="true"] .donationBackdrop { visibility: visible; }
+.donationBackdrop img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.story[data-enhanced][data-has-part-e][data-has-part-f] { height: calc(100svh + var(--part-a-scroll) + var(--part-b-scroll) + var(--part-b1-scroll) + var(--part-c-scroll) + var(--part-c1-scroll) + var(--part-d-scroll) + var(--vegetation-travel, 0px) + var(--part-e-scroll) + var(--part-f-scroll) + var(--about-reading-distance, 0px)); }
+.story[data-enhanced][data-has-part-e][data-has-part-f]:has(.distanceG) { height: calc(100svh + var(--part-a-scroll) + var(--part-b-scroll) + var(--part-b1-scroll) + var(--part-c-scroll) + var(--part-c1-scroll) + var(--part-d-scroll) + var(--vegetation-travel, 0px) + var(--part-e-scroll) + var(--part-f-scroll) + var(--about-reading-distance, 0px) + var(--part-g-scroll) + var(--donation-reading-distance, 0px)); }
+.story[data-enhanced][data-has-part-e][data-has-part-f][data-has-part-h] { height: calc(100svh + var(--part-a-scroll) + var(--part-b-scroll) + var(--part-b1-scroll) + var(--part-c-scroll) + var(--part-c1-scroll) + var(--part-d-scroll) + var(--vegetation-travel, 0px) + var(--part-e-scroll) + var(--part-f-scroll) + var(--about-reading-distance, 0px) + var(--part-g-scroll) + var(--donation-reading-distance, 0px) + var(--part-h-scroll) + var(--contact-reading-distance, 0px)); }
+.story[data-enhanced][data-has-part-e] { height: calc(100svh + var(--part-a-scroll) + var(--part-b-scroll) + var(--part-b1-scroll) + var(--part-c-scroll) + var(--part-c1-scroll) + var(--part-d-scroll) + var(--vegetation-travel, 0px) + var(--part-e-scroll)); }
+.story[data-enhanced][data-has-part-e] .landscape { filter: blur(calc(var(--impact-blur, 0px) + var(--donation-blur, 0px))); }
+.story[data-enhanced] .stageFrame { height: 100svh; }
+.story[data-enhanced] .stage { height: calc(100svh + var(--vegetation-travel, 0px)); position: sticky; top: 0; }
+/* Release the entire scene into document coordinates, then pin its new framing.
+   No transform animates vegetation: one scroll pixel moves the stage one pixel. */
+.story[data-enhanced][data-vegetation-pin="flow"] .stage { position: absolute; top: var(--vegetation-release-top); width: 100%; }
+.story[data-enhanced][data-vegetation-pin="pinned"] .stage { top: calc(-1 * var(--vegetation-travel, 0px)); }
+.story[data-enhanced] .titleScene, .story[data-enhanced] .statementScene { inset: 0; position: absolute; }
+.story[data-enhanced] .titleScene { pointer-events: none; }
+.story[data-enhanced] .title { pointer-events: auto; }
+.story[data-enhanced] .sun {
+  opacity: var(--sun-opacity);
+  top: 50%;
+  transform: translate(-50%, -50%) translateY(var(--sun-y));
+  will-change: transform;
+}
+.story[data-enhanced] .sunImage { animation: clockwise 80s linear infinite; }
+.cloud { transform: translateX(var(--from)); }
+.story[data-enhanced] .cloud { animation: drift var(--loop) ease-in-out infinite alternate; }
+/* Traverse once, reset only when fully outside the clipped scene. */
+.story[data-enhanced] .cloud1,
+.story[data-enhanced] .cloud2 {
+  animation-direction: normal;
+  animation-duration: var(--crossing-duration, var(--loop));
+}
+.story[data-enhanced] .cloud1 {
+  animation-name: crossRight;
+  animation-delay: calc(var(--crossing-duration, var(--loop)) * -0.25);
+}
+.story[data-enhanced] .cloud2 {
+  animation-name: crossLeft;
+  animation-delay: calc(var(--crossing-duration, var(--loop)) * -0.25);
+}
+.story[data-enhanced] .statementScene { opacity: var(--statement-opacity); pointer-events: none; }
+.story[data-enhanced] .statement { color: rgb(102 115 109 / 10%); pointer-events: auto; }
+.story[data-enhanced] .word::after {
+  clip-path: inset(0 calc(100% - var(--word-fill, 0%)) 0 0);
+  color: var(--color-ink);
+  content: attr(data-text);
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+}
+.story[data-enhanced] .scrollHint {
+  bottom: 2.5rem;
+  color: var(--color-forest);
+  display: grid;
+  font-size: .75rem;
+  gap: .6rem;
+  left: 50%;
+  letter-spacing: .14em;
+  margin: 0;
+  opacity: var(--hint-opacity);
+  position: absolute;
+  text-align: center;
+  text-transform: uppercase;
+  transform: translateX(-50%);
+  z-index: 4;
+}
+.scrollHint span { font-size: 1.4rem; animation: arrowBob 1.8s ease-in-out infinite; }
+.story[data-inactive="true"] .cloud, .story[data-inactive="true"] .sunImage,
+.story[data-inactive="true"] .scrollHint span { animation-play-state: paused; }
+/* B.1: mountains 1–3 < mission (35) < mountain4 (40) < mountains 5/6. */
+.mountainScene { position: relative; height: 100svh; isolation: isolate; overflow: clip; pointer-events: none; z-index: 5; }
+.landscape, .camera { position: absolute; inset: 0; }
+.landscape { pointer-events: none; }
+.camera { transform-origin: 50% 0; }
+.mountain {
+  position: absolute;
+  left: calc(50% + var(--mountain-shift));
+  top: 0;
+  width: max(var(--mountain-width), var(--mountain-min-width));
+  transform: translate(-50%, var(--mountain-rest-y));
+}
+.mountain img { display: block; width: 100%; height: auto; }
+/* C: all vegetation is above mountain6 (60), ordered 70 < 80 < 90. */
+.vegetation { display: none; pointer-events: none; }
+.vegetation img { display: block; width: 100%; height: auto; }
+.story[data-enhanced] .vegetation {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: var(--vegetation-width, 134vw);
+  transform: translate3d(var(--vegetation-x, 0px), var(--vegetation-y, 110svh), 0);
+  visibility: hidden;
+}
+.story[data-enhanced] .vegetation[data-visible="true"] { visibility: visible; }
+.missionScene {
+  --mission-top: 24svh;
+  --mission-dock-x: -23vw;
+  position: absolute;
+  top: var(--mission-top);
+  left: 0;
+  right: 0;
+  z-index: 35;
+  display: grid;
+  place-items: center;
+  padding: 0 var(--gutter);
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+.missionTitle {
+  color: var(--color-ivory);
+  text-shadow: 0 2px 8px rgb(29 41 37 / 35%);
+  font-family: var(--font-heading);
+  font-size: clamp(2.3rem, 6.4vw, 10rem);
+  font-weight: 600;
+  letter-spacing: -.055em;
+  line-height: 1.15;
+  margin: 0;
+  text-align: center;
+  pointer-events: auto;
+  white-space: nowrap;
+}
+.missionCopy {
+  position: absolute;
+  top: var(--mission-copy-top, 50svh);
+  right: 5%;
+  width: 42%;
+  z-index: 35;
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: clamp(1rem, 1.05vw, 1.5rem);
+  font-weight: 300;
+  line-height: 1.6;
+  text-align: left;
+  text-shadow: 0 2px 6px rgb(29 41 37 / 65%);
+  transform: translateY(-50%);
+  transform-origin: left center;
+  pointer-events: auto;
+}
+.missionCopy p { margin: 0 0 1.5rem; }
+.missionCopy a { text-shadow: none; }
+.story[data-enhanced] .mountainScene { position: absolute; inset: 0; visibility: hidden; overflow: visible; }
+.story[data-enhanced][data-mountains="true"] .mountainScene { visibility: visible; }
+.story[data-enhanced][data-covered="true"] .mountainScene { background: var(--color-ivory); }
+.story[data-enhanced] .landscape {
+  transform: translateY(calc(var(--landscape-y, 270svh) + var(--part-d-background-y, 0px)));
+}
+.story[data-enhanced] .camera { transform: scale(var(--camera-scale, 2)); }
+.story[data-enhanced] .mountain {
+  transform: translate(-50%, var(--mountain-y, 112svh));
+  filter: var(--mountain-filter, none);
+}
+.story[data-enhanced] .missionScene {
+  top: calc(var(--mission-top) + (var(--mission-dock-top, 50svh) - var(--mission-top)) * var(--mission-dock, 0) + var(--mission-rise, 90svh));
+  opacity: var(--mission-opacity, 0);
+  transform: translate(calc(var(--mission-dock-x) * var(--mission-dock, 0)), -50%) scale(var(--mission-scale, 1));
+}
+.story[data-enhanced] .missionCopy {
+  opacity: var(--mission-copy-opacity, 0);
+  transform: translate(var(--mission-copy-x, -48px), -50%) scale(var(--mission-copy-scale, 1));
+  pointer-events: none;
+}
+.story[data-enhanced][data-mission-copy="true"] .missionCopy { pointer-events: auto; }
+.story[data-enhanced] .missionTitle { pointer-events: none; }
+.story[data-enhanced][data-covered="true"] .missionTitle { pointer-events: auto; }
+.story[data-enhanced][data-covered="true"] .sun,
+.story[data-enhanced][data-covered="true"] .clouds,
+.story[data-enhanced][data-covered="true"] .titleScene { visibility: hidden; }
+.story[data-covered="true"] .cloud,
+.story[data-covered="true"] .sunImage { animation-play-state: paused; }
+/* C.1 sits above the landscape, with no opaque panel or extra veil. */
+.argentinaScene {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 5vw;
+  padding: 10svh 5vw;
+  position: relative;
+  z-index: 6;
+  background: var(--color-forest);
+  color: #fff;
+}
+.argentinaPhotos { display: grid; gap: 1.5rem; min-width: 0; }
+.argentinaPhoto { overflow: hidden; border-radius: var(--radius-section); }
+.argentinaPhoto img { display: block; width: 100%; height: auto; }
+.argentinaCopy { min-width: 0; }
+.argentinaCta { flex: 0 0 auto; align-self: flex-start; margin-top: 1.5rem; }
+.argentinaTitle { font-size: clamp(2rem, 4.5vw, 7.2rem); white-space: normal; margin-bottom: 1.5rem; }
+.argentinaTitle span { display: block; }
+.argentinaParagraph {
+  margin: 0;
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: clamp(1rem, 1.05vw, 1.5rem);
+  font-weight: 300;
+  line-height: 1.6;
+  text-align: left;
+  text-shadow: 0 2px 6px rgb(29 41 37 / 65%);
+}
+.readerText { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.story[data-enhanced] .argentinaScene {
+  position: absolute;
+  inset: 0;
+  padding: 12svh 5vw 6svh;
+  background: none;
+  visibility: hidden;
+  opacity: var(--argentina-opacity, 0);
+  transform: translate3d(0, var(--argentina-rise, 110svh), 0);
+}
+.story[data-enhanced] .argentinaScene[data-visible="true"] { visibility: visible; }
+.story[data-enhanced] .argentinaCta { visibility: hidden; opacity: var(--argentina-cta-opacity, 0); pointer-events: none; }
+.story[data-enhanced] .argentinaScene[data-visible="true"][data-cta-visible="true"] .argentinaCta { visibility: visible; pointer-events: auto; }
+.story[data-enhanced] .argentinaPhotos {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  border-radius: var(--radius-section);
+  height: min(72svh, 1100px);
+  width: min(100%, 48.54svh);
+  justify-self: center;
+  box-shadow: 0 1rem 3rem rgb(29 41 37 / 20%);
+}
+.story[data-enhanced] .argentinaPhoto { position: absolute; inset: 0; border-radius: 0; transform: translate3d(0, var(--argentina-photo-y, 100%), 0); }
+.story[data-enhanced] .argentinaPhoto:first-child { --argentina-photo-y: 0%; }
+.story[data-enhanced] .argentinaPhoto img { height: 100%; object-fit: cover; object-position: 50% 40%; }
+.story[data-enhanced] .argentinaCopy { display: flex; flex-direction: column; justify-content: center; height: 100%; min-height: 0; }
+.story[data-enhanced] .argentinaTitle { flex: 0 0 auto; pointer-events: auto; }
+.story[data-enhanced] .argentinaReadingWindow { min-height: 0; overflow: clip; }
+.story[data-enhanced] .argentinaParagraph { transform: translate3d(0, var(--argentina-copy-y, 0px), 0); }
+.story[data-enhanced] .argentinaWord { opacity: var(--argentina-word-opacity, 0); }
+@media (max-width: 900px) {
+  .argentinaScene { grid-template-columns: minmax(0, 1fr); }
+  .argentinaTitle { font-size: clamp(1.6rem, 6vw, 3rem); margin-bottom: 1rem; }
+  .argentinaParagraph { font-size: clamp(.875rem, 4.1vw, 1rem); line-height: 1.45; }
+  .story[data-enhanced] .argentinaScene { grid-template-rows: 25svh minmax(0, 1fr); gap: 3svh; padding: 5svh 6vw; }
+  .story[data-enhanced] .argentinaPhotos { height: 100%; width: min(100%, 32rem); }
+}
+@media (max-height: 500px) and (min-width: 901px) {
+  .story[data-enhanced] .argentinaScene { padding-top: 5svh; padding-bottom: 5svh; }
+  .argentinaTitle { font-size: 8svh; margin-bottom: .75rem; }
+  .argentinaParagraph { font-size: .875rem; line-height: 1.4; }
+}
+@keyframes drift { from { transform: translateX(var(--from)); } to { transform: translateX(var(--to)); } }
+@keyframes crossRight {
+  from { transform: translateX(calc(-100% - 2px)); }
+  to { transform: translateX(var(--crossing-end, 100vw)); }
+}
+@keyframes crossLeft {
+  from { transform: translateX(var(--crossing-end, 100vw)); }
+  to { transform: translateX(calc(-100% - 2px)); }
+}
+@keyframes arrowBob { 0%, 100% { transform: translateY(-3px); } 50% { transform: translateY(4px); } }
+@keyframes clockwise { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+/* Shared footer stays within Part A's Ivory environment. */
+.story ~ :global(footer) { background: var(--color-ivory); color: var(--color-forest); }
+.story ~ :global(footer) img { filter: brightness(0) saturate(100%) invert(27%) sepia(17%) saturate(1232%) hue-rotate(111deg) brightness(93%) contrast(87%); }
+/* Only the completed English story: retain the single shared footer landmark. */
+.story[data-has-part-h] ~ :global(footer) { position: relative; z-index: 12; height: 160px; margin-top: -160px; padding: 24px var(--gutter); display: grid; place-items: center; background: transparent; color: white; text-shadow: 0 2px 8px black; }
+.story[data-has-part-h] ~ :global(footer) img { filter: brightness(0) invert(1); }
+@media (max-width: 900px) {
+  .missionScene { --mission-dock-x: 0vw; }
+  .missionTitle { font-size: clamp(2rem, 8vw, 4rem); }
+  .missionCopy {
+    left: var(--gutter);
+    right: var(--gutter);
+    width: auto;
+    font-size: clamp(.875rem, 4.1vw, 1rem);
+    line-height: 1.45;
+    max-height: calc(100svh - 9rem);
+    overflow-y: auto;
+    overscroll-behavior-y: contain;
+  }
+}
+/* A readable, keyboard-accessible alternative without a pinned animation. */
+.story:not([data-enhanced]) .mountainScene { height: auto; background: var(--color-forest); }
+.story:not([data-enhanced]) .landscape,
+.story:not([data-enhanced]) .camera { position: relative; inset: auto; }
+.story:not([data-enhanced]) .camera { padding: 10svh var(--gutter); }
+.story:not([data-enhanced]) .mountain { display: none; }
+.story:not([data-enhanced]) .missionScene { position: relative; inset: auto; transform: none; padding: 0; }
+.story:not([data-enhanced]) .missionCopy {
+  position: relative;
+  inset: auto;
+  width: min(100%, 48rem);
+  max-height: none;
+  overflow: visible;
+  margin: 2rem auto 0;
+  transform: none;
+}
+@media (max-width: 700px) {
+  .title { font-size: 12vw; letter-spacing: -.07em; }
+  .statement { font-size: clamp(1.7rem, 7.3vw, 3.2rem); max-width: 19ch; }
+  .sun { width: min(86vw, 62svh); }
+  .cloud1 { --cloud-width: 58vw; --from: -18vw; --to: 60vw; top: 19%; }
+  .cloud2 { --cloud-width: 48vw; --from: 67vw; --to: -15vw; top: 12%; }
+  .cloud3 { --cloud-width: 53vw; bottom: 17%; }
+  .story[data-enhanced] .scrollHint { bottom: 6rem; font-size: .65rem; }
+}
+@media (max-height: 500px) and (min-width: 701px) {
+  .title { font-size: min(8vw, 20svh); }
+  .statement { font-size: min(4vw, 10svh); }
+  .missionCopy { font-size: .875rem; line-height: 1.4; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .story .cloud, .story .sunImage, .story .scrollHint span { animation: none; }
+}

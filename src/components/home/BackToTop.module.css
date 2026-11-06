@@ -1,0 +1,40 @@
+.button {
+  position: fixed;
+  right: calc(clamp(16px, 2vw, 32px) + env(safe-area-inset-right, 0px));
+  bottom: calc(clamp(16px, 2vw, 32px) + env(safe-area-inset-bottom, 0px));
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  width: clamp(52px, 3.5vw, 64px);
+  height: clamp(52px, 3.5vw, 64px);
+  padding: 0;
+  border: 2px solid var(--color-ivory);
+  border-radius: 50%;
+  background: var(--color-gold);
+  color: var(--color-ivory);
+  box-shadow: 0 4px 18px rgb(29 41 37 / 25%);
+  cursor: pointer;
+  touch-action: manipulation;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+@media (hover: hover) {
+  .button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 7px 22px rgb(29 41 37 / 30%);
+  }
+}
+
+.button:focus-visible {
+  outline: 3px solid var(--color-forest);
+  outline-offset: 4px;
+}
+
+.button:active {
+  transform: scale(.95);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button { transition: none; }
+  .button:hover, .button:active { transform: none; }
+}

@@ -1,7 +1,391 @@
 {
   "slug": "",
-  "status": "reserved-for-final-phase",
-  "seo": { "title": "Moca Colombia", "description": "Iniciativas lideradas por la comunidad que impulsan un cambio duradero en la Colombia rural." },
-  "hero": { "eyebrow": "Moca Colombia", "title": "La experiencia Home está reservada para la fase final de scrollytelling." },
-  "notice": "La ruta bilingüe, la navegación y el contrato de contenido ya están preparados. Las escenas narrativas y el movimiento se desarrollarán después de aprobar las páginas interiores."
+  "status": "spanish-review",
+  "seo": {
+    "title": "Moca Colombia",
+    "description": "Iniciativas lideradas por la comunidad que impulsan un cambio duradero en la Colombia rural."
+  },
+  "hero": {
+    "eyebrow": "Moca Colombia",
+    "title": "HAZ LA DIFERENCIA"
+  },
+  "partA": {
+    "titleLines": [
+      "HAZ LA",
+      "DIFERENCIA"
+    ],
+    "statement": "El futuro de la juventud colombiana comienza con una oportunidad",
+    "scrollLabel": "Desplázate para explorar",
+    "images": {
+      "sun": "/images/home/sun.webp",
+      "clouds": [
+        "/images/home/cloud1.webp",
+        "/images/home/cloud2.webp",
+        "/images/home/cloud3.webp"
+      ]
+    }
+  },
+  "partB": {
+    "title": "NUESTRA MISIÓN",
+    "description": "MOCA Colombia trabaja para atender las necesidades fundamentales de pequeñas comunidades desatendidas de Colombia y promover su independencia económica a través de la agricultura. Mediante nuestras iniciativas agrícolas, nuestra labor de defensa de las comunidades y nuestras alianzas, mejoramos la calidad de vida y fomentamos un entorno donde la educación, la salud y el empoderamiento económico generan un cambio duradero. Impulsamos todo el potencial de nuestras comunidades campesinas y de sus niños y niñas.",
+    "cta": {
+      "label": "CONOCE MÁS",
+      "href": "/es/our-mission"
+    },
+    "mountains": [
+      {
+        "src": "/images/home/mountain1.webp",
+        "width": 2943,
+        "height": 1257
+      },
+      {
+        "src": "/images/home/mountain2.webp",
+        "width": 2950,
+        "height": 1287
+      },
+      {
+        "src": "/images/home/mountain3.webp",
+        "width": 2581,
+        "height": 992
+      },
+      {
+        "src": "/images/home/mountain4.webp",
+        "width": 3138,
+        "height": 1182
+      },
+      {
+        "src": "/images/home/mountain5.webp",
+        "width": 2932,
+        "height": 1245
+      },
+      {
+        "src": "/images/home/mountain6.webp",
+        "width": 2847,
+        "height": 1043
+      }
+    ]
+  },
+  "partC": {
+    "vegetation": [
+      {
+        "src": "/images/home/vegetation1.webp",
+        "width": 1680,
+        "height": 770
+      },
+      {
+        "src": "/images/home/vegetation2.webp",
+        "width": 2410,
+        "height": 1023
+      },
+      {
+        "src": "/images/home/vegetation3.webp",
+        "width": 1860,
+        "height": 868
+      }
+    ]
+  },
+  "partC1": {
+    "titleLines": [
+      "LA ARGENTINA",
+      "COLOMBIA"
+    ],
+    "cta": {
+      "label": "DESCUBRE CÓMO AYUDAMOS",
+      "href": "/es/la-argentina"
+    },
+    "description": "Llegar a La Argentina, hogar de apenas 273 personas y aislada entre las montañas de los Andes, es toda una aventura. Sin embargo, quienes emprenden el viaje descubren un lugar lleno de resiliencia y potencial. En el corazón de La Argentina está su escuela, una humilde edificación que sirve como centro de la comunidad y eje de los esfuerzos de MOCA Colombia. La escuela enfrenta grandes dificultades económicas y una escasez de recursos, pues el acceso a lo más básico es limitado. En La Argentina, los desafíos son muchos, pero también lo es la esperanza. Con una cultura vibrante en torno al café y al cacao, la comunidad sueña con un futuro más prometedor, donde la educación, la salud y la prosperidad estén al alcance de todos. Gracias a los esfuerzos de MOCA Colombia y al espíritu incansable de sus habitantes, ese futuro se está construyendo.",
+    "images": [
+      {
+        "src": "/images/home/la-argentina-1.webp",
+        "width": 1500,
+        "height": 2225,
+        "alt": "Ilustración del cultivo de cacao y un pueblo entre las montañas de Colombia."
+      },
+      {
+        "src": "/images/home/la-argentina-2.webp",
+        "width": 1500,
+        "height": 2223,
+        "alt": "Ilustración de niños que caminan hacia una escuela rural en las montañas."
+      },
+      {
+        "src": "/images/home/la-argentina-3.webp",
+        "width": 1500,
+        "height": 2225,
+        "alt": "Dos mujeres construyen juntas una casa en miniatura."
+      }
+    ]
+  },
+  "partH": {
+    "titleLines": [
+      "NOS ENCANTARÍA",
+      "SABER DE TI"
+    ],
+    "description": "Conéctate con nosotros y ayuda a construir un cambio duradero",
+    "cta": {
+      "label": "CONTÁCTANOS",
+      "href": "/es/contact"
+    },
+    "image": {
+      "src": "/images/home/contac-us.webp",
+      "width": 1920,
+      "height": 1080,
+      "alt": "Collage de actividades educativas, de salud y comunitarias de MOCA Colombia."
+    },
+    "grains": [
+      {
+        "src": "/images/home/cocoagrain4.webp",
+        "width": 2408,
+        "height": 1629
+      },
+      {
+        "src": "/images/home/cocoagrain5.webp",
+        "width": 2787,
+        "height": 2118
+      }
+    ],
+    "fruits": [
+      {
+        "src": "/images/home/cocoafruit1.webp",
+        "width": 1547,
+        "height": 829
+      },
+      {
+        "src": "/images/home/cocoafruit2.webp",
+        "width": 972,
+        "height": 1340
+      }
+    ]
+  },
+  "partG": {
+    "background": {
+      "src": "/images/home/vegetation-path-2.webp",
+      "width": 2787,
+      "height": 2118
+    },
+    "trees": [
+      {
+        "src": "/images/home/cocoatree1.webp",
+        "width": 1804,
+        "height": 2680
+      },
+      {
+        "src": "/images/home/cocoatree2.webp",
+        "width": 1842,
+        "height": 2713
+      }
+    ],
+    "grains": {
+      "src": "/images/home/cocoagrain3.webp",
+      "width": 3934,
+      "height": 1530
+    },
+    "cta": {
+      "title": "Cambia una Vida Hoy",
+      "body": "Ya sea que dones, seas voluntario o te unas como aliado, tu apoyo ayuda a fortalecer la educación, la salud, los medios de vida sostenibles y el desarrollo comunitario a largo plazo.",
+      "image": "/images/shared/change-a-life-today.png",
+      "actions": [
+        {
+          "label": "Dona Ahora",
+          "href": "/donate",
+          "variant": "secondary"
+        },
+        {
+          "label": "Quiero Ser Voluntario",
+          "href": "/get-involved#volunteer",
+          "variant": "secondary"
+        },
+        {
+          "label": "Crear una Alianza",
+          "href": "/get-involved#partnerships",
+          "variant": "secondary"
+        }
+      ]
+    }
+  },
+  "partF": {
+    "title": "SOBRE NOSOTROS",
+    "description": "Con raíces en la comunidad y unidos por un propósito, construimos un cambio duradero en La Argentina",
+    "cta": {
+      "label": "CONOCE NUESTRA HISTORIA",
+      "href": "/es/about-us"
+    },
+    "house": {
+      "src": "/images/home/house5.webp",
+      "width": 2480,
+      "height": 1440
+    },
+    "grains": [
+      {
+        "src": "/images/home/cocoagrain1.webp",
+        "width": 1678,
+        "height": 1146
+      },
+      {
+        "src": "/images/home/cocoagrain2.webp",
+        "width": 1704,
+        "height": 1916
+      }
+    ],
+    "images": [
+      {
+        "src": "/images/home/about-us-slider1.webp",
+        "width": 1920,
+        "height": 1080,
+        "alt": "Manos sostienen una canasta de cerezas de café recién cosechadas."
+      },
+      {
+        "src": "/images/home/about-us-slider2.webp",
+        "width": 1920,
+        "height": 1080,
+        "alt": "Tres personas frente al mural de la escuela de La Argentina."
+      },
+      {
+        "src": "/images/home/about-us-slider3.webp",
+        "width": 1920,
+        "height": 1080,
+        "alt": "Un agricultor recolecta frutos de cacao en una plantación sombreada."
+      },
+      {
+        "src": "/images/home/about-us-slider4.webp",
+        "width": 1920,
+        "height": 1080,
+        "alt": "Laderas cultivadas y un paisaje montañoso de la Colombia rural."
+      },
+      {
+        "src": "/images/home/about-us-slider5.webp",
+        "width": 1920,
+        "height": 1080,
+        "alt": "Vista aérea de un barrio y su cancha deportiva."
+      },
+      {
+        "src": "/images/home/about-us-slider6.webp",
+        "width": 1920,
+        "height": 1080,
+        "alt": "Niños y adultos reunidos alrededor de las mesas para compartir una comida."
+      }
+    ],
+    "galleryLabels": {
+      "label": "Galería de fotos de MOCA Colombia",
+      "role": "carrusel",
+      "slideRole": "diapositiva",
+      "previous": "Foto anterior",
+      "next": "Foto siguiente",
+      "goToPhoto": "Ir a la foto",
+      "photo": "Foto",
+      "of": "de"
+    }
+  },
+  "partE": {
+    "title": "IMPACTO",
+    "description": "Creamos un impacto duradero mediante oportunidades, alianzas y progreso liderado por la comunidad para las próximas generaciones",
+    "descriptionLines": [
+      "Creamos un impacto duradero mediante oportunidades,",
+      "alianzas y progreso liderado por la comunidad",
+      "para las próximas generaciones"
+    ],
+    "cta": {
+      "label": "EXPLORA NUESTRO IMPACTO",
+      "href": "/es/impact"
+    },
+    "houses": [
+      {
+        "src": "/images/home/house1.webp",
+        "width": 1364,
+        "height": 961
+      },
+      {
+        "src": "/images/home/house2.webp",
+        "width": 1280,
+        "height": 1130
+      },
+      {
+        "src": "/images/home/house3.webp",
+        "width": 2903,
+        "height": 1411
+      },
+      {
+        "src": "/images/home/house4.webp",
+        "width": 1450,
+        "height": 1640
+      }
+    ]
+  },
+  "partD": {
+    "vegetationPath": {
+      "src": "/images/home/vegetation-path.webp",
+      "width": 2560,
+      "height": 3840
+    },
+    "title": "NUESTROS PROYECTOS",
+    "trees": [
+      {
+        "src": "/images/home/tree1.webp",
+        "width": 971,
+        "height": 1466
+      },
+      {
+        "src": "/images/home/tree2.webp",
+        "width": 1024,
+        "height": 1281
+      },
+      {
+        "src": "/images/home/tree3.webp",
+        "width": 1532,
+        "height": 1956
+      }
+    ],
+    "way": {
+      "src": "/images/home/way.webp",
+      "width": 3040,
+      "height": 4137
+    },
+    "church": {
+      "src": "/images/home/church.webp",
+      "width": 1600,
+      "height": 1546
+    },
+    "projects": [
+      {
+        "title": "MOCACAO",
+        "summary": "Cultivamos oportunidades a través del cacao.",
+        "href": "/es/projects/mocacao",
+        "image": {
+          "src": "/images/home/project-mocacao.png",
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      {
+        "title": "NUTRICIÓN",
+        "summary": "Nutrimos un futuro más saludable.",
+        "href": "/es/projects/nutrition",
+        "image": {
+          "src": "/images/home/project-nutrition.png",
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      {
+        "title": "APOYO ACADÉMICO",
+        "summary": "Apoyamos el aprendizaje de niños y niñas.",
+        "href": "/es/projects/academic-support",
+        "image": {
+          "src": "/images/home/project-academic-support.png",
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      {
+        "title": "ATENCIÓN MÉDICA",
+        "summary": "Mejoramos el acceso a la atención médica.",
+        "href": "/es/projects/medical-care",
+        "image": {
+          "src": "/images/home/project-medical-care.png",
+          "width": 1200,
+          "height": 675
+        }
+      }
+    ]
+  },
+  "notice": "Versión en español disponible para revisión. Conserva las escenas, imágenes y animaciones del home aprobado."
 }

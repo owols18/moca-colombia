@@ -18,8 +18,8 @@
     { "id": "impact", "label": "Impact", "href": "/impact" },
     { "id": "about", "label": "About Us", "href": "/about-us" },
     { "id": "involved", "label": "Get Involved", "href": "/get-involved" },
-    { "id": "contact", "label": "Contact Us", "href": "/contact" },
-    { "id": "donate", "label": "Donate", "href": "/donate" }
+    { "id": "donate", "label": "Donate Now", "href": "/donate" },
+    { "id": "contact", "label": "Contact Us", "href": "/contact" }
   ],
   "footer": {
     "copyright": "Moca Colombia. All rights reserved."

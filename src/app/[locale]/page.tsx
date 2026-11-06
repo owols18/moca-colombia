@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { HomeStory } from "@/components/home/HomeStory";
+import { BackToTop } from "@/components/home/BackToTop";
+import { DonateSticker } from "@/components/home/DonateSticker";
 
 import { getHome } from "@/lib/content";
 import { hasLocale, localizedHref } from "@/lib/i18n";
@@ -35,6 +38,14 @@ export default async function HomePage({ params }: HomePageProps) {
 
   const content = getHome(locale);
   const missionLabel = locale === "es" ? "Ver Nuestra misión" : "View Our Mission";
+
+  if (content.partA) {
+    return <>
+      <HomeStory locale={locale} content={content.partA} partB={content.partB} partC={content.partC} partC1={content.partC1} partD={content.partD} partE={content.partE} partF={content.partF} partG={content.partG} partH={content.partH} />
+      <BackToTop locale={locale} />
+      <DonateSticker locale={locale} />
+    </>;
+  }
 
   return (
     <main className={styles.page}>

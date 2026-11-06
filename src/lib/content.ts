@@ -412,12 +412,94 @@ export type ContactContent = {
   cta: SharedCtaContent;
 };
 
+export type HomePartAContent = {
+  titleLines: string[];
+  statement: string;
+  scrollLabel: string;
+  images: { sun: string; clouds: string[] };
+};
+
+export type HomePartBContent = {
+  title: string;
+  description?: string;
+  cta?: { label: string; href: string };
+  mountains: { src: string; width: number; height: number }[];
+};
+
+export type HomePartCContent = {
+  vegetation: { src: string; width: number; height: number }[];
+};
+
+export type HomePartC1Content = {
+  titleLines: string[];
+  description: string;
+  cta: { label: string; href: string };
+  images: { src: string; width: number; height: number; alt: string }[];
+};
+
+export type HomePartDContent = {
+  title: string;
+  vegetationPath?: { src: string; width: number; height: number };
+  trees: { src: string; width: number; height: number }[];
+  way: { src: string; width: number; height: number };
+  church: { src: string; width: number; height: number };
+  projects: {
+    title: string;
+    summary: string;
+    href: string;
+    image: { src: string; width: number; height: number };
+  }[];
+};
+
+export type HomePartEContent = {
+  title: string;
+  description: string;
+  descriptionLines: string[];
+  cta: { label: string; href: string };
+  houses: { src: string; width: number; height: number }[];
+};
+
+export type HomePartFContent = {
+  title: string;
+  galleryLabels: { label: string; role: string; slideRole: string; previous: string; next: string; goToPhoto: string; photo: string; of: string };
+  description: string;
+  cta: { label: string; href: string };
+  house: { src: string; width: number; height: number };
+  grains: { src: string; width: number; height: number }[];
+  images: { src: string; width: number; height: number; alt: string }[];
+};
+
+export type HomePartGContent = {
+  background?: { src: string; width: number; height: number };
+  trees: { src: string; width: number; height: number }[];
+  grains: { src: string; width: number; height: number };
+  cta: SharedCtaContent;
+};
+
+export type HomePartHContent = {
+  titleLines: string[];
+  description: string;
+  cta: { label: string; href: string };
+  image: { src: string; width: number; height: number; alt: string };
+  grains: { src: string; width: number; height: number }[];
+  fruits: { src: string; width: number; height: number }[];
+};
+
 type HomeContent = {
   slug: string;
   status: string;
   seo: { title: string; description: string };
   hero: { eyebrow: string; title: string };
   notice: string;
+  partA?: HomePartAContent;
+  partB?: HomePartBContent;
+  partC?: HomePartCContent;
+  partC1?: HomePartC1Content;
+  partD?: HomePartDContent;
+  partE?: HomePartEContent;
+  partF?: HomePartFContent;
+  partG?: HomePartGContent;
+  partH?: HomePartHContent;
 };
 
 const navigationByLocale = {
@@ -476,8 +558,8 @@ const contactByLocale = {
 } as Record<Locale, ContactContent>;
 
 const homeByLocale = {
-  en: homeEn,
-  es: homeEs,
+  en: homeEn as HomeContent,
+  es: homeEs as HomeContent,
 } satisfies Record<Locale, HomeContent>;
 
 const pagesByLocale = {
