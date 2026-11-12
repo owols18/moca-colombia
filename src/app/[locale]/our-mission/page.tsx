@@ -98,12 +98,24 @@ export default async function OurMissionPage({ params }: OurMissionPageProps) {
                 ))}
               </div>
               <div className={styles.media}>
-                <Image
-                  alt={section.alt}
-                  fill
-                  sizes="(max-width: 800px) 100vw, 44vw"
-                  src={section.image}
-                />
+                {section.id === "purpose" ? (
+                  <video
+                    aria-label={section.title}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    poster={section.image}
+                    src="/images/our-mission/purpose.mp4"
+                  />
+                ) : (
+                  <Image
+                    alt={section.alt}
+                    fill
+                    sizes="(max-width: 800px) 100vw, 44vw"
+                    src={section.image}
+                  />
+                )}
               </div>
             </div>
           </section>
