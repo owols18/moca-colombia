@@ -1,4 +1,4 @@
-:HL["/moca-colombia/_next/static/css/69c88d1953281f34.css","style"]
-:HL["/moca-colombia/_next/static/css/f4e159189dedb231.css","style"]
-:HL["/moca-colombia/_next/static/css/9fd3415491331908.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"locale","param":{"type":"d","key":"en","siblings":["_not-found","_global-error","design-system"]},"prefetchHints":4208,"slots":{"children":{"name":"la-argentina","param":null,"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}}}},"staleTime":300,"buildId":"3LbeoNo_5o7oTvfvmPwQG"}
+:HL["/moca-colombia/_next/static/css/6df34f4aba46fa84.css","style"]
+:HL["/moca-colombia/_next/static/css/62a116861e0c6fb0.css","style"]
+:HL["/moca-colombia/_next/static/css/62808b294f581fc8.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"locale","param":{"type":"d","key":"en","siblings":["_not-found","_global-error","design-system"]},"prefetchHints":4208,"slots":{"children":{"name":"la-argentina","param":null,"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}}}},"staleTime":300,"buildId":"9kyWdc6sqqGqD0NhlBKfX"}
