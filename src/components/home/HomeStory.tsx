@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import type { Locale } from "@/lib/i18n";
 import { useEffect, useRef, type CSSProperties } from "react";
 import type { HomePartAContent, HomePartBContent, HomePartCContent, HomePartC1Content, HomePartDContent, HomePartEContent, HomePartFContent, HomePartGContent, HomePartHContent } from "@/lib/content";
@@ -309,6 +310,7 @@ export function HomeStory({ locale, content, partB, partC, partC1, partD, partE,
           const progressC1 = clamp((window.scrollY - top - distance - mountainDistance - missionDistance - vegetationDistance) / argentinaDistance);
           const argentina = getArgentinaFrame(progressC1, argentinaTextHeight, argentinaWindowHeight);
           const argentinaOpacity = argentina.opacity * (projectsFrame?.previousOpacity ?? 1);
+          root.style.setProperty("--argentina-backdrop-progress", String(argentinaOpacity));
           argentinaScene.dataset.visible = String(argentina.visible && argentinaOpacity > 0);
           argentinaScene.inert = projectsFrame ? !projectsFrame.previousInteractive : false;
           argentinaScene.dataset.ctaVisible = String(argentina.ctaOpacity > 0);
@@ -420,7 +422,8 @@ export function HomeStory({ locale, content, partB, partC, partC1, partD, partE,
         argentinaWindowHeight = argentinaWindow?.clientHeight ?? 0;
         if (missionCopy && missionTitle) {
           const stacked = window.matchMedia("(max-width: 900px)").matches;
-          const titleHeight = missionTitle.offsetHeight * .85;
+          const titleHeight = missionTitle.offsetHeight * MISSION_TIMING.titleDockScale;
+          root.style.setProperty("--mission-title-height", `${titleHeight}px`);
           const copyHeight = missionCopy.offsetHeight;
           const gap = 24;
           const groupHeight = titleHeight + gap + copyHeight;
@@ -491,6 +494,8 @@ export function HomeStory({ locale, content, partB, partC, partC1, partD, partE,
         delete root.dataset.mountains;
         delete root.dataset.covered;
         delete root.dataset.missionCopy;
+        root.style.removeProperty("--mission-title-height");
+        root.style.removeProperty("--argentina-backdrop-progress");
         root.style.removeProperty("--part-d-background-y");
         root.style.removeProperty("--impact-blur");
         root.style.removeProperty("--about-reading-distance");
@@ -642,12 +647,25 @@ export function HomeStory({ locale, content, partB, partC, partC1, partD, partE,
                     </div>
                   );
                 })}
+                <div className={styles.missionBackdrop} aria-hidden="true" />
                 <div className={styles.missionScene}>
                   <h2 id="home-mission-title" className={styles.missionTitle} data-mission-title>{partB.title}</h2>
                 </div>
                 {partB.description && (
                   <div className={styles.missionCopy} data-mission-copy>
-                    <p>{partB.description}</p>
+                    <div className={styles.missionReading} tabIndex={0}>
+                      <p>{partB.description}</p>
+                      <p>{partB.pillarsIntro}</p>
+                      <ol className={styles.missionPillars}>
+                        {partB.pillars.map((pillar) => (
+                          <li key={pillar.href}>
+                            <Link href={pillar.href}>
+                              <strong>{pillar.label}</strong> — {pillar.description}
+                            </Link>
+                          </li>
+                        ))}
+                      </ol>
+                    </div>
                     {partB.cta && <ButtonLink href={partB.cta.href} variant="secondary">{partB.cta.label}</ButtonLink>}
                   </div>
                 )}
@@ -662,7 +680,10 @@ export function HomeStory({ locale, content, partB, partC, partC1, partD, partE,
             </div>
           </section>
         )}
-        {partC1 && <ArgentinaScene content={partC1} />}
+        {partC1 && <>
+          <div className={styles.argentinaBackdrop} aria-hidden="true" />
+          <ArgentinaScene content={partC1} />
+        </>}
         {partD && partE && partF && partG?.background && <div className={styles.donationBackdrop} data-donation-backdrop aria-hidden="true">
           <Image {...partG.background} alt="" unoptimized loading="eager" />
         </div>}

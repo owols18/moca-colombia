@@ -1,6 +1,7 @@
 "use client";
 
-import type { Locale } from "@/lib/i18n";
+import Link from "next/link";
+import { localizedHref, type Locale } from "@/lib/i18n";
 import styles from "./DonateSticker.module.css";
 
 // Rounded scallops drawn as a vector, crisp at every screen size.
@@ -17,12 +18,11 @@ const outline = `M ${midpoint(points[23], points[0])} ${points.map((point, i) =>
 export function DonateSticker({ locale }: { locale: Locale }) {
   const words = locale === "es" ? ["Dona", "ahora"] : ["Donate", "now"];
   return (
-    <a
-      href="#"
+    <Link
+      href={localizedHref(locale, "/donate")}
       className={styles.sticker}
       aria-label={words.join(" ")}
       title={words.join(" ")}
-      onClick={event => event.preventDefault()}
     >
       <svg className={styles.shape} viewBox="0 0 100 100" aria-hidden="true" focusable="false">
         <path d={outline} fill="var(--color-gold)" stroke="var(--color-ivory)" strokeWidth="2" vectorEffect="non-scaling-stroke" />
@@ -30,6 +30,6 @@ export function DonateSticker({ locale }: { locale: Locale }) {
       <span className={styles.label} aria-hidden="true">
         {words.map(word => <span key={word}>{word}</span>)}
       </span>
-    </a>
+    </Link>
   );
 }

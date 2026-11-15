@@ -38,7 +38,7 @@ export function SiteHeader({ locale, navigation }: SiteHeaderProps) {
   const pathname = usePathname();
   const isAnimatedHome = /^\/(en|es)\/?$/.test(pathname);
   const [isOpen, setIsOpen] = useState(false);
-  const [projectsOpen, setProjectsOpen] = useState(false);
+  const [openGroup, setOpenGroup] = useState<string | null>(null);
   const menuButtonRef = useRef<HTMLButtonElement>(null);
   const headerRef = useRef<HTMLElement>(null);
   const overlayRef = useRef<HTMLDivElement>(null);
@@ -56,7 +56,7 @@ export function SiteHeader({ locale, navigation }: SiteHeaderProps) {
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
         setIsOpen(false);
-        setProjectsOpen(false);
+        setOpenGroup(null);
         menuButtonRef.current?.focus();
       }
       if (event.key === "Tab") {
@@ -104,7 +104,7 @@ export function SiteHeader({ locale, navigation }: SiteHeaderProps) {
 
   const closeMenu = () => {
     setIsOpen(false);
-    setProjectsOpen(false);
+    setOpenGroup(null);
   };
 
   return (
@@ -116,7 +116,7 @@ export function SiteHeader({ locale, navigation }: SiteHeaderProps) {
           aria-expanded={isOpen}
           aria-label={isOpen ? navigation.menuClose : navigation.menuOpen}
           className={styles.menuButton}
-          onClick={() => { setProjectsOpen(false); setIsOpen((current) => !current); }}
+          onClick={() => { setOpenGroup(null); setIsOpen((current) => !current); }}
           type="button"
         >
           <span />
@@ -166,14 +166,14 @@ export function SiteHeader({ locale, navigation }: SiteHeaderProps) {
                 ) : (
                   <>
                     <button type="button" className={styles.groupLabel}
-                      aria-label={item.label} aria-expanded={projectsOpen} aria-controls="navigation-projects"
-                      onClick={() => setProjectsOpen(open => !open)}>
+                      aria-label={item.label} aria-expanded={openGroup === item.id} aria-controls={`navigation-${item.id}`}
+                      onClick={() => setOpenGroup(current => current === item.id ? null : item.id)}>
                       <MenuLetters text={item.label} row={row} />
                       <svg className={styles.chevron} width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                         <path d="m6 9 6 6 6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                     </button>
-                    <ul id="navigation-projects" className={styles.projectLinks} hidden={!projectsOpen}>
+                    <ul id={`navigation-${item.id}`} className={styles.projectLinks} hidden={openGroup !== item.id}>
                       {item.children?.map((child, index) => (
                         <li key={child.href}>
                           <Link href={localizedHref(locale, child.href)} onClick={closeMenu} aria-label={child.label}>

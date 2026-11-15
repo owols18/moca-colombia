@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import type { ReactNode } from "react";
 
+import { DonateSticker } from "@/components/home/DonateSticker";
 import { SiteFooter } from "@/components/site/SiteFooter";
 import { SiteHeader } from "@/components/site/SiteHeader";
 import { getNavigation } from "@/lib/content";
@@ -43,6 +44,7 @@ export default async function LocaleLayout({
       <body>
         <SiteHeader locale={locale} navigation={navigation} />
         {children}
+        <DonateSticker locale={locale} />
         <SiteFooter locale={locale} navigation={navigation} />
       </body>
     </html>

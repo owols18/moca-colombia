@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import type { AboutUsContent } from "@/lib/content";
 
@@ -14,7 +14,38 @@ type BoardOfDirectorsProps = {
 export function BoardOfDirectors({ content }: BoardOfDirectorsProps) {
   const [activeIndex, setActiveIndex] = useState(0);
   const activeDirector = content.directors[activeIndex];
-  const showControls = content.directors.length > 7;
+  const showControls = content.directors.length > 1;
+  const railRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const rail = railRef.current;
+    const card = rail?.children[activeIndex];
+    if (!rail || !(card instanceof HTMLElement)) return;
+
+    function revealSelected(behavior: ScrollBehavior) {
+      if (!rail || !(card instanceof HTMLElement)) return;
+      const left = card.offsetLeft;
+      const right = left + card.offsetWidth;
+      if (left < rail.scrollLeft) rail.scrollTo({ left, behavior });
+      else if (right > rail.scrollLeft + rail.clientWidth) {
+        rail.scrollTo({ left: right - rail.clientWidth, behavior });
+      }
+    }
+
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    revealSelected(reducedMotion ? "instant" : "smooth");
+    let previousWidth = rail.clientWidth;
+    const observer = new ResizeObserver(() => {
+      if (rail.clientWidth !== previousWidth) {
+        previousWidth = rail.clientWidth;
+        revealSelected("instant");
+      }
+    });
+    observer.observe(rail);
+    return () => observer.disconnect();
+  }, [activeIndex]);
+
+  if (!activeDirector) return null;
 
   function selectPrevious() {
     setActiveIndex((current) =>
@@ -30,6 +61,62 @@ export function BoardOfDirectors({ content }: BoardOfDirectorsProps) {
     <section className={styles.boardSection} id={content.id}>
       <div className={styles.boardInner}>
         <h2 className={styles.boardTitle}>{content.title}</h2>
+
+        {showControls ? (
+          <div className={styles.boardControls}>
+            <button
+              aria-controls="board-director-cards"
+              aria-label={content.previousLabel}
+              onClick={selectPrevious}
+              type="button"
+            >
+              <span aria-hidden="true">←</span>
+              <span>{content.previousLabel}</span>
+            </button>
+            <button
+              aria-controls="board-director-cards"
+              aria-label={content.nextLabel}
+              onClick={selectNext}
+              type="button"
+            >
+              <span>{content.nextLabel}</span>
+              <span aria-hidden="true">→</span>
+            </button>
+          </div>
+        ) : null}
+
+        <div
+          aria-label={content.selectLabel}
+          className={styles.directorRail}
+          id="board-director-cards"
+          ref={railRef}
+          role="group"
+        >
+          {content.directors.map((director, index) => {
+            const isActive = index === activeIndex;
+
+            return (
+              <button
+                aria-pressed={isActive}
+                className={`${styles.directorCard} ${isActive ? styles.directorCardActive : ""}`}
+                key={director.id}
+                onClick={() => setActiveIndex(index)}
+                type="button"
+              >
+                <span className={styles.cardPortrait}>
+                  <Image
+                    alt=""
+                    fill
+                    sizes="(max-width: 600px) 44vw, 15rem"
+                    src={director.image}
+                  />
+                </span>
+                <span className={styles.cardName}>{director.name}</span>
+                <span className={styles.cardRole}>{director.role}</span>
+              </button>
+            );
+          })}
+        </div>
 
         <article aria-live="polite" className={styles.featuredDirector} key={activeDirector.id}>
           <div className={styles.featuredVisual}>
@@ -64,61 +151,6 @@ export function BoardOfDirectors({ content }: BoardOfDirectorsProps) {
             </div>
           </div>
         </article>
-
-        <div
-          aria-label={content.selectLabel}
-          className={styles.directorRail}
-          id="board-director-cards"
-          role="group"
-        >
-          {content.directors.map((director, index) => {
-            const isActive = index === activeIndex;
-
-            return (
-              <button
-                aria-pressed={isActive}
-                className={`${styles.directorCard} ${isActive ? styles.directorCardActive : ""}`}
-                key={director.id}
-                onClick={() => setActiveIndex(index)}
-                type="button"
-              >
-                <span className={styles.cardPortrait}>
-                  <Image
-                    alt=""
-                    fill
-                    sizes="(max-width: 600px) 44vw, 15rem"
-                    src={director.image}
-                  />
-                </span>
-                <span className={styles.cardName}>{director.name}</span>
-                <span className={styles.cardRole}>{director.role}</span>
-              </button>
-            );
-          })}
-        </div>
-
-        {showControls ? (
-          <div className={styles.boardControls}>
-            <button
-              aria-controls="board-director-cards"
-              aria-label={content.previousLabel}
-              onClick={selectPrevious}
-              type="button"
-            >
-              <span aria-hidden="true">←</span>
-              <span>{content.previousLabel}</span>
-            </button>
-            <button
-              aria-controls="board-director-cards"
-              aria-label={content.nextLabel}
-              onClick={selectNext}
-              type="button"
-            >
-              <span>{content.nextLabel}</span>
-              <span aria-hidden="true">→</span>
-            </button>
-          </div>
-        ) : null}
       </div>
     </section>
   );

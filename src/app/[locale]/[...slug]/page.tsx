@@ -1,23 +1,15 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 
-import { getPageStub } from "@/lib/content";
-import {
-  hasLocale,
-  locales,
-  plannedPagePaths,
-  type PlannedPagePath,
-} from "@/lib/i18n";
+import { SectionHeading } from "@/components/ui/SectionHeading";
+import { getDonate } from "@/lib/content";
+import { hasLocale, locales, plannedPagePaths } from "@/lib/i18n";
 
-import styles from "./page.module.css";
+import { DonationForm } from "@/components/donate/DonationForm";
+import styles from "@/components/donate/donate.module.css";
 
-type PlannedPageProps = {
-  params: Promise<{ locale: string; slug: string[] }>;
-};
-
-function isPlannedPage(path: string): path is PlannedPagePath {
-  return plannedPagePaths.includes(path as PlannedPagePath);
-}
+type DonateProps = { params: Promise<{ locale: string; slug: string[] }> };
 
 export function generateStaticParams() {
   return locales.flatMap((locale) =>
@@ -25,45 +17,36 @@ export function generateStaticParams() {
   );
 }
 
-export async function generateMetadata({ params }: PlannedPageProps): Promise<Metadata> {
+export async function generateMetadata({ params }: DonateProps): Promise<Metadata> {
   const { locale, slug } = await params;
-  const path = slug.join("/");
+  if (!hasLocale(locale) || slug.join("/") !== "donate") return {};
 
-  if (!hasLocale(locale) || !isPlannedPage(path)) {
-    return {};
-  }
-
-  const content = getPageStub(locale, path);
   return {
-    title: content.seo.title,
-    description: content.seo.description,
-    robots: { index: false, follow: false },
+    ...getDonate(locale).seo,
+    alternates: { languages: { en: "/en/donate", es: "/es/donate" } },
   };
 }
 
-export default async function PlannedPage({ params }: PlannedPageProps) {
+export default async function DonatePage({ params }: DonateProps) {
   const { locale, slug } = await params;
-  const path = slug.join("/");
+  if (!hasLocale(locale) || slug.join("/") !== "donate") notFound();
 
-  if (!hasLocale(locale) || !isPlannedPage(path)) {
-    notFound();
-  }
-
-  const content = getPageStub(locale, path);
-
+  const { hero, donation } = getDonate(locale);
   return (
-    <main className={styles.page}>
-      <section className={styles.hero}>
-        <div className={styles.inner}>
-          <p>{content.hero.eyebrow}</p>
-          <h1>{content.hero.title}</h1>
+    <main>
+      <section aria-labelledby="donate-title" className={styles.hero}>
+        <Image alt="" className={styles.heroImage} fill preload sizes="100vw" src={hero.image} />
+        <div className={styles.heroInner}>
+          <h1 id="donate-title">{hero.title}</h1>
+          <p>{hero.statement}</p>
         </div>
       </section>
-      <section className={styles.status}>
-        <div>
-          <p className={styles.label}>{content.status}</p>
-          <h2>{content.notice}</h2>
+      <section className={styles.section}>
+        <div className={styles.copy}>
+          <SectionHeading>{donation.title}</SectionHeading>
+          <p>{donation.notice}</p>
         </div>
+        <DonationForm content={donation.form} locale={locale} />
       </section>
     </main>
   );

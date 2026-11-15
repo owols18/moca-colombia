@@ -7,6 +7,7 @@ import { getAboutUs } from "@/lib/content";
 import { hasLocale } from "@/lib/i18n";
 
 import { BoardOfDirectors } from "./BoardOfDirectors";
+import aboutHero from "../../../../public/images/about-us/hero.jpg";
 import styles from "./page.module.css";
 
 type AboutUsPageProps = {
@@ -52,7 +53,7 @@ export default async function AboutUsPage({ params }: AboutUsPageProps) {
           fill
           preload
           sizes="100vw"
-          src={content.hero.image}
+          src={content.hero.image === "/images/about-us/hero.jpg" ? aboutHero : content.hero.image}
         />
         <div aria-hidden="true" className={styles.heroScrim} />
         <div className={styles.heroInner}>

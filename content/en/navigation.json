@@ -4,14 +4,20 @@
   "languageLabel": "Choose language",
   "items": [
     { "id": "mission", "label": "Our Mission", "href": "/our-mission" },
-    { "id": "community", "label": "La Argentina", "href": "/la-argentina" },
+    {
+      "id": "successes",
+      "label": "Our Successes",
+      "children": [
+        { "label": "La Argentina", "href": "/la-argentina" }
+      ]
+    },
     {
       "id": "projects",
       "label": "Projects",
       "children": [
         { "label": "MOCACAO", "href": "/projects/mocacao" },
-        { "label": "Nutrition", "href": "/projects/nutrition" },
-        { "label": "Academic Support", "href": "/projects/academic-support" },
+        { "label": "Nutrition + Wellness", "href": "/projects/nutrition" },
+        { "label": "Scholastic", "href": "/projects/academic-support" },
         { "label": "Medical Care", "href": "/projects/medical-care" }
       ]
     },

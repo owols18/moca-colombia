@@ -78,11 +78,15 @@ export default async function LaArgentinaPage({ params }: LaArgentinaPageProps) 
                 ))}
               </div>
               <div className={styles.communityMedia}>
-                <Image
-                  alt={communityContext.alt}
-                  fill
-                  sizes="(max-width: 800px) 88vw, (max-width: 1600px) 44vw, 50rem"
-                  src={communityContext.image}
+                <video
+                  aria-label={communityContext.alt}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  poster={communityContext.image}
+                  preload="metadata"
+                  src="/images/la-argentina/community-web.mp4"
                 />
               </div>
             </div>

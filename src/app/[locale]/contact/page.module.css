@@ -17,7 +17,6 @@
 }
 
 .heroImage {
-  filter: grayscale(1);
   object-position: center;
 }
 

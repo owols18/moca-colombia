@@ -25,3 +25,6 @@ Thumbs.db
 # Generated media and temporary files
 tmp/
 public/media/generated/
+
+# Full-resolution local master; the web rendition is tracked.
+/public/images/la-argentina/community.mp4

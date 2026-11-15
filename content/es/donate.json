@@ -1,7 +1,22 @@
 {
-  "slug": "donate",
-  "status": "deferred",
-  "seo": { "title": "Donar", "description": "Apoya las iniciativas comunitarias de educación, nutrición, salud y medios de vida de Moca Colombia." },
-  "hero": { "eyebrow": "Apoya la misión", "title": "Donar" },
-  "notice": "La integración con Stripe y el contenido final de donaciones se reservan para la última página interior."
+  "seo": {
+    "title": "Dona ahora",
+    "description": "El futuro de la juventud colombiana comienza con una oportunidad."
+  },
+  "hero": {
+    "title": "Dona aquí",
+    "statement": "El futuro de la juventud colombiana comienza con una oportunidad.",
+    "image": "/images/donate/hero-donate-now.jpg"
+  },
+  "donation": {
+    "title": "Haz una donación",
+    "notice": "MOCA COLOMBIA, INC. es una organización 501(c)(3). Las donaciones pueden deducirse conforme a la sección 170 del Código de Rentas Internas de Estados Unidos. De acuerdo con las directrices del Servicio de Impuestos Internos de Estados Unidos, MOCA COLOMBIA, INC. conserva la facultad de decidir y el control exclusivo sobre el uso de todos los fondos donados. Por lo tanto, los donantes liberan expresamente a MOCA COLOMBIA, INC. de cualquier restricción sobre el uso de esos fondos.",
+    "form": {
+      "choose": "Elige un monto",
+      "custom": "Dona otro monto",
+      "placeholder": "Ingresa el monto",
+      "submit": "Enviar donación",
+      "preview": "La opción de pago estará disponible próximamente."
+    }
+  }
 }

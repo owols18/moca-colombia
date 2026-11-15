@@ -1,5 +1,6 @@
 // Build an isolated design/content review. The original server app stays intact.
 const fs = require("node:fs");
+const { createHash } = require("node:crypto");
 const path = require("node:path");
 const { spawnSync } = require("node:child_process");
 
@@ -13,20 +14,31 @@ for (const name of ["src", "content", "public", "package.json", "tsconfig.json"]
   fs.cpSync(path.join(root, name), path.join(stage, name), {
     recursive: true,
     filter: source => source !== path.join(root, "src", "proxy.ts") &&
-      source !== path.join(root, "src", "app", "api"),
+      source !== path.join(root, "src", "app", "api") &&
+      source !== path.join(root, "public", "images", "la-argentina", "community.mp4"),
   });
 }
 fs.symlinkSync(path.join(root, "node_modules"), path.join(stage, "node_modules"),
   process.platform === "win32" ? "junction" : "dir");
 
 // next/link handles basePath; public asset URLs in JSON, JSX and CSS need it too.
+const assetVersions = new Map();
+function assetUrl(asset) {
+  if (!assetVersions.has(asset)) {
+    const bytes = fs.readFileSync(path.join(stage, "public", asset));
+    assetVersions.set(asset, createHash("sha256").update(bytes).digest("hex").slice(0, 12));
+  }
+  return basePath + asset + "?v=" + assetVersions.get(asset);
+}
+
 function prefixAssets(directory) {
   for (const entry of fs.readdirSync(directory, { withFileTypes: true })) {
     const filename = path.join(directory, entry.name);
     if (entry.isDirectory()) prefixAssets(filename);
     else if (/\.(tsx?|jsx?|json|css)$/.test(entry.name)) {
       const original = fs.readFileSync(filename, "utf8");
-      const updated = original.replace(/(["'`(])\/(images|brand|media)\//g, `$1${basePath}/$2/`);
+      const updated = original.replace(/(["'\x60(])(\/(?:images|brand|media)\/[^"'\x60()?#\r\n]+?\.(?:png|jpe?g|webp|avif|svg|gif|mp4))(?=["'\x60)])/gi,
+        (_, delimiter, asset) => delimiter + assetUrl(asset));
       if (updated !== original) fs.writeFileSync(filename, updated);
     }
   }

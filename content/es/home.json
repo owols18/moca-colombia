@@ -27,7 +27,14 @@
   },
   "partB": {
     "title": "NUESTRA MISIÓN",
-    "description": "MOCA Colombia trabaja para atender las necesidades fundamentales de pequeñas comunidades desatendidas de Colombia y promover su independencia económica a través de la agricultura. Mediante nuestras iniciativas agrícolas, nuestra labor de defensa de las comunidades y nuestras alianzas, mejoramos la calidad de vida y fomentamos un entorno donde la educación, la salud y el empoderamiento económico generan un cambio duradero. Impulsamos todo el potencial de nuestras comunidades campesinas y de sus niños y niñas.",
+    "description": "La misión de MOCA Colombia es apoyar a las familias que cultivan cacao en algunas de las veredas más pequeñas y pobres de Colombia.",
+    "pillarsIntro": "Nuestro trabajo se centra en cuatro pilares.",
+    "pillars": [
+      { "label": "MOCACAO", "description": "Convertimos el cacao en una fuente de oportunidades.", "href": "/es/projects/mocacao" },
+      { "label": "Nutrición + Bienestar", "description": "Combatimos la malnutrición.", "href": "/es/projects/nutrition" },
+      { "label": "Educación escolar", "description": "Fortalecemos la educación y el desarrollo de las comunidades.", "href": "/es/projects/academic-support" },
+      { "label": "Atención médica", "description": "Ampliamos el acceso a la atención médica para la niñez en situación de vulnerabilidad.", "href": "/es/projects/medical-care" }
+    ],
     "cta": {
       "label": "CONOCE MÁS",
       "href": "/es/our-mission"

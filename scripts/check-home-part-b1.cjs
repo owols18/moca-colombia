@@ -51,7 +51,12 @@ for (let index = 100; index >= 0; index--) assert.deepEqual(getMissionFrame(1, i
 const content = JSON.parse(fs.readFileSync(path.join(root, 'content/en/home.json'), 'utf8'));
 assert.equal(content.partB.cta.href, '/en/our-mission');
 assert.equal(content.partB.cta.label, 'LEARN MORE');
-assert.ok(content.partB.description.endsWith('their children.'));
+for (const locale of ['en', 'es']) {
+  const { partB } = JSON.parse(fs.readFileSync(path.join(root, 'content', locale, 'home.json'), 'utf8'));
+  assert.ok(partB.description && partB.pillarsIntro);
+  assert.deepEqual(partB.pillars.map(pillar => pillar.href),
+    ['mocacao', 'nutrition', 'academic-support', 'medical-care'].map(slug => '/' + locale + '/projects/' + slug));
+}
 const css = fs.readFileSync(path.join(root, 'src/components/home/HomeStory.module.css'), 'utf8');
 assert.match(css, /--part-a-scroll: 260svh/);
 assert.match(css, /--part-b-scroll: 520svh/);

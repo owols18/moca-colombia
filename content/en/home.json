@@ -14,7 +14,14 @@
   },
   "partB": {
     "title": "OUR MISSION",
-    "description": "MOCA Colombia strives to address the fundamental needs of small, underserved communities in Colombia and promote economic independence through agriculture. Through our agricultural initiatives, advocacies, and partnerships, we elevate standards of living and foster an environment where education, medicine, and economic empowerment create lasting change. We unlock the full potential of our farming communities and their children.",
+    "description": "MOCA Colombia’s mission is to support cacao farmers in some of Colombia’s smallest and poorest rural communities, known as veredas.",
+    "pillarsIntro": "Our work focuses on four pillars.",
+    "pillars": [
+      { "label": "MOCACAO", "description": "Turning cacao into opportunity.", "href": "/en/projects/mocacao" },
+      { "label": "Nutrition + Wellness", "description": "Combating malnutrition.", "href": "/en/projects/nutrition" },
+      { "label": "Scholastic", "description": "Strengthening education and helping communities grow.", "href": "/en/projects/academic-support" },
+      { "label": "Medical Care", "description": "Expanding access to healthcare for vulnerable children.", "href": "/en/projects/medical-care" }
+    ],
     "cta": { "label": "LEARN MORE", "href": "/en/our-mission" },
     "mountains": [
       { "src": "/images/home/mountain1.webp", "width": 2943, "height": 1257 },

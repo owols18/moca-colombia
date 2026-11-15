@@ -17,9 +17,9 @@ function walk(directory) {
     else if (entry.name.endsWith(".html")) {
       pages++;
       const html = fs.readFileSync(file, "utf8");
-      for (const tag of html.matchAll(/<(a|img|script|link)\b[^>]*>/g)) {
+      for (const tag of html.matchAll(/<(a|img|video|source|script|link)\b[^>]*>/g)) {
         if (tag[1] === "link" && /rel="alternate"/.test(tag[0])) continue;
-        for (const attr of tag[0].matchAll(/(?:src|href)="([^"\s]+)"/g)) checkUrl(attr[1], file);
+        for (const attr of tag[0].matchAll(/(?:src|href|poster)="([^"\s]+)"/g)) checkUrl(attr[1], file);
       }
     } else if (entry.name.endsWith(".css")) {
       for (const match of fs.readFileSync(file, "utf8").matchAll(/url\(["']?(\/[^)'"\s]+)/g)) checkUrl(match[1], file);

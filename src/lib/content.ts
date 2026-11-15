@@ -27,7 +27,7 @@ import nutritionEs from "../../content/es/projects/nutrition.json";
 
 import type { ButtonVariant } from "@/components/ui/Button";
 
-import type { Locale, PlannedPagePath } from "./i18n";
+import type { Locale } from "./i18n";
 
 export type NavigationItem = {
   id: string;
@@ -44,14 +44,6 @@ export type NavigationContent = {
   footer: {
     copyright: string;
   };
-};
-
-export type PageStub = {
-  slug: string;
-  status: string;
-  seo: { title: string; description: string };
-  hero: { eyebrow: string; title: string };
-  notice: string;
 };
 
 export type SharedCtaContent = {
@@ -422,6 +414,8 @@ export type HomePartAContent = {
 export type HomePartBContent = {
   title: string;
   description?: string;
+  pillarsIntro: string;
+  pillars: { label: string; description: string; href: string }[];
   cta?: { label: string; href: string };
   mountains: { src: string; width: number; height: number }[];
 };
@@ -562,14 +556,7 @@ const homeByLocale = {
   es: homeEs as HomeContent,
 } satisfies Record<Locale, HomeContent>;
 
-const pagesByLocale = {
-  en: {
-    donate: donateEn,
-  },
-  es: {
-    donate: donateEs,
-  },
-} satisfies Record<Locale, Record<PlannedPagePath, PageStub>>;
+const donateByLocale = { en: donateEn, es: donateEs } satisfies Record<Locale, typeof donateEn>;
 
 export function getNavigation(locale: Locale): NavigationContent {
   return navigationByLocale[locale];
@@ -619,6 +606,6 @@ export function getHome(locale: Locale): HomeContent {
   return homeByLocale[locale];
 }
 
-export function getPageStub(locale: Locale, path: PlannedPagePath): PageStub {
-  return pagesByLocale[locale][path];
+export function getDonate(locale: Locale) {
+  return donateByLocale[locale];
 }

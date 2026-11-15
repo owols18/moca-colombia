@@ -4,14 +4,20 @@
   "languageLabel": "Elegir idioma",
   "items": [
     { "id": "mission", "label": "Nuestra misión", "href": "/our-mission" },
-    { "id": "community", "label": "La Argentina", "href": "/la-argentina" },
+    {
+      "id": "successes",
+      "label": "Nuestros logros",
+      "children": [
+        { "label": "La Argentina", "href": "/la-argentina" }
+      ]
+    },
     {
       "id": "projects",
       "label": "Proyectos",
       "children": [
         { "label": "MOCACAO", "href": "/projects/mocacao" },
-        { "label": "Nutrición", "href": "/projects/nutrition" },
-        { "label": "Apoyo académico", "href": "/projects/academic-support" },
+        { "label": "Nutrición + Bienestar", "href": "/projects/nutrition" },
+        { "label": "Educación escolar", "href": "/projects/academic-support" },
         { "label": "Atención médica", "href": "/projects/medical-care" }
       ]
     },

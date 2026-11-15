@@ -10,7 +10,6 @@
 }
 
 .heroImage {
-  filter: grayscale(1);
   object-fit: cover;
   object-position: center;
 }
@@ -141,7 +140,7 @@
   display: grid;
   gap: clamp(3rem, 7vw, 9rem);
   grid-template-columns: minmax(19rem, 0.82fr) minmax(0, 1.18fr);
-  margin-bottom: clamp(4rem, 7vw, 8rem);
+  margin-top: clamp(2rem, 4vw, 4rem);
   min-height: 44rem;
 }
 
@@ -239,11 +238,21 @@
 }
 
 .directorRail {
+  --visible-cards: 7;
+  --card-gap: clamp(1rem, 2vw, 2rem);
   display: grid;
-  gap: clamp(1rem, 2vw, 2rem);
-  grid-template-columns: repeat(7, minmax(0, 1fr));
-  overflow: hidden;
-  padding: var(--space-3) var(--space-2) var(--space-6);
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% - (var(--visible-cards) - 1) * var(--card-gap)) / var(--visible-cards));
+  gap: var(--card-gap);
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scrollbar-width: none;
+  position: relative;
+  padding-block: var(--space-3) var(--space-4);
+}
+
+.directorRail::-webkit-scrollbar {
+  display: none;
 }
 
 .directorCard {
@@ -272,6 +281,7 @@
 }
 
 .directorCard:focus-visible {
+  outline-offset: -2px;
   border-radius: var(--radius-sm);
 }
 
@@ -327,7 +337,7 @@
 .boardControls {
   display: flex;
   justify-content: space-between;
-  margin-top: var(--space-5);
+  margin-bottom: var(--space-2);
 }
 
 .boardControls button {
@@ -358,14 +368,17 @@
   padding-top: 0;
 }
 
+@media (max-width: 1500px) {
+  .directorRail {
+    --visible-cards: 5;
+  }
+}
+
 @media (max-width: 1100px) {
   .directorRail {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    --visible-cards: 3;
   }
 
-  .boardControls {
-    display: none;
-  }
 }
 
 @media (max-width: 900px) {
@@ -414,7 +427,7 @@
 
   .featuredDirector {
     grid-template-columns: 1fr;
-    margin-bottom: var(--space-8);
+    margin-top: var(--space-6);
     min-height: 0;
   }
 
@@ -433,7 +446,7 @@
   }
 
   .directorRail {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    --visible-cards: 2;
   }
 
   .boardControls button span:not([aria-hidden="true"]) {
