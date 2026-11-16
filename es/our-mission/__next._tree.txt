@@ -1,4 +1,4 @@
 :HL["/moca-colombia/_next/static/css/6df34f4aba46fa84.css","style"]
-:HL["/moca-colombia/_next/static/css/62a116861e0c6fb0.css","style"]
+:HL["/moca-colombia/_next/static/css/98435776b2d82e36.css","style"]
 :HL["/moca-colombia/_next/static/css/03ba1c87f9e2e30d.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"locale","param":{"type":"d","key":"es","siblings":["_not-found","_global-error","design-system"]},"prefetchHints":4208,"slots":{"children":{"name":"our-mission","param":null,"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}}}},"staleTime":300,"buildId":"9kyWdc6sqqGqD0NhlBKfX"}
+0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"locale","param":{"type":"d","key":"es","siblings":["_not-found","_global-error","design-system"]},"prefetchHints":4208,"slots":{"children":{"name":"our-mission","param":null,"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}}}},"staleTime":300,"buildId":"XQNwWVGQOx7-uoDiGjpxz"}
