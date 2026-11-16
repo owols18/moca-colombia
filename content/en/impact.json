@@ -13,7 +13,7 @@
     "title": "Impact",
     "statement": "Creating lasting impact through opportunity, partnership, and community-led progress for generations.",
     "image": "/images/impact/hero.jpg",
-    "alt": "A smiling child holding young plants"
+    "alt": "Schoolwork in La Argentina"
   },
   "sections": {
     "keyFigures": {
@@ -27,13 +27,51 @@
     },
     "storiesOfChange": {
       "id": "stories-of-change",
-      "title": "Stories of Change",
+      "title": "STORIES THAT TRANSFORM LIVES",
       "body": [
-        "Change begins when people receive the resources and support needed to move forward. In La Argentina, children gain greater access to education, families strengthen their wellbeing, and farmers develop more sustainable opportunities.",
-        "Each story reflects determination, collaboration, and the community's ability to shape its own future. These transformations extend beyond individual achievements, creating benefits that reach entire families. By sharing their experiences, we celebrate progress while recognizing the work that still lies ahead. Their stories demonstrate that lasting impact is built one opportunity at a time."
+        "MOCA Colombia is paying for his nursing studies, as well as his transportation costs to and from the vereda to the local town where his classes take place. We are also financing his six-month clinical internship, where he is gaining hands-on experience working with real patients. Fabio’s grades are top-notch and reflect his strong aspiration to one day attend medical school. MOCA Colombia is proud to help him realize his dream in this field."
       ],
-      "image": "/images/impact/stories-of-change.png",
-      "alt": "Children gathering cacao pods outdoors"
+      "close": "Close story",
+      "previous": "Previous story",
+      "next": "Next story",
+      "pending": "This story is being prepared.",
+      "people": [
+        {
+          "id": "nicole",
+          "name": "Nicole",
+          "card": "/images/impact/nicole-card.webp",
+          "portrait": "/images/impact/nicole-portrait.webp",
+          "biography": [
+            "I am a young woman deeply proud of my rural roots. Coming from the countryside, I am working with effort, dedication, and determination to build a future full of opportunities. I am currently studying Marketing, a degree that allows me to develop creative and strategic skills to understand people’s needs and connect meaningful projects with their audiences.",
+            "I am sincerely grateful to MOCA Colombia for their trust, support, and for giving me the chance to pursue higher education. This opportunity motivates me every day to fight for my dreams and prove that no matter where we come from, we can go as far as we set our minds to.",
+            "As a marketing student, I want to put my knowledge at the service of my community. My goal is to boost local entrepreneurship, help our farmers promote their products using digital tools, and bring visibility to our talents and traditions. The countryside holds immense potential; through marketing, we can ensure that our culture and the hard work of our people are recognized and valued everywhere."
+          ],
+          "title": "Nicole: Blending Creativity and Rural Roots to Empower Local Farmers"
+        },
+        {
+          "id": "fabio",
+          "name": "Fabio",
+          "card": "/images/impact/fabio-card.webp",
+          "portrait": "/images/impact/fabio-portrait.webp",
+          "biography": [
+            "I am a young man from the rural community of La Argentina, and I am deeply grateful to MOCA Colombia for the tremendous support they have given me to fulfill my dream of becoming a healthcare professional. Knowing they believe in me motivates me to push forward in my studies every single day.",
+            "My studies focus on nursing, which I believe is both the art and science of caring for people to help them recover, maintain, and protect their health. Beyond administering medication, our role as nurses is to provide compassionate support and stand by our patients throughout their physical and mental recovery.",
+            "Once I complete my nursing assistant program, my goal is to continue in the healthcare field by pursuing a medical degree. I aspire to become a great doctor so I can give back everything I have learned to my community and serve those who need it most.",
+            "• MOCA’s Impact: MOCA Colombia is currently funding Fabio’s nursing studies as well as his transportation costs to and from his rural community to the local town where he attends classes. We are also financing his six-month clinical internship, where he is gaining hands-on experience working with real patients. Fabio’s grades are top-notch and reflect his determination to one day attend medical school—a dream MOCA Colombia will be proud to help him achieve."
+          ],
+          "title": "Fabio Andrés Muñoz Castaño: A Calling to Heal and the Dream of Becoming a Doctor"
+        },
+        {
+          "id": "mariam",
+          "name": "Mariam",
+          "card": "/images/impact/mariam-card.webp",
+          "portrait": "/images/impact/mariam-portrait.webp",
+          "biography": [
+            "I am proudly from the countryside. I never imagined I would have access to higher education, let alone the chance to speak a second language. Today, thanks to the MOCA Colombia Foundation, I have the tools to become bilingual. Thank you for believing in us—the people of the countryside."
+          ],
+          "title": "Mariam: Breaking Barriers Through Language"
+        }
+      ]
     }
   },
   "cta": {
@@ -41,9 +79,21 @@
     "body": "Whether you donate, volunteer, or partner with us, your support helps strengthen education, healthcare, sustainable livelihoods, and long-term community development.",
     "image": "/images/shared/change-a-life-today.png",
     "actions": [
-      { "label": "Donate Now", "href": "/donate", "variant": "light" },
-      { "label": "Volunteer With Us", "href": "/get-involved#volunteer", "variant": "outlineLight" },
-      { "label": "Let's Partner", "href": "/get-involved#partner", "variant": "outlineLight" }
+      {
+        "label": "Donate Now",
+        "href": "/donate",
+        "variant": "light"
+      },
+      {
+        "label": "Volunteer With Us",
+        "href": "/get-involved#volunteer",
+        "variant": "outlineLight"
+      },
+      {
+        "label": "Let's Partner",
+        "href": "/get-involved#partner",
+        "variant": "outlineLight"
+      }
     ]
   }
 }

@@ -279,8 +279,11 @@ export type ImpactContent = {
       id: string;
       title: string;
       body: string[];
-      image: string;
-      alt: string;
+      close: string;
+      previous: string;
+      next: string;
+      pending: string;
+      people: { id: string; name: string; title: string; card: string; portrait: string; biography: string[] }[];
     };
   };
   cta: SharedCtaContent;

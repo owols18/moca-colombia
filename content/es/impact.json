@@ -13,7 +13,7 @@
     "title": "Impacto",
     "statement": "Creando un impacto duradero mediante oportunidades, alianzas y progreso comunitario para las generaciones futuras.",
     "image": "/images/impact/hero.jpg",
-    "alt": "Una niña sonriente sostiene plantas jóvenes"
+    "alt": "Trabajo escolar en La Argentina"
   },
   "sections": {
     "keyFigures": {
@@ -27,13 +27,51 @@
     },
     "storiesOfChange": {
       "id": "historias-de-cambio",
-      "title": "Historias de cambio",
+      "title": "HISTORIAS QUE TRANSFORMAN VIDAS",
       "body": [
-        "El cambio comienza cuando las personas reciben los recursos y el apoyo necesarios para avanzar. En La Argentina, los niños obtienen mayor acceso a la educación, las familias fortalecen su bienestar y los agricultores desarrollan oportunidades más sostenibles.",
-        "Cada historia refleja determinación, colaboración y la capacidad de la comunidad para construir su propio futuro. Estas transformaciones van más allá de los logros individuales y generan beneficios que alcanzan a familias enteras. Al compartir sus experiencias, celebramos los avances mientras reconocemos el trabajo que aún queda por hacer. Sus historias demuestran que un impacto duradero se construye una oportunidad a la vez."
+        "MOCA Colombia financia los estudios de enfermería de Fabio, incluidos sus gastos de transporte entre su vereda y el municipio de estudio, además de respaldar su pasantía clínica de seis meses con pacientes reales. Sus calificaciones sobresalientes reflejan su compromiso de ingresar a la facultad de medicina, una meta que la organización se complace en ayudarle a alcanzar. Puedes conocer más sobre la labor de MOCA Colombia en su sitio web."
       ],
-      "image": "/images/impact/stories-of-change.png",
-      "alt": "Niños recolectan mazorcas de cacao al aire libre"
+      "close": "Cerrar historia",
+      "previous": "Historia anterior",
+      "next": "Historia siguiente",
+      "pending": "Estamos preparando esta historia.",
+      "people": [
+        {
+          "id": "nicole",
+          "name": "Nicole",
+          "card": "/images/impact/nicole-card.webp",
+          "portrait": "/images/impact/nicole-portrait.webp",
+          "biography": [
+            "Soy una joven orgullosa de mis raíces campesinas. Vengo del campo y, con esfuerzo, dedicación y muchas ganas de salir adelante, busco construir un futuro lleno de oportunidades. Actualmente estudio Marketing, una carrera que me permite desarrollar habilidades creativas y estratégicas para comprender las necesidades de las personas y conectar proyectos con su público.",
+            "Agradezco profundamente a MOCA Colombia por su apoyo, confianza y por abrirme las puertas a la educación superior. Esta oportunidad es mi mayor motivación para seguir luchando por mis sueños y demostrar que, sin importar de dónde vengamos, podemos llegar tan lejos como nos lo propongamos.",
+            "Como futura profesional, quiero poner mis conocimientos al servicio de mi vereda. Mi sueño es impulsar los emprendimientos locales, ayudar a nuestros campesinos a promocionar sus productos mediante herramientas digitales y dar visibilidad a nuestras tradiciones. El campo tiene un potencial inmenso; a través del marketing, lograremos que nuestra cultura y el trabajo de nuestra gente sean reconocidos y valorados en todas partes."
+          ],
+          "title": "Nicole: Creatividad y raíces campesinas al servicio de su comunidad"
+        },
+        {
+          "id": "fabio",
+          "name": "Fabio",
+          "card": "/images/impact/fabio-card.webp",
+          "portrait": "/images/impact/fabio-portrait.webp",
+          "biography": [
+            "Soy un joven de la vereda La Argentina y agradezco de corazón a MOCA Colombia por el inmenso apoyo que me han brindado para hacer realidad mi meta de convertirme en un profesional de la salud. Su respaldo es el motor que cada día me impulsa a seguir avanzando en mis estudios.",
+            "Actualmente me formo en el área de enfermería, una profesión que considero el arte y la ciencia de cuidar a las personas para ayudarlas a recuperar, mantener y proteger su salud. Más allá de administrar medicamentos, nuestro rol es brindar apoyo humano y acompañar al paciente en cada etapa de su recuperación física y mental.",
+            "Mi gran propósito al terminar mis estudios como auxiliar de enfermería es continuar mi camino profesional en la carrera de Medicina. Quiero convertirme en un gran médico para retribuir todo lo que he aprendido a mi comunidad y ayudar a quienes más lo necesiten.",
+            "• El impacto de MOCA: Actualmente, MOCA Colombia financia la totalidad de los estudios de enfermería de Fabio, además de cubrir sus gastos de transporte desde su vereda hasta el municipio donde toma sus clases. También apoyamos su pasantía clínica de seis meses, donde ya atiende a pacientes reales. Sus calificaciones son sobresalientes y reflejan su firme aspiración de ingresar algún día a la facultad de medicina, un sueño en el que estaremos orgullosos de seguir acompañándolo."
+          ],
+          "title": "Fabio Andrés Muñoz Castaño: Vocación de servicio y el sueño de ser médico"
+        },
+        {
+          "id": "mariam",
+          "name": "Mariam",
+          "card": "/images/impact/mariam-card.webp",
+          "portrait": "/images/impact/mariam-portrait.webp",
+          "biography": [
+            "Soy orgullosamente campesina. Nunca imaginé que podría acceder a la educación superior, y mucho menos aprender una segunda lengua. Hoy, gracias al respaldo de la fundación MOCA Colombia, cuento con las herramientas para convertirme en una mujer bilingüe. Gracias por creer en el potencial de quienes venimos del campo."
+          ],
+          "title": "Mariam: Rompiendo barreras a través de los idiomas"
+        }
+      ]
     }
   },
   "cta": {
@@ -41,9 +79,21 @@
     "body": "Ya sea que dones, seas voluntario o te unas como aliado, tu apoyo ayuda a fortalecer la educación, la salud, los medios de vida sostenibles y el desarrollo comunitario a largo plazo.",
     "image": "/images/shared/change-a-life-today.png",
     "actions": [
-      { "label": "Donar ahora", "href": "/donate", "variant": "light" },
-      { "label": "Quiero ser voluntario", "href": "/get-involved#volunteer", "variant": "outlineLight" },
-      { "label": "Crear una alianza", "href": "/get-involved#partner", "variant": "outlineLight" }
+      {
+        "label": "Donar ahora",
+        "href": "/donate",
+        "variant": "light"
+      },
+      {
+        "label": "Quiero ser voluntario",
+        "href": "/get-involved#volunteer",
+        "variant": "outlineLight"
+      },
+      {
+        "label": "Crear una alianza",
+        "href": "/get-involved#partner",
+        "variant": "outlineLight"
+      }
     ]
   }
 }

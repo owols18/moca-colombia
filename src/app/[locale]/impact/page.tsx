@@ -6,6 +6,7 @@ import { SharedCta } from "@/components/site/SharedCta";
 import { getImpact } from "@/lib/content";
 import { hasLocale } from "@/lib/i18n";
 
+import { ImpactStories } from "./ImpactStories";
 import styles from "./page.module.css";
 
 type ImpactPageProps = {
@@ -41,7 +42,7 @@ export default async function ImpactPage({ params }: ImpactPageProps) {
   }
 
   const content = getImpact(locale);
-  const { keyFigures, storiesOfChange } = content.sections;
+  const { storiesOfChange } = content.sections;
 
   return (
     <main className={styles.page}>
@@ -61,45 +62,7 @@ export default async function ImpactPage({ params }: ImpactPageProps) {
         </div>
       </section>
 
-      <section className={styles.keyFigures} id={keyFigures.id}>
-        <div className={styles.keyFiguresCard}>
-          <div className={styles.keyFiguresMedia}>
-            <Image
-              alt={keyFigures.alt}
-              fill
-              loading="eager"
-              sizes="(max-width: 900px) 86vw, (max-width: 2000px) 38vw, 43rem"
-              src={keyFigures.image}
-              unoptimized
-            />
-          </div>
-          <div className={styles.keyFiguresCopy}>
-            <h2>{keyFigures.title}</h2>
-            {keyFigures.body.map((paragraph) => (
-              <p key={paragraph}>{paragraph}</p>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className={styles.stories} id={storiesOfChange.id}>
-        <div className={styles.storiesCard}>
-          <div className={styles.storiesCopy}>
-            <h2>{storiesOfChange.title}</h2>
-            {storiesOfChange.body.map((paragraph) => (
-              <p key={paragraph}>{paragraph}</p>
-            ))}
-          </div>
-          <div className={styles.storiesMedia}>
-            <Image
-              alt={storiesOfChange.alt}
-              fill
-              sizes="(max-width: 900px) 100vw, (max-width: 2000px) 46vw, 51rem"
-              src={storiesOfChange.image}
-            />
-          </div>
-        </div>
-      </section>
+      <ImpactStories content={storiesOfChange} />
 
       <div className={styles.ctaWrap}>
         <SharedCta content={content.cta} locale={locale} />
